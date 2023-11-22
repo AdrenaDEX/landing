@@ -27,7 +27,6 @@ export default function Home() {
 
   const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
-
   return (
     <main>
       {isLoaded && (
@@ -36,22 +35,22 @@ export default function Home() {
             y > 100
               ? ' border-black bg-black/50'
               : 'border-transparent bg-transparent',
-            'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-10 transition duration-300 fade-in'
+            'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-10 transition duration-300 fade-in',
           )}
         >
-          <p className="font-specialmonster text-2xl mr-5 font-light">
-            Adrena
-          </p>
+          <p className="font-specialmonster text-2xl mr-5 font-light">Adrena</p>
 
-          <button className="p-1 sm:p-3 bg-[#4C34A4] w-[100px] sm:w-[200px] font-kavivanar text-sm">
-            TRADE NOW
-          </button>
+          <a href="https://alpha.adrena.xyz/">
+            <button className="p-1 sm:p-3 bg-[#4C34A4] w-[100px] sm:w-[200px] font-kavivanar text-sm">
+              TRADE NOW
+            </button>
+          </a>
         </div>
       )}
 
       <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
-      <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px]">
+      <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
         <div className="text-center">
           <h3 className="text-4xl">ADX</h3>
           <p className="max-w-[400px] font-kavivanar">

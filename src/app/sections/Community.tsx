@@ -45,9 +45,11 @@ export default function Community({
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-          <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar">
-            TRADE NOW
-          </button>
+          <a href="https://alpha.adrena.xyz/">
+            <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar">
+              TRADE NOW
+            </button>
+          </a>
         </div>
       </div>
       {isLoaded && (

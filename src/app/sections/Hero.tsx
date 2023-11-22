@@ -20,18 +20,18 @@ export default function Hero({
   return (
     <div className="relative">
       <div className="relative h-[100vh] overflow-hidden">
-          <Lottie
-            rendererSettings={renderSettings}
-            animationData={animationData}
-            loop={true}
-            style={{
-              position: 'absolute',
-              width: '100%',
-              height: '100%',
-              filter: 'drop-shadow(0px 0px 40px #000)',
-            }}
-            onDOMLoaded={() => setIsHeaderLoaded(true)}
-          />
+        <Lottie
+          rendererSettings={renderSettings}
+          animationData={animationData}
+          loop={true}
+          style={{
+            position: 'absolute',
+            width: '100%',
+            height: '100%',
+            filter: 'drop-shadow(0px 0px 40px #000)',
+          }}
+          onDOMLoaded={() => setIsHeaderLoaded(true)}
+        />
 
         {isLoaded ? (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center">
@@ -39,9 +39,11 @@ export default function Hero({
             <p className="font-kavivanar fade-in">
               Trade at the speed of light with up to 50x leverage
             </p>
-            <button className="p-3 bg-[#4C34A4] w-[200px] font-kavivanar fade-in">
-              TRADE NOW
-            </button>
+            <a href="https://alpha.adrena.xyz/">
+              <button className="p-3 bg-[#4C34A4] w-[200px] font-kavivanar fade-in">
+                TRADE NOW
+              </button>
+            </a>
           </div>
         ) : (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in">
