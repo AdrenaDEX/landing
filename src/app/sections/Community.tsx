@@ -36,13 +36,13 @@ export default function Community({
           <div className="max-w-[600px]">
             <h2 className="text-6xl mb-3 ">Coummunity owned</h2>
             <p className="mb-3 font-kavivanar">
-              Adrena was constructed with with one thing in mind... build a DeFi
-              project that gives all of it's value to the community. This is
-              something that Solana has lacked and Adrena aims to change the
-              narrative. It was built as an open-sourced, on-chain, stoppable
-              application that anuone can interact with and build upon. Token
-              holders and users are the ones who decide what is built and how it
-              functions. This is the people's perp DEX.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+              reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
           <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar">
