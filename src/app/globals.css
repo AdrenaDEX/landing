@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: specialmonster;
+    src: url('/fonts/Pink Blue.ttf');
+  }
+
+  @font-face {
+    font-family: kavivanar;
+    src: url('/fonts/Kavivanar-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: openbrush;
+    src: url('/fonts/OpenBrush.ttf');
+  }
+
+  h1 {
+    @apply text-4xl;
+
+    @apply font-openbrush;
+  }
+
+  h2 {
+    @apply text-2xl;
+
+    @apply font-openbrush;
+  }
+
+  h3 {
+    @apply text-xl;
+
+    @apply font-openbrush;
+  }
+
+  h4 {
+    @apply text-lg;
+
+    @apply font-openbrush;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #330c45;
+  color: white;
+}
+
+.lottie-svg-class {
+  position: absolute !important;
+  height: 100% !important;
+  transform: scale(1.2) !important;
+  width: 100% !important;
+  z-index: -1 !important;
+  animation: fadeIn 0.5s 1s ease both;
+}
+
+
+/* for screens bigger than 1500px */
+
+.seperator {
+  transform: scale(1.2);
+}
+
+.seperator__top{
+  bottom: -20px;
+}
+
+.seperator__community__top{
+  top: -30px;
+}
+
+@media (max-width: 600px) {
+
+  .seperator {
+    transform: scale(3);
+  }
+
+  .seperator__community__top{
+    top: -20px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .lottie-svg-class {
+    transform: scale(1) !important;
+  }
+
+  .seperator__top {
+    bottom: -50px;
+  }
+
+}
+
+.fade-in {
+  animation: fadeIn 0.3s 0.5s ease both;
+  -webkit-animation: fadeIn 0.3s 0.5s ease both;
+  -moz-animation: fadeIn 0.3s 0.5s ease both;
+  -o-animation: fadeIn 0.3s 0.5s ease both;
+  -ms-animation: fadeIn 0.3s 0.5s ease both;
+}
+
+.fade-in-3 {
+  animation: fadeIn 0.5s 1s ease both;
+  -webkit-animation: fadeIn 0.5s 1s ease both;
+  -moz-animation: fadeIn 0.5s 1s ease both;
+  -o-animation: fadeIn 0.5s 1s ease both;
+  -ms-animation: fadeIn 0.5s 1s ease both;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking {
+  animation: blinkingText 1.2s infinite;
+}
+
+@keyframes blinkingText {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    color: 1;
+  }
+  100% {
+    color: 0.25;
+  }
+}
