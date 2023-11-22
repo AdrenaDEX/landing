@@ -20,12 +20,18 @@ export default function Hero({
   return (
     <div className="relative">
       <div className="relative h-[100vh] overflow-hidden">
-        <Lottie
-          rendererSettings={renderSettings}
-          animationData={animationData}
-          loop={true}
-          onDOMLoaded={() => setIsHeaderLoaded(true)}
-        />
+          <Lottie
+            rendererSettings={renderSettings}
+            animationData={animationData}
+            loop={true}
+            style={{
+              position: 'absolute',
+              width: '100%',
+              height: '100%',
+              filter: 'drop-shadow(0px 0px 40px #000)',
+            }}
+            onDOMLoaded={() => setIsHeaderLoaded(true)}
+          />
 
         {isLoaded ? (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center">
@@ -39,15 +45,19 @@ export default function Hero({
           </div>
         ) : (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in">
-            <h2 className="text-[100px] md:text-[164px] mb-5 font-light blinking">Adrena</h2>
+            <h2 className="text-[100px] md:text-[164px] mb-5 font-light blinking">
+              Adrena
+            </h2>
           </div>
         )}
       </div>
-     { isLoaded && <Image
-        src={sepImg}
-        alt="seperator"
-        className="absolute seperator seperator__top fade-in-3"
-      />}
+      {isLoaded && (
+        <Image
+          src={sepImg}
+          alt="seperator"
+          className="absolute seperator seperator__top fade-in-3"
+        />
+      )}
     </div>
   );
 }
