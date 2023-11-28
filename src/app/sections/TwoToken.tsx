@@ -35,15 +35,15 @@ export default function TwoToken({
             <h2 className="text-6xl mb-3 font-openbrush">Our 2-token model</h2>
             <p className="mb-3 max-w-[600px] font-kavivanar">
               Building upon the 2-token model system used by perps dex innovator
-              GMX, we've taken their token structure to the next level,
+              GMX, we&apos;ve taken their token structure to the next level,
               providing token holders with the as much control and value
               possible to help shape Adrena long term.
             </p>
 
             <p className="mb-3 max-w-[600px] font-kavivanar">
               Our governance and utility token, ADX, accrues 30% of the
-              platform's generated fees. ALP is the liquidity provider token
-              that accrues 70% of the platform's generated fees. All of this is
+              platform&apos;s generated fees. ALP is the liquidity provider token
+              that accrues 70% of the platform&apos;s generated fees. All of this is
               supplemented with our attractive distribution model which rewards
               ALL participants of the platform.
             </p>
