@@ -60,12 +60,23 @@
 html,
 body {
   overflow-x: hidden;
+  overscroll-behavior-y: none;
 }
 
 body {
   background-color: #330c45;
   color: white;
 }
+
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 
 .lottie-svg-class {
   position: absolute !important;
@@ -76,28 +87,26 @@ body {
   animation: fadeIn 0.5s 1s ease both;
 }
 
-
 /* for screens bigger than 1500px */
 
 .seperator {
   transform: scale(1.2);
 }
 
-.seperator__top{
+.seperator__top {
   bottom: -20px;
 }
 
-.seperator__community__top{
+.seperator__community__top {
   top: -30px;
 }
 
 @media (max-width: 600px) {
-
   .seperator {
     transform: scale(3);
   }
 
-  .seperator__community__top{
+  .seperator__community__top {
     top: -20px;
   }
 }
@@ -110,7 +119,6 @@ body {
   .seperator__top {
     bottom: -50px;
   }
-
 }
 
 .fade-in {

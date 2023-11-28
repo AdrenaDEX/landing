@@ -34,27 +34,22 @@ export default function TwoToken({
           <div>
             <h2 className="text-6xl mb-3 font-openbrush">Our 2-token model</h2>
             <p className="mb-3 max-w-[600px] font-kavivanar">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Building upon the 2-token model system used by perps dex innovator
+              GMX, we've taken their token structure to the next level,
+              providing token holders with the as much control and value
+              possible to help shape Adrena long term.
             </p>
 
             <p className="mb-3 max-w-[600px] font-kavivanar">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our governance and utility token, ADX, accrues 30% of the
+              platform's generated fees. ALP is the liquidity provider token
+              that accrues 70% of the platform's generated fees. All of this is
+              supplemented with our attractive distribution model which rewards
+              ALL participants of the platform.
             </p>
           </div>
           <a href="https://alpha.adrena.xyz/">
-            <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar">
+            <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar shadow-xl hover:opacity-75 transition-opacity duration-300">
               TRADE NOW
             </button>
           </a>

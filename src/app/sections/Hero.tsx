@@ -36,7 +36,7 @@ export default function Hero({
         {isLoaded ? (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center">
             <h2 className="text-[120px] mb-5 font-light fade-in">Adrena</h2>
-            <p className="font-kavivanar fade-in">
+            <p className="text-2xl  max-w-[400px] font-kavivanar fade-in">
               Trade at the speed of light with up to 50x leverage
             </p>
             <a href="https://alpha.adrena.xyz/">
@@ -46,7 +46,7 @@ export default function Hero({
             </a>
           </div>
         ) : (
-          <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in">
+          <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in z-30">
             <h2 className="text-[100px] md:text-[164px] mb-5 font-light blinking">
               Adrena
             </h2>
