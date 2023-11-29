@@ -9,7 +9,7 @@ import TwoToken from './sections/TwoToken';
 
 import diamondImg from './assets/diamond.png';
 import Image from 'next/image';
-import LocomotiveScroll from 'locomotive-scroll';
+
 
 export default function Home() {
   const [y, setY] = useState(0);
@@ -31,7 +31,8 @@ export default function Home() {
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      const locomotiveScroll = new LocomotiveScroll({
+      
+      new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]') as HTMLElement,
         smooth: true,
       });
