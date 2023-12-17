@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import FAQ from './components/FAQ';
@@ -8,18 +8,29 @@ import Community from './sections/Community';
 import TwoToken from './sections/TwoToken';
 
 import diamondImg from './assets/diamond.png';
-import Image from 'next/image';
 
+import Image from 'next/image';
 
 export default function Home() {
   const [y, setY] = useState(0);
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
+  const [isSafari, setIsSafari] = useState(false);
 
   const handleScroll = () => {
     setY(window.scrollY);
   };
+
+  useEffect(() => {
+    if (
+      typeof navigator !== 'undefined' &&
+      navigator.userAgent.indexOf('Safari') !== -1 &&
+      navigator.userAgent.indexOf('Chrome') === -1
+    ) {
+      setIsSafari(true);
+    }
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -28,29 +39,18 @@ export default function Home() {
     };
   }, []);
 
-  useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import('locomotive-scroll')).default;
-      
-      new LocomotiveScroll({
-        el: document.querySelector('[data-scroll-container]') as HTMLElement,
-        smooth: true,
-      });
-    })();
-  }, []);
-
   const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
   return (
-    <main data-scroll-container>
-      <div data-scroll>
+    <main>
+      <div>
         {isLoaded && (
           <div
             className={twMerge(
               y > 100
                 ? ' border-black bg-black/50'
                 : 'border-transparent bg-transparent',
-              'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-10 transition duration-300 fade-in',
+              'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-20 transition duration-300 fade-in',
             )}
           >
             <p className="font-specialmonster text-2xl mr-5 font-light">
@@ -65,7 +65,11 @@ export default function Home() {
           </div>
         )}
 
-        <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
+        <Hero
+          isLoaded={isLoaded}
+          setIsHeaderLoaded={setIsHeaderLoaded}
+          isSafari={isSafari}
+        />
 
         <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
           <div className="text-center">
@@ -100,7 +104,11 @@ export default function Home() {
           </div>
         </div>
 
-        <Community setIsMidLoaded={setIsMidLoaded} isLoaded={isLoaded} />
+        <Community
+          setIsMidLoaded={setIsMidLoaded}
+          isLoaded={isLoaded}
+          isSafari={isSafari}
+        />
 
         <div className="relative">
           <Image
@@ -110,7 +118,11 @@ export default function Home() {
           />
         </div>
 
-        <TwoToken setIsBtmLoaded={setIsBtmLoaded} isLoaded={isLoaded} />
+        <TwoToken
+          setIsBtmLoaded={setIsBtmLoaded}
+          isLoaded={isLoaded}
+          isSafari={isSafari}
+        />
 
         <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
           <div className="text-center">

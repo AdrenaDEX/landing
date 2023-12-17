@@ -23,14 +23,14 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center p-4 h-[75vh]">
+    <div className="relative flex flex-col items-center justify-center p-4 h-[75vh]">
       <h2 className="text-6xl mb-6">FAQ</h2>
       <div className="flex flex-col gap-6 w-full max-w-[500px]">
         {FAQs.map((faq, i) => (
           <div
-            className="p-3 border border-white/50 rounded-md w-full cursor-pointer"
-            onClick={() => setActiveQ(activeQ === i ? null : i)}
-            key={i}
+          className="p-3 border border-white/50 rounded-md w-full cursor-pointer"
+          onClick={() => setActiveQ(activeQ === i ? null : i)}
+          key={i}
           >
             <div className="flex flex-row justify-between">
               <p className="font-medium font-kavivanar">{faq.question}</p>

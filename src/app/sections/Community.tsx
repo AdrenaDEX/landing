@@ -1,34 +1,36 @@
-import React from 'react';
-import Lottie from 'lottie-react';
+import React, { useEffect } from 'react';
+import { DotLottiePlayer, PlayerEvents } from '@dotlottie/react-player';
 
-import animationData from '../optimzedData2.json';
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
 
 export default function Community({
   isLoaded,
   setIsMidLoaded,
+  isSafari,
 }: {
   isLoaded: boolean;
   setIsMidLoaded: (v: boolean) => void;
+  isSafari: boolean;
 }) {
-  const renderSettings = {
-    preserveAspectRatio: 'xMidYMid slice',
-    className: 'lottie-svg-class',
-  };
 
   return (
     <div className="relative">
-      <div className="relative w-full h-[100vh] flex items-center px-10 overflow-hidden">
+      <div className="relative w-full h-[100vh] flex items-center px-10 z-10">
         <div
-          className="absolute z-[-1] transform-gpu top-0 right-0 w-full h-full"
+          className="absolute z-[-1] transform-gpu top-[-50px] right-[350px] sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          <Lottie
-            rendererSettings={renderSettings}
-            animationData={animationData}
-            loop={true}
-            onDOMLoaded={() => setIsMidLoaded(true)}
+          <DotLottiePlayer
+            src="https://lottie.host/37e1ec5d-b487-44e1-b4e9-ac7f51500eee/ydhCjShFMH.lottie"
+            autoplay={!isSafari}
+            loop={!isSafari}
+            className="w-[1000px] sm:w-auto"
+            onEvent={(event: PlayerEvents) => {
+              if (event === PlayerEvents.Ready) {
+                setIsMidLoaded(true);
+              }
+            }}
           />
         </div>
 
@@ -37,8 +39,8 @@ export default function Community({
             <h2 className="text-6xl mb-3 ">Coummunity owned</h2>
             <p className="mb-3 font-kavivanar">
               Adrena was constructed with with one thing in mind... build a DeFi
-              project that gives all of It&apos;s value to the community. This is
-              something that Solana has lacked and Adrena aims to change the
+              project that gives all of It&apos;s value to the community. This
+              is something that Solana has lacked and Adrena aims to change the
               narrative. It was built as an open-sourced, on-chain, ustoppable
               application that anyone can interact with and bulld upon. Token
               holders and users are the ones who decide what is built and how it
@@ -57,13 +59,13 @@ export default function Community({
           <Image
             src={sepImg}
             alt="seperator"
-            className="absolute seperator seperator__community__top fade-in-3"
+            className="absolute seperator seperator__community__top fade-in-3 z-20"
           />
-          <Image
+          {/* <Image
             src={sepImg}
             alt="seperator"
             className="absolute seperator seperator__top fade-in-3 hidden sm:block"
-          />
+          /> */}
         </>
       )}
     </div>
