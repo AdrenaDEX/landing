@@ -50,9 +50,9 @@ export default function Community({
           </div>
         )}
 
-        <div className={twMerge(!isSafari && 'mt-[500px' ,"flex flex-col gap-3 ] sm:mt-0 z-10 px-10")}>
+        <div className={twMerge(isSafari ? 'mt-[150px]': 'mt-[500px]' ,"flex flex-col gap-3 ] sm:mt-0 z-10 px-10")}>
           <div className="max-w-[600px]">
-            <h2 className="text-6xl mb-3 ">Coummunity owned</h2>
+            <h2 className="text-6xl mb-3 ">Community owned</h2>
             <p className="mb-3 font-kavivanar">
               Adrena was constructed with with one thing in mind... build a DeFi
               project that gives all of It&apos;s value to the community. This

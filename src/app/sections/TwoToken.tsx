@@ -22,7 +22,7 @@ export default function TwoToken({
           <Image
             src={btmImg}
             alt="monster"
-            className="absolute w-full object-cover bottom-0 transition-opacity duration-300"
+            className="absolute w-full object-cover bottom-0 transition-opacity duration-300 z-[-1]"
             style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
             loading="eager"
             onLoad={() => {
