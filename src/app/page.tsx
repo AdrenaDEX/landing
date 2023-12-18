@@ -29,7 +29,6 @@ export default function Home() {
 
   const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded && !isSafari;
   
-  console.log(isLoaded, isHeaderLoaded, isMidLoaded, isBtmLoaded, isSafari);
   return (
     <main>
       <div>
@@ -37,7 +36,7 @@ export default function Home() {
           <div
             className={twMerge(
               'border-transparent bg-transparent',
-              'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-20 transition duration-300 fade-in',
+              'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in',
             )}
           >
             <p className="font-specialmonster text-2xl mr-5 font-light">

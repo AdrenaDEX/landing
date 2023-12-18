@@ -4,7 +4,7 @@ import headerImg from '../assets/header-monster.png';
 
 import Image from 'next/image';
 import { DotLottiePlayer, PlayerEvents } from '@dotlottie/react-player';
-import { twMerge } from 'tailwind-merge';
+
 export default function Hero({
   isLoaded,
   setIsHeaderLoaded,
