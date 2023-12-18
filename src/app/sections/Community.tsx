@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { DotLottiePlayer, PlayerEvents } from '@dotlottie/react-player';
 
 import sepImg from '../assets/line.png';
+import monsterImg from '../assets/mid-monster.png';
 import Image from 'next/image';
 
 export default function Community({
@@ -13,7 +14,6 @@ export default function Community({
   setIsMidLoaded: (v: boolean) => void;
   isSafari: boolean;
 }) {
-
   return (
     <div className="relative">
       <div className="relative w-full h-[100vh] flex items-center px-10 z-10">
@@ -21,17 +21,29 @@ export default function Community({
           className="absolute z-[-1] transform-gpu top-[-50px] right-[350px] sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          <DotLottiePlayer
-            src="https://lottie.host/37e1ec5d-b487-44e1-b4e9-ac7f51500eee/ydhCjShFMH.lottie"
-            autoplay={!isSafari}
-            loop={!isSafari}
-            className="w-[1000px] sm:w-auto"
-            onEvent={(event: PlayerEvents) => {
-              if (event === PlayerEvents.Ready) {
+          {isSafari ? (
+            <Image
+              src={monsterImg}
+              className="absolute w-[1000px] sm:w-auto top-[50px]"
+              alt="monster"
+              loading="eager"
+              onLoad={() => {
                 setIsMidLoaded(true);
-              }
-            }}
-          />
+              }}
+            />
+          ) : (
+            <DotLottiePlayer
+              src="https://lottie.host/37e1ec5d-b487-44e1-b4e9-ac7f51500eee/ydhCjShFMH.lottie"
+              autoplay
+              loop
+              className="w-[1000px] sm:w-auto"
+              onEvent={(event: PlayerEvents) => {
+                if (event === PlayerEvents.Ready) {
+                  setIsMidLoaded(true);
+                }
+              }}
+            />
+          )}
         </div>
 
         <div className="flex flex-col gap-3 mt-[500px] sm:mt-0">
@@ -54,7 +66,7 @@ export default function Community({
           </a>
         </div>
       </div>
-      {isLoaded && (
+      {(isLoaded || isSafari) && (
         <>
           <Image
             src={sepImg}

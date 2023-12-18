@@ -12,15 +12,10 @@ import diamondImg from './assets/diamond.png';
 import Image from 'next/image';
 
 export default function Home() {
-  const [y, setY] = useState(0);
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
   const [isSafari, setIsSafari] = useState(false);
-
-  const handleScroll = () => {
-    setY(window.scrollY);
-  };
 
   useEffect(() => {
     if (
@@ -32,24 +27,16 @@ export default function Home() {
     }
   }, []);
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
-
+  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded && !isSafari;
+  
+  console.log(isLoaded, isHeaderLoaded, isMidLoaded, isBtmLoaded, isSafari);
   return (
     <main>
       <div>
-        {isLoaded && (
+        {(isLoaded || isSafari) && (
           <div
             className={twMerge(
-              y > 100
-                ? ' border-black bg-black/50'
-                : 'border-transparent bg-transparent',
+              'border-transparent bg-transparent',
               'fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-20 transition duration-300 fade-in',
             )}
           >
