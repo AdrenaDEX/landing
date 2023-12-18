@@ -56,7 +56,7 @@ export default function Hero({
         )}
 
         {isLoaded || isSafari ? (
-          <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center">
+          <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in">
             <h2 className="text-[120px] mb-5 font-light fade-in">Adrena</h2>
             <p className="text-2xl  max-w-[400px] font-kavivanar fade-in">
               Trade at the speed of light with up to 50x leverage
