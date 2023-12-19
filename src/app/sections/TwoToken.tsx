@@ -86,6 +86,7 @@ export default function TwoToken({
           src={sepImg}
           alt="seperator"
           className="absolute seperator seperator__top fade-in-3"
+          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         />
       )}
     </div>

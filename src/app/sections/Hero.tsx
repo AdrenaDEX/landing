@@ -57,12 +57,12 @@ export default function Hero({
 
         {isLoaded || isSafari ? (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in">
-            <h2 className="text-[120px] mb-5 font-light fade-in">Adrena</h2>
-            <p className="text-2xl  max-w-[400px] font-kavivanar fade-in">
+            <h2 className="text-[120px] mb-5 font-light">Adrena</h2>
+            <p className="text-2xl  max-w-[400px] font-kavivanar">
               Trade at the speed of light with up to 50x leverage
             </p>
             <a href="https://alpha.adrena.xyz/">
-              <button className="p-3 bg-[#4C34A4] w-[200px] font-kavivanar fade-in">
+              <button className="p-3 bg-[#4C34A4] hover:bg-[#432D87] transition-all duration-300 w-[200px] shadow-xl font-kavivanar">
                 TRADE NOW
               </button>
             </a>
@@ -80,6 +80,7 @@ export default function Hero({
           src={sepImg}
           alt="seperator"
           className="absolute seperator seperator__top fade-in-3"
+          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         />
       )}
     </div>

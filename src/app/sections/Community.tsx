@@ -76,6 +76,7 @@ export default function Community({
             src={sepImg}
             alt="seperator"
             className="absolute seperator seperator__community__top fade-in-3 z-20"
+            style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
           />
           {/* <Image
             src={sepImg}
