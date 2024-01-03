@@ -20,39 +20,24 @@ export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
-  const [isSafari, setIsSafari] = useState(false);
 
-  useEffect(() => {
-    if (
-      typeof navigator !== 'undefined' &&
-      navigator.userAgent.indexOf('Safari') !== -1 &&
-      navigator.userAgent.indexOf('Chrome') === -1
-    ) {
-      setIsSafari(true);
-    }
-  }, []);
-
-  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded && !isSafari;
+  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
   return (
     <>
-      {(isLoaded || isSafari) && (
+      {isLoaded && (
         <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in">
           <p className="font-specialmonster text-2xl mr-5 font-light">Adrena</p>
 
           <a href="https://alpha.adrena.xyz/">
-            <button className="p-1 sm:p-3 bg-[#4C34A4] w-[100px] sm:w-[200px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300">
+            <button className="p-1 sm:p-3 bg-[#4C34A4] w-[100px] sm:w-[200px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-sm">
               TRADE NOW
             </button>
           </a>
         </div>
       )}
 
-      <Hero
-        isLoaded={isLoaded}
-        setIsHeaderLoaded={setIsHeaderLoaded}
-        isSafari={isSafari}
-      />
+      <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
       <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
         <div className="text-center">
@@ -87,11 +72,7 @@ export default function Home() {
         </div>
       </div>
 
-      <Community
-        setIsMidLoaded={setIsMidLoaded}
-        isLoaded={isLoaded}
-        isSafari={isSafari}
-      />
+      <Community setIsMidLoaded={setIsMidLoaded} isLoaded={isLoaded} />
 
       <div className="relative">
         <Image
@@ -101,18 +82,14 @@ export default function Home() {
         />
       </div>
 
-      <TwoToken
-        setIsBtmLoaded={setIsBtmLoaded}
-        isLoaded={isLoaded}
-        isSafari={isSafari}
-      />
+      <TwoToken setIsBtmLoaded={setIsBtmLoaded} isLoaded={isLoaded} />
 
       <div className="relative flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
         <div className="text-center">
           <h3 className="text-4xl">ADX</h3>
           <p className="max-w-[400px] font-kavivanar">
             Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50% leverage.
+            inner degen with up to 50x leverage.
           </p>
         </div>
 
@@ -122,7 +99,7 @@ export default function Home() {
           <h3 className="text-4xl">ALP</h3>
           <p className="max-w-[400px] font-kavivanar">
             Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50% leverage.
+            inner degen with up to 50x leverage.
           </p>
         </div>
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
@@ -131,7 +108,7 @@ export default function Home() {
           <h3 className="text-4xl">Rewards</h3>
           <p className="max-w-[400px] font-kavivanar">
             Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50% leverage.
+            inner degen with up to 50x leverage.
           </p>
         </div>
       </div>
@@ -171,7 +148,7 @@ export default function Home() {
           </Link>
         </div>
         <a href="https://alpha.adrena.xyz/">
-          <button className="p-1 bg-[#4C34A4] w-[100px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300">
+          <button className="p-1 bg-[#4C34A4] w-[100px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-sm">
             TRADE NOW
           </button>
         </a>

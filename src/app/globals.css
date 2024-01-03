@@ -76,7 +76,7 @@ body {
 .lottie-svg-class {
   position: absolute !important;
   height: 100% !important;
-  transform: scale(1.2) !important;
+  transform: scale(1.1) !important;
   width: 100% !important;
   z-index: -1 !important;
   animation: fadeIn 0.5s 1s ease both;
@@ -106,11 +106,14 @@ body {
   }
 }
 
-@media (min-width: 1500px) {
+@media (max-width: 1500px) {
   .lottie-svg-class {
-    transform: scale(1) !important;
+    transform: scale(1.2) !important;
   }
+}
 
+
+@media (min-width: 1500px) {
   .seperator__top {
     bottom: -50px;
   }
@@ -128,7 +131,6 @@ body {
     width: 100%;
   }
 }
-
 .fade-in {
   animation: fadeIn 0.3s 0.5s ease both;
   -webkit-animation: fadeIn 0.3s 0.5s ease both;
@@ -169,4 +171,3 @@ body {
     color: 0.25;
   }
 }
-
