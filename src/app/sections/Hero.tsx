@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import sepImg from '../assets/line.png';
 
 import Image from 'next/image';
 
 import { useRive, Layout, Fit } from '@rive-app/react-canvas';
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 
 export default function Hero({
   isLoaded,
@@ -12,7 +13,9 @@ export default function Hero({
   isLoaded: boolean;
   setIsHeaderLoaded: (v: boolean) => void;
 }) {
-  const { canvas, rive, RiveComponent } = useRive({
+  const isBigScreen = useBetterMediaQuery('(min-width: 500px)');
+
+  const { RiveComponent } = useRive({
     src: 'topMonsterMouse.riv',
     autoplay: true,
     stateMachines: 'State Machine 1',
@@ -36,6 +39,8 @@ export default function Hero({
             opacity: isLoaded ? '1' : '0',
             transition: 'opacity 0.3s 0.5s',
             filter: 'drop-shadow(0px 0px 40px #000)',
+            // remove event listeners
+            pointerEvents: !isBigScreen ? 'none' : 'all',
           }}
         >
           <RiveComponent className="absolute w-full h-full" />
