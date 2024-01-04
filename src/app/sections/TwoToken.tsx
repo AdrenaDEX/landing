@@ -27,7 +27,7 @@ export default function TwoToken({
   });
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="relative w-full h-[100vh] flex items-center px-10">
         <div
           style={{
@@ -41,7 +41,7 @@ export default function TwoToken({
         >
           <RiveComponent className="absolute w-full h-full" />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3  z-10">
           <div>
             <h2 className="text-6xl mb-3 font-openbrush">Our 2-token model</h2>
             <p className="mb-3 max-w-[600px] font-kavivanar">
