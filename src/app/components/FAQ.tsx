@@ -40,14 +40,14 @@ export default function FAQ() {
       <Image
         src={monsterPillarImg}
         alt="seperator"
-        className="hidden sm:block absolute top-[-50px] right-0 z-[-1] w-[500px] "
+        className="hidden sm:block absolute top-[-50px] right-0 z-[-1] w-[200px] "
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
       <Image
         src={monsterPillarImg}
         alt="seperator"
-        className="absolute rotate-180 left-0 bottom-[-150px] z-[-1] w-[400px] "
+        className="absolute rotate-180 left-0 bottom-[-150px] z-[-1] w-[300px] "
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
@@ -57,8 +57,9 @@ export default function FAQ() {
           {FAQs.map((faq, i) => (
             <div
               className={twMerge(
-                'p-3 rounded-md w-full cursor-pointer hover:opacity-50 transition-opacity duration-300',
+                'p-3 w-full cursor-pointer hover:opacity-50 transition-opacity duration-300',
                 activeQ === i && 'hover:opacity-100',
+                i !== FAQs.length - 1 && 'border-b border-b-white/10',
               )}
               onClick={() => setActiveQ(activeQ === i ? null : i)}
               key={i}
