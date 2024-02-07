@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
-import { DotLottiePlayer, PlayerEvents } from '@dotlottie/react-player';
+import React from 'react';
 
 import sepImg from '../assets/line.png';
-import monsterImg from '../assets/mid-monster.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
-import { MidAnimation } from '../components/MidAnimation';
-import { Alignment, Fit, Layout, useRive } from '@rive-app/react-canvas';
+import {useRive } from '@rive-app/react-canvas';
+import Button from '../components/Button';
 
 export default function Community({
   isLoaded,
@@ -15,7 +13,7 @@ export default function Community({
   isLoaded: boolean;
   setIsMidLoaded: (v: boolean) => void;
 }) {
-  const { rive, RiveComponent } = useRive(
+  const { RiveComponent } = useRive(
     {
       src: 'midMonster.riv',
       autoplay: true,
@@ -52,11 +50,7 @@ export default function Community({
               functions. This is the people&apos;s perp DEX.
             </p>
           </div>
-          <a href="https://alpha.adrena.xyz/">
-            <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar shadow-xl hover:opacity-75 transition-opacity duration-300 rounded-sm">
-              TRADE NOW
-            </button>
-          </a>
+         <Button />
         </div>
       </div>
       {isLoaded && (
@@ -67,11 +61,7 @@ export default function Community({
             className="absolute seperator seperator__community__top fade-in-3 z-20"
             style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
           />
-          {/* <Image
-            src={sepImg}
-            alt="seperator"
-            className="absolute seperator seperator__top fade-in-3 hidden sm:block"
-          /> */}
+       
         </>
       )}
     </div>

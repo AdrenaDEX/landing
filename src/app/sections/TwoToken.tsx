@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import sepImg from '../assets/line.png';
-import btmImg from '../assets/bottom-monster.png';
 import Image from 'next/image';
-import { DotLottiePlayer, PlayerEvents } from '@dotlottie/react-player';
-import { twMerge } from 'tailwind-merge';
 import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
+import Button from '../components/Button';
 
 export default function TwoToken({
   isLoaded,
@@ -14,7 +12,7 @@ export default function TwoToken({
   isLoaded: boolean;
   setIsBtmLoaded: (v: boolean) => void;
 }) {
-  const { rive, RiveComponent } = useRive({
+  const { RiveComponent } = useRive({
     src: 'btmMonster.riv',
     autoplay: true,
     onLoad: () => {
@@ -27,7 +25,7 @@ export default function TwoToken({
   });
 
   return (
-    <div className="relative ">
+    <div className="relative">
       <div className="relative w-full h-[100vh] flex items-center px-10">
         <div
           style={{
@@ -41,7 +39,7 @@ export default function TwoToken({
         >
           <RiveComponent className="absolute w-full h-full" />
         </div>
-        <div className="flex flex-col gap-3  z-10">
+        <div className="flex flex-col gap-3 z-10">
           <div>
             <h2 className="text-6xl mb-3 font-openbrush">Our 2-token model</h2>
             <p className="mb-3 max-w-[600px] font-kavivanar">
@@ -59,11 +57,7 @@ export default function TwoToken({
               which rewards ALL participants of the platform.
             </p>
           </div>
-          <a href="https://alpha.adrena.xyz/">
-            <button className="p-3 bg-[#EA34A9] w-[200px] font-kavivanar shadow-xl hover:opacity-75 transition-opacity duration-300 rounded-sm">
-              TRADE NOW
-            </button>
-          </a>
+          <Button />
         </div>
       </div>
       {isLoaded && (

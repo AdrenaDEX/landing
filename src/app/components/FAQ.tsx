@@ -9,24 +9,34 @@ export default function FAQ() {
 
   const FAQs = [
     {
-      question: 'Do you have whitepaper or gitbook?',
-      answer:
-        'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
-    },
-    {
       question: 'What are your trading fees?',
       answer:
         'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
     },
     {
-      question: 'What differentiates you from other competitors like GMX ?',
+      question: 'Are Liquidity Provider fees included in the quoted price?',
+      answer:
+        'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
+    },
+    {
+      question: 'My swap fails, reporting a slippage error. What should I do?',
+      answer:
+        'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
+    },
+    {
+      question: 'What does rent for accounts mean?',
+      answer:
+        'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
+    },
+    {
+      question: 'Do you have whitepaper or gitbook?',
       answer:
         'Increase your winnings without increasing your bankroll Unleash our inner degen with up to 50% leverage.',
     },
   ];
 
   return (
-    <div className="relative flex flex-col items-center justify-center p-4 min-h-[75vh] overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center p-4 min-h-[75vh]">
       <Image
         src={monsterPillarImg}
         alt="seperator"
@@ -43,10 +53,13 @@ export default function FAQ() {
 
       <div>
         <h2 className="text-6xl mb-6">FAQ</h2>
-        <div className="flex flex-col gap-6 w-full max-w-[500px]">
+        <div className="flex flex-col gap-6 w-full max-w-[700px] border border-white/10 p-5 bg-[#2F0E43]/50 backdrop-blur-md rounded-2xl">
           {FAQs.map((faq, i) => (
             <div
-              className="p-3 border border-white/25 rounded-md w-full cursor-pointer bg-[#2F0E43]/50 backdrop-blur-2xl"
+              className={twMerge(
+                'p-3 rounded-md w-full cursor-pointer hover:opacity-50 transition-opacity duration-300',
+                activeQ === i && 'hover:opacity-100',
+              )}
               onClick={() => setActiveQ(activeQ === i ? null : i)}
               key={i}
             >
@@ -59,7 +72,7 @@ export default function FAQ() {
                   height={16}
                   className={twMerge(
                     activeQ === i && 'rotate-180',
-                    'transition duration-300',
+                    'transition duration-300 ml-3',
                   )}
                 />
               </div>

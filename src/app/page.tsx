@@ -15,13 +15,27 @@ import twitterLogo from './assets/twitter.svg';
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Button from './components/Button';
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
 
-  const isLoaded = isHeaderLoaded
+  const isLoaded = isHeaderLoaded;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // no scroll during loading
+  useEffect(() => {
+    if (isLoaded) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [isLoaded]);
 
   return (
     <>
@@ -29,11 +43,7 @@ export default function Home() {
         <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in">
           <p className="font-specialmonster text-2xl mr-5 font-light">Adrena</p>
 
-          <a href="https://alpha.adrena.xyz/">
-            <button className="p-1 sm:p-3 bg-[#4C34A4] w-[100px] sm:w-[200px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-sm">
-              TRADE NOW
-            </button>
-          </a>
+          <Button className="p-2 w-[125px] sm:w-[175px] text-sm" />
         </div>
       )}
 
@@ -88,8 +98,10 @@ export default function Home() {
         <div className="text-center">
           <h3 className="text-4xl">ADX</h3>
           <p className="max-w-[400px] font-kavivanar">
-            Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50x leverage.
+            Designed to foster community engagement and decentralized
+            decision-making, ADX holders have the opportunity to shape the
+            direction of the platform through governance proposals and voting
+            mechanisms.
           </p>
         </div>
 
@@ -98,8 +110,9 @@ export default function Home() {
         <div className="text-center">
           <h3 className="text-4xl">ALP</h3>
           <p className="max-w-[400px] font-kavivanar">
-            Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50x leverage.
+            ALP Token, short for Adrena Liquidity Protocol Token, is the
+            cornerstone of a revolutionary ecosystem designed to empower
+            individuals in their financial endeavors.
           </p>
         </div>
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
@@ -107,8 +120,8 @@ export default function Home() {
         <div className="text-center">
           <h3 className="text-4xl">Rewards</h3>
           <p className="max-w-[400px] font-kavivanar">
-            Increase your winnings without increasing your bankroll Unleash our
-            inner degen with up to 50x leverage.
+            Adrena ecosystem offers a diverse range of opportunities for earning
+            rewards and shaping the future of finance.
           </p>
         </div>
       </div>
@@ -121,8 +134,8 @@ export default function Home() {
 
       <FAQ />
 
-      <footer className="flex flex-row gap-3 justify-between p-3 border-t border-black items-center ">
-        <p className="font-specialmonster">Adrena</p>
+      <footer className="flex flex-row gap-3 justify-center p-3 items-center ">
+        {/* <p className="font-specialmonster">Adrena</p> */}
         <div className="flex flex-row gap-6 justify-center items-center">
           <Link
             href="https://github.com/orgs/AdrenaDEX/repositories"
@@ -147,11 +160,11 @@ export default function Home() {
             />
           </Link>
         </div>
-        <a href="https://alpha.adrena.xyz/">
-          <button className="p-1 bg-[#4C34A4] w-[100px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-sm">
+        {/* <a href="https://alpha.adrena.xyz/">
+          <button className="p-1 bg-[#4C34A4] w-[100px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-full">
             TRADE NOW
           </button>
-        </a>
+        </a> */}
       </footer>
     </>
   );
