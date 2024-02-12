@@ -53,7 +53,7 @@ export default function Hero({
             <p className="text-2xl  max-w-[400px] font-kavivanar font-light">
               Trade at the speed of light with up to 50x leverage
             </p>
-           <Button />
+            <Button />
           </div>
         ) : (
           <div className="absolute w-full h-full flex flex-col gap-5 justify-center text-center items-center fade-in z-30">
@@ -71,6 +71,8 @@ export default function Hero({
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         />
       )}
+      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
     </div>
   );
 }

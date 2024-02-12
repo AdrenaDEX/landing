@@ -3,7 +3,7 @@ import React from 'react';
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
-import {useRive } from '@rive-app/react-canvas';
+import { useRive } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 
 export default function Community({
@@ -36,7 +36,7 @@ export default function Community({
           <RiveComponent className="absolute w-full h-full" />
         </div>
 
-        <div className={twMerge('flex flex-col gap-3 ] sm:mt-0 z-10 px-10')}>
+        <div className={twMerge('flex flex-col gap-3 ] sm:mt-0 z-10 px-10 z-30')}>
           <div className="max-w-[600px]">
             <h2 className="text-6xl mb-3 ">Community owned</h2>
 
@@ -50,7 +50,7 @@ export default function Community({
               functions. This is the people&apos;s perp DEX.
             </p>
           </div>
-         <Button />
+          <Button />
         </div>
       </div>
       {isLoaded && (
@@ -61,9 +61,10 @@ export default function Community({
             className="absolute seperator seperator__community__top fade-in-3 z-20"
             style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
           />
-       
         </>
       )}
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
     </div>
   );
 }

@@ -66,7 +66,20 @@ body {
 body {
   background-color: #330c45;
   color: white;
-  
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+
+/* show gradient__control for screens bigger than 2000px */
+.gradient__control {
+  display: none;
+}
+
+@media (min-width: 2000px) {
+  .gradient__control {
+    display: block;
+  }
 }
 
 .animation {
@@ -92,6 +105,7 @@ body {
 .seperator__top {
   bottom: -20px;
 }
+
 
 .seperator__community__top {
   top: -30px;

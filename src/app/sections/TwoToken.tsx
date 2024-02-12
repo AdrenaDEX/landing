@@ -68,6 +68,8 @@ export default function TwoToken({
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         />
       )}
+      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
     </div>
   );
 }
