@@ -40,14 +40,14 @@ export default function FAQ() {
       <Image
         src={monsterPillarImg}
         alt="seperator"
-        className="hidden sm:block absolute top-[-50px] right-0 z-[-1] w-[200px] "
+        className="absolute top-0 sm:top-[-25px] right-0 z-[-1] w-[200px] "
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
       <Image
         src={monsterPillarImg}
         alt="seperator"
-        className="absolute rotate-180 left-0 bottom-[-150px] z-[-1] w-[300px] "
+        className="hidden sm:block absolute rotate-180 left-0 bottom-[-150px] z-[-1] w-[300px] "
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
