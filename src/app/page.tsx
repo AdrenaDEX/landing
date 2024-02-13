@@ -30,17 +30,17 @@ export default function Home() {
 
   // no scroll during loading
   useEffect(() => {
-    if (isLoaded) {
-      document.body.style.overflow = 'hidden';
+    if (!isLoaded) {
+      document.documentElement.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto';
+      document.documentElement.style.overflow = 'unset';
     }
   }, [isLoaded]);
 
   return (
     <>
       {isLoaded && (
-        <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in">
+        <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in max-w-[2000px] m-auto">
           <p className="font-specialmonster text-2xl mr-5 font-light">Adrena</p>
 
           <Button className="p-2 w-[125px] sm:w-[175px] text-sm" />
