@@ -52,7 +52,7 @@ export default function Home() {
       <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
       <div className="flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">INSTANT EXECUTION</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -62,9 +62,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
+        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">50X LEVERAGE</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -74,9 +74,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
+        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">EARN REAL YIELD</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -100,7 +100,7 @@ export default function Home() {
       <TwoToken setIsBtmLoaded={setIsBtmLoaded} isLoaded={isLoaded} />
 
       <div className="relative flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">ADX</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -113,7 +113,7 @@ export default function Home() {
 
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">ALP</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -124,7 +124,7 @@ export default function Home() {
         </div>
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">Rewards</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">

@@ -53,7 +53,7 @@ export default function FAQ() {
 
       <div className="flex flex-col items-center mt-14">
         <h2 className="text-6xl mb-12">FAQ</h2>
-        <div className="flex flex-col gap-6 w-full max-w-[700px] border border-white/10 p-5 bg-[#2F0E43]/50 backdrop-blur-md rounded-2xl">
+        <div className="flex flex-col gap-6 w-full max-w-[700px] border border-white/10 p-5 backdrop-blur-md rounded-2xl">
           {FAQs.map((faq, i) => (
             <div
               className={twMerge(

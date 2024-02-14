@@ -28,7 +28,7 @@ export default function Community({
 
   return (
     <div className="relative z-10">
-      <div className="relative w-full h-[100vh] flex items-center">
+      <div className="relative w-full h-[90vh] sm:h-[100vh] flex items-center">
         <div
           className="absolute sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
@@ -37,10 +37,10 @@ export default function Community({
         </div>
 
         <div className={twMerge('flex flex-col px-10 z-30')}>
-          <div className="absolute bottom-[8%] 2xl:bottom-[18%] left-[7%] 2xl:left-[10%] w-[30%] xl:w-[40%] min-w-[400px] text-justify">
-            <h1 className="">Community owned</h1>
+          <div className="absolute bottom-[8%] md:bottom-[3%] 2xl:bottom-[8] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
+            <h1 className="text-center sm:text-left">Community owned</h1>
 
-            <p className="mt-8 2xl:text-[1.3em]">
+            <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
               Adrena was crafted with with one thing in mind... build a DeFi
               project that gives all of It&apos;s value to the community. This
               is something that Solana has lacked and Adrena aims to change the
@@ -50,7 +50,7 @@ export default function Community({
               functions. This is the people&apos;s perp DEX.
             </p>
 
-            <Button className="mt-10" />
+            <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
           </div>
         </div>
       </div>

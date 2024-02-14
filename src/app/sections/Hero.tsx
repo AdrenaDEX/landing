@@ -51,7 +51,10 @@ export default function Hero({
           {isLoaded && (
             <div className="flex flex-col gap-5 justify-center text-center items-center fade-in z-10">
               <h2 className="text-[120px] mb-5 font-light">Adrena</h2>
-              <p className="text-2xl  max-w-[400px] font-kavivanar font-light">
+
+              <div className="hidden md:block h-[2px] w-1/2 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
+
+              <p className="text-2xl  max-w-[400px]">
                 Trade at the speed of light with up to 50x leverage
               </p>
               <Button />

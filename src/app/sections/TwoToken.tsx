@@ -40,18 +40,18 @@ export default function TwoToken({
           <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
         </div>
 
-        <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[30%] xl:w-[40%] min-w-[400px]">
+        <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
           <div>
-            <h1 className="mb-3">Our 2-token model</h1>
+            <h1 className="mb-3 text-center sm:text-left">Our 2-token model</h1>
 
-            <p className="mt-8 text-justify 2xl:text-[1.3em]">
+            <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
               Building upon the 2-token model system used by perps dex innovator
               GMX, we&apos;ve taken their token structure to the next level,
               providing token holders with the as much control and value
               possible to help shape Adrena long term.
             </p>
 
-            <p className="mt-2 text-justify 2xl:text-[1.3em]">
+            <p className="mt-2 2xl:text-[1.3em] text-center sm:text-justify">
               Our governance and utility token, ADX, accrues 30% of the
               platform&apos;s generated fees. ALP is the liquidity provider
               token that accrues 70% of the platform&apos;s generated fees. All
@@ -60,7 +60,7 @@ export default function TwoToken({
             </p>
           </div>
 
-          <Button className="mt-10" />
+          <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
         </div>
       </div>
 

@@ -65,7 +65,7 @@ html {
 
 body {
   overflow: hidden;
-  background-color: #330c45;
+  background-color: #16293d;
   color: white;
   max-width: 2000px;
   margin: 0 auto;
@@ -144,6 +144,7 @@ body {
     width: 100%;
   }
 }
+
 .fade-in {
   animation: fadeIn 0.3s 0.5s ease both;
   -webkit-animation: fadeIn 0.3s 0.5s ease both;
@@ -182,5 +183,11 @@ body {
   }
   100% {
     color: 0.25;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 0.7em;
   }
 }
