@@ -31,9 +31,9 @@ export default function Home() {
   // no scroll during loading
   useEffect(() => {
     if (!isLoaded) {
-      document.documentElement.style.overflow = 'hidden';
+      document.documentElement.style.overflowY = 'hidden';
     } else {
-      document.documentElement.style.overflow = 'unset';
+      document.documentElement.style.overflowY = 'auto';
     }
   }, [isLoaded]);
 
