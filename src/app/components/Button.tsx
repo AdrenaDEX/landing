@@ -6,7 +6,7 @@ export default function Button({ className }: { className?: string }) {
     <a href="https://alpha.adrena.xyz/">
       <button
         className={twMerge(
-          'relative group flex flex-row item-center justify-center p-3 bg-[#4C34A4] hover:bg-[#432d87] border border-[#4C34A4] transition-all duration-300 w-[200px] shadow-xl hover:shadow-none font-kavivanar font-bold rounded-full',
+          'relative group flex flex-row item-center justify-center p-3 bg-[#4C34A4] hover:bg-[#432d87] border border-[#4C34A4] transition-all duration-300 w-[200px] shadow-xl hover:shadow-none font-bold rounded-full',
           className,
         )}
       >

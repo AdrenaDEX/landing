@@ -22,7 +22,7 @@ export default function Home() {
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
 
-  const isLoaded = isHeaderLoaded;
+  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,7 +41,9 @@ export default function Home() {
     <>
       {isLoaded && (
         <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in max-w-[2000px] m-auto">
-          <p className="font-specialmonster text-2xl mr-5 font-light">Adrena</p>
+          <p className="font-specialmonster text-2xl mr-5 tracking-normal">
+            Adrena
+          </p>
 
           <Button className="p-2 w-[125px] sm:w-[175px] text-sm" />
         </div>
@@ -49,10 +51,11 @@ export default function Home() {
 
       <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
-      <div className="flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
+      <div className="flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
         <div className="text-center">
-          <h3 className="text-4xl">INSTANT EXECUTION</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">INSTANT EXECUTION</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Unleash the raw power of Solana with trades that execute in
             miliseconds with NEAR ZERO gas fees. Get the trading experience of a
             CEX with the resillence and reilability of a DEX.
@@ -62,8 +65,9 @@ export default function Home() {
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
         <div className="text-center">
-          <h3 className="text-4xl">50X LEVERAGE</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">50X LEVERAGE</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Long and short your favorite cryptocurrencies with up to 50x
             leverage while maintaining 100% self custody and control of your
             assets... Not your keys, not your coins!
@@ -73,8 +77,9 @@ export default function Home() {
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
         <div className="text-center">
-          <h3 className="text-4xl">EARN REAL YIELD</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">EARN REAL YIELD</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Adrena is focused on actual financial inclu-sion. 100% of the
             revenue generated is passed through to token holders, liqudity
             providers, and users of the platform.
@@ -94,10 +99,11 @@ export default function Home() {
 
       <TwoToken setIsBtmLoaded={setIsBtmLoaded} isLoaded={isLoaded} />
 
-      <div className="relative flex flex-col md:flex-row gap-10 items-center justify-center my-[100px] px-7">
+      <div className="relative flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
         <div className="text-center">
-          <h3 className="text-4xl">ADX</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">ADX</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Designed to foster community engagement and decentralized
             decision-making, ADX holders have the opportunity to shape the
             direction of the platform through governance proposals and voting
@@ -108,8 +114,9 @@ export default function Home() {
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
         <div className="text-center">
-          <h3 className="text-4xl">ALP</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">ALP</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             ALP Token, short for Adrena Liquidity Protocol Token, is the
             cornerstone of a revolutionary ecosystem designed to empower
             individuals in their financial endeavors.
@@ -118,8 +125,9 @@ export default function Home() {
         <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
 
         <div className="text-center">
-          <h3 className="text-4xl">Rewards</h3>
-          <p className="max-w-[400px] font-kavivanar">
+          <h2 className="mb-4">Rewards</h2>
+
+          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Adrena ecosystem offers a diverse range of opportunities for earning
             rewards and shaping the future of finance.
           </p>
@@ -161,7 +169,7 @@ export default function Home() {
           </Link>
         </div>
         {/* <a href="https://alpha.adrena.xyz/">
-          <button className="p-1 bg-[#4C34A4] w-[100px] font-kavivanar text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-full">
+          <button className="p-1 bg-[#4C34A4] w-[100px] text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-full">
             TRADE NOW
           </button>
         </a> */}

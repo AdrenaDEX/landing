@@ -33,14 +33,14 @@ export default function Community({
           className="absolute sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          <RiveComponent className="absolute w-full h-full" />
+          <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
         </div>
 
-        <div className={twMerge('flex flex-col gap-3 ] sm:mt-0 z-10 px-10 z-30')}>
-          <div className="max-w-[600px]">
-            <h2 className="text-6xl mb-3 ">Community owned</h2>
+        <div className={twMerge('flex flex-col px-10 z-30')}>
+          <div className="absolute bottom-[8%] 2xl:bottom-[18%] left-[7%] 2xl:left-[10%] w-[30%] xl:w-[40%] min-w-[400px] text-justify">
+            <h1 className="">Community owned</h1>
 
-            <p className="mb-3 font-kavivanar">
+            <p className="mt-8 2xl:text-[1.3em]">
               Adrena was crafted with with one thing in mind... build a DeFi
               project that gives all of It&apos;s value to the community. This
               is something that Solana has lacked and Adrena aims to change the
@@ -49,10 +49,12 @@ export default function Community({
               holders and users are the ones who decide what is built and how it
               functions. This is the people&apos;s perp DEX.
             </p>
+
+            <Button className="mt-10" />
           </div>
-          <Button />
         </div>
       </div>
+
       {isLoaded && (
         <>
           <Image
@@ -63,6 +65,7 @@ export default function Community({
           />
         </>
       )}
+
       <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
       <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
     </div>

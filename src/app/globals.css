@@ -23,53 +23,53 @@
   }
 
   @font-face {
-    font-family: kavivanar;
-    src: url('/fonts/Kavivanar-Regular.ttf');
-  }
-
-  @font-face {
-    font-family: openbrush;
-    src: url('/fonts/OpenBrush.ttf');
+    font-family: regulartext;
+    src: url('/fonts/Louis George Cafe.ttf');
   }
 
   h1 {
-    @apply text-4xl;
-
-    @apply font-openbrush;
+    @apply text-6xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h2 {
-    @apply text-2xl;
-
-    @apply font-openbrush;
+    @apply text-3xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h3 {
-    @apply text-xl;
-
-    @apply font-openbrush;
+    @apply text-2xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
+  }
 
-    @apply font-openbrush;
+  p,
+  div,
+  span {
+    @apply font-regulartext;
   }
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
   overscroll-behavior-y: none;
 }
 
 body {
+  overflow: hidden;
   background-color: #330c45;
   color: white;
   max-width: 2000px;
   margin: 0 auto;
 }
-
 
 /* show gradient__control for screens bigger than 2000px */
 .gradient__control {
@@ -106,7 +106,6 @@ body {
   bottom: -20px;
 }
 
-
 .seperator__community__top {
   top: -30px;
 }
@@ -126,7 +125,6 @@ body {
     transform: scale(1.2) !important;
   }
 }
-
 
 @media (min-width: 1500px) {
   .seperator__top {

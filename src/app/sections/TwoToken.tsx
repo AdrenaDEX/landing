@@ -37,19 +37,21 @@ export default function TwoToken({
             filter: 'drop-shadow(0px 0px 40px #000)',
           }}
         >
-          <RiveComponent className="absolute w-full h-full" />
+          <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
         </div>
-        <div className="flex flex-col gap-3 z-10">
+
+        <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[30%] xl:w-[40%] min-w-[400px]">
           <div>
-            <h2 className="text-6xl mb-3 font-openbrush">Our 2-token model</h2>
-            <p className="mb-3 max-w-[600px] font-kavivanar">
+            <h1 className="mb-3">Our 2-token model</h1>
+
+            <p className="mt-8 text-justify 2xl:text-[1.3em]">
               Building upon the 2-token model system used by perps dex innovator
               GMX, we&apos;ve taken their token structure to the next level,
               providing token holders with the as much control and value
               possible to help shape Adrena long term.
             </p>
 
-            <p className="mb-3 max-w-[600px] font-kavivanar">
+            <p className="mt-2 text-justify 2xl:text-[1.3em]">
               Our governance and utility token, ADX, accrues 30% of the
               platform&apos;s generated fees. ALP is the liquidity provider
               token that accrues 70% of the platform&apos;s generated fees. All
@@ -57,9 +59,11 @@ export default function TwoToken({
               which rewards ALL participants of the platform.
             </p>
           </div>
-          <Button />
+
+          <Button className="mt-10" />
         </div>
       </div>
+
       {isLoaded && (
         <Image
           src={sepImg}
@@ -68,6 +72,7 @@ export default function TwoToken({
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         />
       )}
+
       <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
       <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
     </div>
