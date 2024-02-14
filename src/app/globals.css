@@ -187,8 +187,30 @@ body {
   }
 }
 
+/* Shrink the whole screen when in mobile resolution */
 @media (max-width: 500px) {
   html {
     font-size: 0.7em;
   }
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #16293d;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #16293d; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */
+  border: 3px solid #16293d; /* creates padding around scroll thumb */
 }
