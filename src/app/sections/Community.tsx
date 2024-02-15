@@ -41,9 +41,9 @@ export default function Community({
             <h1 className="text-center sm:text-left">Community owned</h1>
 
             <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
-              Adrena was crafted with with one thing in mind... build a DeFi
-              project that gives all of It&apos;s value to the community. This
-              is something that Solana has lacked and Adrena aims to change the
+              Adrena was crafted with one thing in mind... build a DeFi project
+              that gives all of It&apos;s value to the community. This is
+              something that Solana has lacked and Adrena aims to change the
               narrative. It was built as an open-source, on-chain, unstoppable
               application that anyone can interact with and bulld upon. Token
               holders and users are the ones who decide what is built and how it

@@ -47,8 +47,8 @@ export default function TwoToken({
             <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
               Building upon the 2-token model system used by perps dex innovator
               GMX, we&apos;ve taken their token structure to the next level,
-              providing token holders with the as much control and value
-              possible to help shape Adrena long term.
+              providing token holders with as much control and value as possible
+              to help shape Adrena long term.
             </p>
 
             <p className="mt-2 2xl:text-[1.3em] text-center sm:text-justify">

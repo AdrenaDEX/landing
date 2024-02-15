@@ -57,7 +57,7 @@ export default function Home() {
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Unleash the raw power of Solana with trades that execute in
             miliseconds with NEAR ZERO gas fees. Get the trading experience of a
-            CEX with the resillence and reilability of a DEX.
+            CEX with the resillence and reliability of a DEX.
           </p>
         </div>
 
@@ -79,9 +79,9 @@ export default function Home() {
           <h2 className="mb-4">EARN REAL YIELD</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-            Adrena is focused on actual financial inclu-sion. 100% of the
-            revenue generated is passed through to token holders, liqudity
-            providers, and users of the platform.
+            Adrena is focused on actual financial inclusion. 100% of the revenue
+            generated is passed through to token holders, liquidity providers,
+            and users of the platform.
           </p>
         </div>
       </div>
