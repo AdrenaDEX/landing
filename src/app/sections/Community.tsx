@@ -28,31 +28,33 @@ export default function Community({
 
   return (
     <div className="relative z-10">
-      <div className="relative w-full h-[100vh] flex items-center">
+      <div className="relative w-full h-[90vh] sm:h-[100vh] flex items-center">
         <div
           className="absolute sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          <RiveComponent className="absolute w-full h-full" />
+          <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
         </div>
 
-        <div className={twMerge('flex flex-col gap-3 ] sm:mt-0 z-10 px-10 z-30')}>
-          <div className="max-w-[600px]">
-            <h2 className="text-6xl mb-3 ">Community owned</h2>
+        <div className={twMerge('flex flex-col px-10 z-30')}>
+          <div className="absolute bottom-[8%] md:bottom-[3%] 2xl:bottom-[8] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
+            <h1 className="text-center sm:text-left">Community owned</h1>
 
-            <p className="mb-3 font-kavivanar">
-              Adrena was crafted with with one thing in mind... build a DeFi
-              project that gives all of It&apos;s value to the community. This
-              is something that Solana has lacked and Adrena aims to change the
+            <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
+              Adrena was crafted with one thing in mind... build a DeFi project
+              that gives all of It&apos;s value to the community. This is
+              something that Solana has lacked and Adrena aims to change the
               narrative. It was built as an open-source, on-chain, unstoppable
-              application that anyone can interact with and bulld upon. Token
+              application that anyone can interact with and build upon. Token
               holders and users are the ones who decide what is built and how it
               functions. This is the people&apos;s perp DEX.
             </p>
+
+            <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
           </div>
-          <Button />
         </div>
       </div>
+
       {isLoaded && (
         <>
           <Image
@@ -63,8 +65,9 @@ export default function Community({
           />
         </>
       )}
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
+
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -15,11 +15,10 @@ const config: Config = {
       },
       fontFamily: {
         specialmonster: ['specialmonster'],
-        openbrush: ['openbrush'],
-        kavivanar: ['kavivanar'],
+        regulartext: ['regulartext'],
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;

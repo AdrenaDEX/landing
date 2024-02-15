@@ -23,53 +23,54 @@
   }
 
   @font-face {
-    font-family: kavivanar;
-    src: url('/fonts/Kavivanar-Regular.ttf');
-  }
-
-  @font-face {
-    font-family: openbrush;
-    src: url('/fonts/OpenBrush.ttf');
+    font-family: regulartext;
+    src: url('/fonts/Louis George Cafe.ttf');
   }
 
   h1 {
-    @apply text-4xl;
-
-    @apply font-openbrush;
+    @apply text-6xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h2 {
-    @apply text-2xl;
-
-    @apply font-openbrush;
+    @apply text-3xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h3 {
-    @apply text-xl;
-
-    @apply font-openbrush;
+    @apply text-2xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
   }
 
   h4 {
-    @apply text-lg;
+    @apply text-xl;
+    @apply font-specialmonster;
+    letter-spacing: 0.1em;
+  }
 
-    @apply font-openbrush;
+  p,
+  div,
+  span {
+    @apply font-regulartext;
   }
 }
 
-html,
-body {
+html {
   overflow-x: hidden;
   overscroll-behavior-y: none;
+  overflow: auto;
 }
 
 body {
-  background-color: #330c45;
+  overflow: hidden;
+  background-color: #16293d;
   color: white;
   max-width: 2000px;
   margin: 0 auto;
 }
-
 
 /* show gradient__control for screens bigger than 2000px */
 .gradient__control {
@@ -106,7 +107,6 @@ body {
   bottom: -20px;
 }
 
-
 .seperator__community__top {
   top: -30px;
 }
@@ -127,7 +127,6 @@ body {
   }
 }
 
-
 @media (min-width: 1500px) {
   .seperator__top {
     bottom: -50px;
@@ -146,6 +145,7 @@ body {
     width: 100%;
   }
 }
+
 .fade-in {
   animation: fadeIn 0.3s 0.5s ease both;
   -webkit-animation: fadeIn 0.3s 0.5s ease both;
@@ -185,4 +185,32 @@ body {
   100% {
     color: 0.25;
   }
+}
+
+/* Shrink the whole screen when in mobile resolution */
+@media (max-width: 500px) {
+  html {
+    font-size: 0.7em;
+  }
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ffffff #16293d;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #16293d; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */
+  border: 3px solid #16293d; /* creates padding around scroll thumb */
 }

@@ -36,7 +36,7 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="relative flex flex-col items-center justify-center p-4 min-h-[75vh]">
+    <div className="relative flex flex-col items-center p-4 min-h-[75vh]">
       <Image
         src={monsterPillarImg}
         alt="seperator"
@@ -51,9 +51,9 @@ export default function FAQ() {
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
-      <div>
-        <h2 className="text-6xl mb-6">FAQ</h2>
-        <div className="flex flex-col gap-6 w-full max-w-[700px] border border-white/10 p-5 bg-[#2F0E43]/50 backdrop-blur-md rounded-2xl">
+      <div className="flex flex-col items-center mt-14">
+        <h2 className="text-6xl mb-12">FAQ</h2>
+        <div className="flex flex-col gap-6 w-full max-w-[700px] border border-white/10 p-5 backdrop-blur-md rounded-2xl">
           {FAQs.map((faq, i) => (
             <div
               className={twMerge(
@@ -65,7 +65,7 @@ export default function FAQ() {
               key={i}
             >
               <div className="flex flex-row justify-between">
-                <p className="font-medium font-kavivanar">{faq.question}</p>
+                <p className="font-medium">{faq.question}</p>
                 <Image
                   src={chevron}
                   alt="chevron"
@@ -81,7 +81,7 @@ export default function FAQ() {
               <p
                 className={twMerge(
                   activeQ === i ? 'block' : 'hidden',
-                  'opacity-75 text-sm mt-2 max-w-[400px] font-kavivanar',
+                  'opacity-75 text-sm mt-2 max-w-[400px]',
                 )}
               >
                 {faq.answer}
@@ -90,8 +90,8 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-      <div className="absolute w-1/4 h-[150%] top-[-200px] left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
-      <div className="absolute w-1/4 h-[150%] top-[-200px] right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[150%] top-[-200px] left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
+      <div className="absolute w-1/4 h-[150%] top-[-200px] right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
     </div>
   );
 }
