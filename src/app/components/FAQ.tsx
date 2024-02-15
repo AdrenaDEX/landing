@@ -90,8 +90,8 @@ export default function FAQ() {
           ))}
         </div>
       </div>
-      <div className="absolute w-1/4 h-[150%] top-[-200px] left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
-      <div className="absolute w-1/4 h-[150%] top-[-200px] right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[150%] top-[-200px] left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
+      <div className="absolute w-1/4 h-[150%] top-[-200px] right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
     </div>
   );
 }

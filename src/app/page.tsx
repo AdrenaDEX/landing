@@ -9,7 +9,6 @@ import TwoToken from './sections/TwoToken';
 
 import diamondImg from './assets/diamond.png';
 import sepImg from './assets/line.png';
-import monsterPillarImg from './assets/trade-monster.png';
 import githubLogo from './assets/github.svg';
 import twitterLogo from './assets/twitter.svg';
 

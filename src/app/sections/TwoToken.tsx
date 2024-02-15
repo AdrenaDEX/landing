@@ -73,8 +73,8 @@ export default function TwoToken({
         />
       )}
 
-      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
-      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
+      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
+      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
     </div>
   );
 }

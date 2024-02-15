@@ -70,13 +70,13 @@ export default function Hero({
             style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
           />
         )}
-        <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#330c45] gradient__control" />
-        <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#330c45] gradient__control" />
+        <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
+        <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
       </div>
 
       {!isLoaded && (
         <div className="absolute w-full h-full top-0 left-0 flex flex-col gap-5 justify-center text-center items-center fade-in z-50">
-          <h2 className="text-[100px] md:text-[164px] mb-5 font-light blinking">
+          <h2 className="text-[7em] mb-5 font-light blinking tracking-normal">
             Adrena
           </h2>
         </div>
