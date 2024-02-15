@@ -111,7 +111,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
+        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
         <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">ALP</h2>
@@ -122,7 +122,8 @@ export default function Home() {
             individuals in their financial endeavors.
           </p>
         </div>
-        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#2E0E42] via-[#4D2158] to-[#2E0E42]" />
+
+        <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
         <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">Rewards</h2>
