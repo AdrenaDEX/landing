@@ -45,7 +45,7 @@ export default function Community({
               that gives all of It&apos;s value to the community. This is
               something that Solana has lacked and Adrena aims to change the
               narrative. It was built as an open-source, on-chain, unstoppable
-              application that anyone can interact with and bulld upon. Token
+              application that anyone can interact with and build upon. Token
               holders and users are the ones who decide what is built and how it
               functions. This is the people&apos;s perp DEX.
             </p>
