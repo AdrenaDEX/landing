@@ -4,6 +4,7 @@ import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import Button from '../components/Button';
+import RiveAnimation from '../components/RiveAnimation';
 
 export default function TwoToken({
   isLoaded,
@@ -12,17 +13,17 @@ export default function TwoToken({
   isLoaded: boolean;
   setIsBtmLoaded: (v: boolean) => void;
 }) {
-  const { RiveComponent } = useRive({
-    src: 'btmMonster.riv',
-    autoplay: true,
-    onLoad: () => {
-      setIsBtmLoaded(true);
-    },
-    layout: new Layout({
-      fit: Fit.FitWidth,
-      alignment: Alignment.BottomRight,
-    }),
-  });
+  // const { RiveComponent } = useRive({
+  //   src: 'btmMonster.riv',
+  //   autoplay: true,
+  //   onLoad: () => {
+  //     setIsBtmLoaded(true);
+  //   },
+  //   layout: new Layout({
+  //     fit: Fit.FitWidth,
+  //     alignment: Alignment.BottomRight,
+  //   }),
+  // });
 
   return (
     <div className="relative">
@@ -37,7 +38,15 @@ export default function TwoToken({
             filter: 'drop-shadow(0px 0px 40px #000)',
           }}
         >
-          <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
+          {/* <RiveComponent className="absolute w-full h-full max-w-7xl right-0" /> */}
+          <RiveAnimation
+              animation="btm-monster"
+              layout={
+                new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
+              }
+              className={'absolute w-full h-full max-w-7xl right-0'}
+              setIsReady={setIsBtmLoaded}
+            />
         </div>
 
         <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">

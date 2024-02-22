@@ -140,7 +140,7 @@ export default function Home() {
         style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
       />
 
-      <FAQ />
+      {/* <FAQ /> */}
 
       <footer className="flex flex-row gap-3 justify-center p-3 items-center ">
         {/* <p className="font-specialmonster">Adrena</p> */}

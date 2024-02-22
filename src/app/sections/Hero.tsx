@@ -3,9 +3,10 @@ import sepImg from '../assets/line.png';
 
 import Image from 'next/image';
 
-import { useRive, Layout, Fit } from '@rive-app/react-canvas';
+import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 import Button from '../components/Button';
+import RiveAnimation from '../components/RiveAnimation';
 
 export default function Hero({
   isLoaded,
@@ -16,18 +17,18 @@ export default function Hero({
 }) {
   const isBigScreen = useBetterMediaQuery('(min-width: 500px)');
 
-  const { RiveComponent } = useRive({
-    src: 'topMonsterMouse.riv',
-    autoplay: true,
-    stateMachines: 'State Machine 1',
-    automaticallyHandleEvents: true,
-    onLoad: () => {
-      setIsHeaderLoaded(true);
-    },
-    layout: new Layout({
-      fit: Fit.Cover,
-    }),
-  });
+  // const { RiveComponent } = useRive({
+  //   src: 'topMonsterMouse.riv',
+  //   autoplay: true,
+  //   stateMachines: 'State Machine 1',
+  //   automaticallyHandleEvents: true,
+  //   onLoad: () => {
+  //     setIsHeaderLoaded(true);
+  //   },
+  //   layout: new Layout({
+  //     fit: Fit.Cover,
+  //   }),
+  // });
 
   return (
     <>
@@ -45,7 +46,17 @@ export default function Hero({
               pointerEvents: !isBigScreen ? 'none' : 'all',
             }}
           >
-            <RiveComponent className="absolute w-full h-full" />
+            {/* <RiveComponent className="absolute w-full h-full" /> */}
+            <RiveAnimation
+              animation="hero-monster"
+              layout={
+                new Layout({ fit: Fit.Cover, alignment: Alignment.Center })
+              }
+              className={'fixed top-0 left-0 w-full h-full'}
+              automaticallyHandleEvents={true}
+              stateMachines = 'State Machine 1'
+              setIsReady={setIsHeaderLoaded}
+            />
           </div>
 
           {isLoaded && (

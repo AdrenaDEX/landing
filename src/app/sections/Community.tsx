@@ -3,8 +3,9 @@ import React from 'react';
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
-import { useRive } from '@rive-app/react-canvas';
+import { Alignment, Fit, Layout, useRive } from '@rive-app/react-canvas';
 import Button from '../components/Button';
+import RiveAnimation from '../components/RiveAnimation';
 
 export default function Community({
   isLoaded,
@@ -13,18 +14,18 @@ export default function Community({
   isLoaded: boolean;
   setIsMidLoaded: (v: boolean) => void;
 }) {
-  const { RiveComponent } = useRive(
-    {
-      src: 'midMonster.riv',
-      autoplay: true,
-      onLoad: () => {
-        setIsMidLoaded(true);
-      },
-    },
-    {
-      fitCanvasToArtboardHeight: true,
-    },
-  );
+  // const { RiveComponent } = useRive(
+  //   {
+  //     src: 'midMonster.riv',
+  //     autoplay: true,
+  //     onLoad: () => {
+  //       setIsMidLoaded(true);
+  //     },
+  //   },
+  //   {
+  //     fitCanvasToArtboardHeight: true,
+  //   },
+  // );
 
   return (
     <div className="relative z-10">
@@ -33,7 +34,15 @@ export default function Community({
           className="absolute sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          <RiveComponent className="absolute w-full h-full max-w-7xl right-0" />
+          {/* <RiveComponent  /> */}
+          <RiveAnimation
+            animation="mid-monster"
+            layout={
+              new Layout({ fit: Fit.Contain, alignment: Alignment.TopRight })
+            }
+            className="absolute w-full h-full max-w-7xl right-0"
+            setIsReady={setIsMidLoaded}
+          />
         </div>
 
         <div className={twMerge('flex flex-col px-10 z-30')}>
