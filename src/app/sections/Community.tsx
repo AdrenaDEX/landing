@@ -3,9 +3,11 @@ import React from 'react';
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
-import { Alignment, Fit, Layout, useRive } from '@rive-app/react-canvas';
+import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
+import midImage from '../../../public/Images/mid-monster.png';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Community({
   isLoaded,
@@ -14,19 +16,6 @@ export default function Community({
   isLoaded: boolean;
   setIsMidLoaded: (v: boolean) => void;
 }) {
-  // const { RiveComponent } = useRive(
-  //   {
-  //     src: 'midMonster.riv',
-  //     autoplay: true,
-  //     onLoad: () => {
-  //       setIsMidLoaded(true);
-  //     },
-  //   },
-  //   {
-  //     fitCanvasToArtboardHeight: true,
-  //   },
-  // );
-
   return (
     <div className="relative z-10">
       <div className="relative w-full h-[90vh] sm:h-[100vh] flex items-center">
@@ -62,21 +51,27 @@ export default function Community({
             <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
           </div>
         </div>
+
+        {!isLoaded && (
+          <motion.span exit={{ opacity: 0 }}>
+            <Image
+              src={midImage}
+              className="absolute w-full max-w-7xl top-0 right-0 object-right-top -z-10 fade-in-3"
+              alt="hero illustration"
+            />
+          </motion.span>
+        )}
       </div>
 
-      {isLoaded && (
-        <>
-          <Image
-            src={sepImg}
-            alt="seperator"
-            className="absolute seperator seperator__community__top fade-in-3 z-20"
-            style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-          />
-        </>
-      )}
+      <Image
+        src={sepImg}
+        alt="seperator"
+        className="absolute seperator seperator__community__top fade-in-3 z-20"
+        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+      />
 
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
     </div>
   );
 }

@@ -3,32 +3,23 @@ import sepImg from '../assets/line.png';
 
 import Image from 'next/image';
 
-import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
+import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
+import heroImage from '../../../public/Images/header-monster.png';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Hero({
   isLoaded,
   setIsHeaderLoaded,
+  setProgress,
 }: {
   isLoaded: boolean;
   setIsHeaderLoaded: (v: boolean) => void;
+  setProgress: (v: number) => void;
 }) {
   const isBigScreen = useBetterMediaQuery('(min-width: 500px)');
-
-  // const { RiveComponent } = useRive({
-  //   src: 'topMonsterMouse.riv',
-  //   autoplay: true,
-  //   stateMachines: 'State Machine 1',
-  //   automaticallyHandleEvents: true,
-  //   onLoad: () => {
-  //     setIsHeaderLoaded(true);
-  //   },
-  //   layout: new Layout({
-  //     fit: Fit.Cover,
-  //   }),
-  // });
 
   return (
     <>
@@ -46,7 +37,6 @@ export default function Hero({
               pointerEvents: !isBigScreen ? 'none' : 'all',
             }}
           >
-            {/* <RiveComponent className="absolute w-full h-full" /> */}
             <RiveAnimation
               animation="hero-monster"
               layout={
@@ -54,44 +44,52 @@ export default function Hero({
               }
               className={'fixed top-0 left-0 w-full h-full'}
               automaticallyHandleEvents={true}
-              stateMachines = 'State Machine 1'
+              stateMachines="State Machine 1"
               setIsReady={setIsHeaderLoaded}
+              setProgress={setProgress}
             />
           </div>
 
-          {isLoaded && (
-            <div className="flex flex-col gap-5 justify-center text-center items-center fade-in z-10">
-              <h2 className="text-[6em] mb-5 tracking-normal">Adrena</h2>
+          <div className="flex flex-col gap-5 justify-center text-center items-center fade-in z-10">
+            <h2 className="text-[6em] mb-5 tracking-normal">Adrena</h2>
 
-              <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
+            <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-              <p className="text-xl max-w-[80%]">
-                Trade at the speed of light with up to 50x leverage
-              </p>
-              <Button />
-            </div>
-          )}
+            <p className="text-xl max-w-[80%]">
+              Trade at the speed of light with up to 50x leverage
+            </p>
+            <Button />
+          </div>
         </div>
 
-        {isLoaded && (
-          <Image
-            src={sepImg}
-            alt="seperator"
-            className="absolute seperator seperator__top fade-in-3"
-            style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-          />
-        )}
-        <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
-        <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
+        <Image
+          src={sepImg}
+          alt="seperator"
+          className="absolute seperator seperator__top fade-in-3"
+          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+        />
+        <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
+        <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
+
+        <Image
+          src={heroImage}
+          className="absolute top-0 left-0 w-full h-full object-cover -z-10 fade-in-3"
+          style={{
+            opacity: isLoaded ? '0' : '1',
+            transition: 'opacity 0.3s 0.5s',
+            filter: 'drop-shadow(0px 0px 40px #000)',
+          }}
+          alt="hero illustration"
+        />
       </div>
 
-      {!isLoaded && (
+      {/* {!isLoaded && (
         <div className="absolute w-full h-full top-0 left-0 flex flex-col gap-5 justify-center text-center items-center fade-in z-50">
           <h2 className="text-[7em] mb-5 font-light blinking tracking-normal">
             Adrena
           </h2>
         </div>
-      )}
+      )} */}
     </>
   );
 }

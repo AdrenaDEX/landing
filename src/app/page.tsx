@@ -20,6 +20,7 @@ export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
@@ -28,13 +29,13 @@ export default function Home() {
   }, []);
 
   // no scroll during loading
-  useEffect(() => {
-    if (!isLoaded) {
-      document.documentElement.style.overflowY = 'hidden';
-    } else {
-      document.documentElement.style.overflowY = 'auto';
-    }
-  }, [isLoaded]);
+  // useEffect(() => {
+  //   if (!isLoaded) {
+  //     document.documentElement.style.overflowY = 'hidden';
+  //   } else {
+  //     document.documentElement.style.overflowY = 'auto';
+  //   }
+  // }, [isLoaded]);
 
   return (
     <>
@@ -48,7 +49,11 @@ export default function Home() {
         </div>
       )}
 
-      <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
+      <Hero
+        isLoaded={isLoaded}
+        setIsHeaderLoaded={setIsHeaderLoaded}
+        setProgress={setProgress}
+      />
 
       <div className="flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
         <div className="text-center flex flex-col items-center">
@@ -133,12 +138,13 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <Image
-        src={sepImg}
-        alt="seperator"
-        className="seperator fade-in-3"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
+
+      {/* <Image
+          src={sepImg}
+          alt="seperator"
+          className="seperator fade-in-3"
+          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+        /> */}
 
       {/* <FAQ /> */}
 

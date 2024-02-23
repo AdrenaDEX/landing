@@ -2,9 +2,11 @@ import React from 'react';
 
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
-import { useRive, Layout, Fit, Alignment } from '@rive-app/react-canvas';
+import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
+import { AnimatePresence, motion } from 'framer-motion';
+import btmImage from '../../../public/Images/btm-monster.png';
 
 export default function TwoToken({
   isLoaded,
@@ -13,18 +15,6 @@ export default function TwoToken({
   isLoaded: boolean;
   setIsBtmLoaded: (v: boolean) => void;
 }) {
-  // const { RiveComponent } = useRive({
-  //   src: 'btmMonster.riv',
-  //   autoplay: true,
-  //   onLoad: () => {
-  //     setIsBtmLoaded(true);
-  //   },
-  //   layout: new Layout({
-  //     fit: Fit.FitWidth,
-  //     alignment: Alignment.BottomRight,
-  //   }),
-  // });
-
   return (
     <div className="relative">
       <div className="relative w-full h-[100vh] flex items-center px-10">
@@ -38,15 +28,14 @@ export default function TwoToken({
             filter: 'drop-shadow(0px 0px 40px #000)',
           }}
         >
-          {/* <RiveComponent className="absolute w-full h-full max-w-7xl right-0" /> */}
           <RiveAnimation
-              animation="btm-monster"
-              layout={
-                new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
-              }
-              className={'absolute w-full h-full max-w-7xl right-0'}
-              setIsReady={setIsBtmLoaded}
-            />
+            animation="btm-monster"
+            layout={
+              new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
+            }
+            className={'absolute w-full h-full max-w-7xl right-0'}
+            setIsReady={setIsBtmLoaded}
+          />
         </div>
 
         <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
@@ -73,17 +62,27 @@ export default function TwoToken({
         </div>
       </div>
 
-      {isLoaded && (
+      <Image
+        src={sepImg}
+        alt="seperator"
+        className="absolute seperator seperator__top fade-in"
+        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+      />
+
+      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
+      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
+
+      {!isLoaded && (
         <Image
-          src={sepImg}
-          alt="seperator"
-          className="absolute seperator seperator__top fade-in-3"
-          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+          src={btmImage}
+          className="absolute w-full bottom-0 right-0 max-w-7xl object-right-bottom -z-10 fade-in-3"
+          style={{
+            opacity: isLoaded ? '0' : '1',
+            transition: 'opacity 0.3s 0.5s',
+          }}
+          alt="hero illustration"
         />
       )}
-
-      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A2A3D] gradient__control" />
-      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A2A3D] gradient__control" />
     </div>
   );
 }

@@ -15,6 +15,7 @@ const RiveAnimation = ({
   setIsReady,
   automaticallyHandleEvents = false,
   stateMachines,
+  setProgress,
 }: {
   animation:
     | 'fred-bg'
@@ -27,6 +28,7 @@ const RiveAnimation = ({
   automaticallyHandleEvents?: boolean;
   stateMachines?: string;
   setIsReady: (v: boolean) => void;
+  setProgress?: any
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -95,6 +97,7 @@ const RiveAnimation = ({
     asset.setRenderImage(image);
 
     setAssetsLoaded((prev) => prev + 1);
+    setProgress?.((prev: any) => prev + 1);
 
     // call unref to release any references when no longer needed.
     image.unref();
