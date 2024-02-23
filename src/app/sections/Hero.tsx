@@ -70,17 +70,18 @@ export default function Hero({
         />
         <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
         <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
-
-        <Image
-          src={heroImage}
-          className="absolute top-0 left-0 w-full h-full object-cover -z-10 fade-in-3"
-          style={{
-            opacity: isLoaded ? '0' : '1',
-            transition: 'opacity 0.3s 0.5s',
-            filter: 'drop-shadow(0px 0px 40px #000)',
-          }}
-          alt="hero illustration"
-        />
+        <span className='fade-in-3'>
+          <Image
+            src={heroImage}
+            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+            style={{
+              opacity: !isLoaded ? '1' : '0',
+              transition: 'opacity 0.3s 0.5s',
+              filter: 'drop-shadow(0px 0px 40px #000)',
+            }}
+            alt="hero illustration"
+          />
+        </span>
       </div>
 
       {/* {!isLoaded && (
