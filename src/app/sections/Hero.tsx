@@ -42,7 +42,7 @@ export default function Hero({
               layout={
                 new Layout({ fit: Fit.Cover, alignment: Alignment.Center })
               }
-              className={'fixed top-0 left-0 w-full h-full'}
+              className={'absolute top-0 left-0 w-full h-full'}
               automaticallyHandleEvents={true}
               stateMachines="State Machine 1"
               setIsReady={setIsHeaderLoaded}
