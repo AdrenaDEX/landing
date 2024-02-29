@@ -1,14 +1,11 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { twMerge } from 'tailwind-merge';
 
-import FAQ from './components/FAQ';
 import Hero from './sections/Hero';
 import Community from './sections/Community';
 import TwoToken from './sections/TwoToken';
 
 import diamondImg from './assets/diamond.png';
-import sepImg from './assets/line.png';
 import githubLogo from './assets/github.svg';
 import twitterLogo from './assets/twitter.svg';
 

@@ -7,8 +7,7 @@ import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import heroImage from '../../../public/Images/header-monster.png';
-import { AnimatePresence, motion } from 'framer-motion';
+import heroImage from '../../../public/Images/hero-monster.png';
 
 export default function Hero({
   isLoaded,
