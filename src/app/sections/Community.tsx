@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
@@ -7,7 +7,7 @@ import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
 import midImage from '../../../public/Images/mid-monster.png';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 export default function Community({
   isLoaded,
@@ -16,6 +16,16 @@ export default function Community({
   isLoaded: boolean;
   setIsMidLoaded: (v: boolean) => void;
 }) {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (isLoaded) {
+      setTimeout(() => {
+        setIsReady(true);
+      }, 500);
+    }
+  }, [isLoaded]);
+
   return (
     <div className="relative z-10">
       <div className="relative w-full h-[90vh] sm:h-[100vh] flex items-center">
@@ -23,7 +33,6 @@ export default function Community({
           className="absolute sm:right-0 w-full h-full"
           style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
         >
-          {/* <RiveComponent  /> */}
           <RiveAnimation
             animation="mid-monster"
             layout={
@@ -52,14 +61,17 @@ export default function Community({
           </div>
         </div>
 
-        {!isLoaded && (
-          <motion.span exit={{ opacity: 0 }}>
+        {!isReady && (
+          <span>
             <Image
               src={midImage}
+              style={{
+                filter: 'drop-shadow(0px 0px 40px #000)',
+              }}
               className="absolute w-full max-w-7xl top-0 right-0 object-right-top -z-10 fade-in-3"
               alt="hero illustration"
             />
-          </motion.span>
+          </span>
         )}
       </div>
 

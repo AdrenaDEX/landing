@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import sepImg from '../assets/line.png';
 
 import Image from 'next/image';
@@ -20,7 +20,15 @@ export default function Hero({
   setProgress: (v: number) => void;
 }) {
   const isBigScreen = useBetterMediaQuery('(min-width: 500px)');
+  const [isReady, setIsReady] = useState(false);
 
+  useEffect(() => {
+    if (isLoaded) {
+      setTimeout(() => {
+        setIsReady(true);
+      }, 500);
+    }
+  }, [isLoaded]);
   return (
     <>
       <div className="relative">
@@ -30,8 +38,6 @@ export default function Hero({
               position: 'absolute',
               width: '100%',
               height: '100%',
-              opacity: isLoaded ? '1' : '0',
-              transition: 'opacity 0.3s 0.5s',
               filter: 'drop-shadow(0px 0px 40px #000)',
               // remove event listeners
               pointerEvents: !isBigScreen ? 'none' : 'all',
@@ -70,19 +76,19 @@ export default function Hero({
         />
         <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
         <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
-        
-        <span className='absolute w-full h-full top-0 left-0 fade-in-3 -z-10'>
-          <Image
-            src={heroImage}
-            className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-            style={{
-              opacity: !isLoaded ? '1' : '0',
-              transition: 'opacity 0.3s 0.5s',
-              filter: 'drop-shadow(0px 0px 40px #000)',
-            }}
-            alt="hero illustration"
-          />
-        </span>
+
+        {!isReady && (
+          <span className="absolute w-full h-full top-0 left-0 fade-in-3 -z-10">
+            <Image
+              src={heroImage}
+              className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+              style={{
+                filter: 'drop-shadow(0px 0px 40px #000)',
+              }}
+              alt="hero illustration"
+            />
+          </span>
+        )}
       </div>
 
       {/* {!isLoaded && (

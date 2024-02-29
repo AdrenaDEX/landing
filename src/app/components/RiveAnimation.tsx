@@ -28,7 +28,7 @@ const RiveAnimation = ({
   automaticallyHandleEvents?: boolean;
   stateMachines?: string;
   setIsReady: (v: boolean) => void;
-  setProgress?: any
+  setProgress?: any;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -84,13 +84,9 @@ const RiveAnimation = ({
     const img =
       require(`../../../public/${folder}/${subFolder}/${asset.name}.webp`).default;
 
-    const arrayBuffer = await fetch(img.src, {
-      cache: 'force-cache',
-      headers: {
-        'cache-control': 'max-age=31536000',
-        'content-type': 'image/webp',
-      },
-    }).then((response) => response.arrayBuffer());
+    const arrayBuffer = await fetch(img.src).then((response) =>
+      response.arrayBuffer(),
+    );
 
     const image = await decodeImage(new Uint8Array(arrayBuffer));
 
@@ -126,7 +122,7 @@ const RiveAnimation = ({
         className={twMerge(
           isLoaded ? 'opacity-100' : 'opacity-0',
           className,
-          'transition-opacity duration-300',
+          'transition-opacity duration-1000',
         )}
       />
     );

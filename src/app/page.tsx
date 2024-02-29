@@ -55,7 +55,7 @@ export default function Home() {
         setProgress={setProgress}
       />
 
-      <div className="flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
+      <div className="flex flex-col md:flex-row gap-10 justify-center items-center my-[100px] px-7">
         <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">INSTANT EXECUTION</h2>
 
@@ -103,7 +103,7 @@ export default function Home() {
 
       <TwoToken setIsBtmLoaded={setIsBtmLoaded} isLoaded={isLoaded} />
 
-      <div className="relative flex flex-col md:flex-row gap-10 justify-center my-[100px] px-7">
+      <div className="relative flex flex-col md:flex-row gap-10 justify-center items-center my-[100px] px-7">
         <div className="text-center flex flex-col items-center">
           <h2 className="mb-4">ADX</h2>
 
@@ -139,14 +139,10 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <Image
-          src={sepImg}
-          alt="seperator"
-          className="seperator fade-in-3"
-          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-        /> */}
 
       {/* <FAQ /> */}
+
+      <div className='w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]' />
 
       <footer className="flex flex-row gap-3 justify-center p-3 items-center ">
         {/* <p className="font-specialmonster">Adrena</p> */}
@@ -159,8 +155,8 @@ export default function Home() {
               className="hover:opacity-90 cursor-pointer"
               src={githubLogo}
               alt="github icon"
-              width="20"
-              height="20"
+              width="32"
+              height="32"
             />
           </Link>
 
@@ -169,8 +165,8 @@ export default function Home() {
               className="hover:opacity-90 cursor-pointer"
               src={twitterLogo}
               alt="twitter icon"
-              width="20"
-              height="20"
+              width="32"
+              height="32"
             />
           </Link>
         </div>

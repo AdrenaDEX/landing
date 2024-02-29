@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import sepImg from '../assets/line.png';
 import Image from 'next/image';
@@ -15,6 +15,16 @@ export default function TwoToken({
   isLoaded: boolean;
   setIsBtmLoaded: (v: boolean) => void;
 }) {
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (isLoaded) {
+      setTimeout(() => {
+        setIsReady(true);
+      }, 500);
+    }
+  }, [isLoaded]);
+
   return (
     <div className="relative">
       <div className="relative w-full h-[100vh] flex items-center px-10">
@@ -23,8 +33,6 @@ export default function TwoToken({
             position: 'absolute',
             width: '100%',
             height: '100%',
-            opacity: isLoaded ? '1' : '0',
-            transition: 'opacity 0.3s',
             filter: 'drop-shadow(0px 0px 40px #000)',
           }}
         >
@@ -72,13 +80,12 @@ export default function TwoToken({
       <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
       <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
 
-      {!isLoaded && (
+      {!isReady && (
         <Image
           src={btmImage}
           className="absolute w-full bottom-0 right-0 max-w-7xl object-right-bottom -z-10 fade-in-3"
           style={{
-            opacity: isLoaded ? '0' : '1',
-            transition: 'opacity 0.3s 0.5s',
+            filter: 'drop-shadow(0px 0px 40px #000)',
           }}
           alt="hero illustration"
         />
