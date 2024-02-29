@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import sepImg from '../assets/line.png';
+import logo from '../../../public/adrena-logo.svg'
 
 import Image from 'next/image';
 
@@ -56,7 +57,8 @@ export default function Hero({
           </div>
 
           <div className="flex flex-col gap-5 justify-center text-center items-center fade-in z-10">
-            <h2 className="text-[6em] mb-5 tracking-normal">Adrena</h2>
+            {/* <h2 className="text-[6em] mb-5 tracking-normal">Adrena</h2> */}
+            <Image src={logo} alt="adrena logo" className='w-[300px] md:w-[400px]'/>
 
             <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
