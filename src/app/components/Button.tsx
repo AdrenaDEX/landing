@@ -3,14 +3,15 @@ import { twMerge } from 'tailwind-merge';
 
 export default function Button({ className }: { className?: string }) {
   return (
-    <a href="https://alpha.adrena.xyz/">
+    <>
+    {/* <a href="https://alpha.adrena.xyz/"> */}
       <button
         className={twMerge(
-          'relative group flex flex-row item-center justify-center p-3 bg-[#2A30EE] hover:bg-[#1E4FD8] border border-[#2A30EE] transition-all duration-300 w-[200px] shadow-xl hover:shadow-none font-bold rounded-full',
+          'relative group flex flex-row item-center justify-center p-3 bg-[#2A30EE] hover:bg-[#1E4FD8] border border-[#2A30EE] transition-all duration-300 w-[200px] shadow-xl hover:shadow-none font-bold rounded-full cursor-default',
           className,
         )}
       >
-        <span className="absolute left-5 self-center opacity-0 group-hover:left-7 group-hover:opacity-100 transition-all duration-300">
+        <span className="absolute left-5 self-center opacity-0 group-hover:left-7 group-hover:opacity-20 transition-all duration-300">
           <svg
             width="16"
             height="16"
@@ -26,10 +27,11 @@ export default function Button({ className }: { className?: string }) {
             />
           </svg>
         </span>
-        <span className="group-hover:translate-x-1 transition-all duration-300">
-          TRADE NOW
+        <span className="group-hover:translate-x-1 transition-all duration-300 opacity-30">
+          Trade soon
         </span>
       </button>
-    </a>
+    {/* </a> */}
+    </>
   );
 }

@@ -39,7 +39,7 @@ export default function Hero({
               width: '100%',
               height: '100%',
               filter: 'drop-shadow(0px 0px 40px #000)',
-              // remove event listeners
+              // remove event listeners on phone
               pointerEvents: !isBigScreen ? 'none' : 'all',
             }}
           >
