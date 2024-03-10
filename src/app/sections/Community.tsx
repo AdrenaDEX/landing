@@ -7,7 +7,6 @@ import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
 import midImage from '../../../public/Images/mid-monster.png';
-import { motion } from 'framer-motion';
 
 export default function Community({
   isLoaded,
@@ -45,16 +44,16 @@ export default function Community({
 
         <div className={twMerge('flex flex-col px-10 z-30')}>
           <div className="absolute bottom-[8%] md:bottom-[3%] 2xl:bottom-[8] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
-            <h1 className="text-center sm:text-left">Community owned</h1>
+            <h1 className="text-center sm:text-left">
+              For the Community, By the Community
+            </h1>
 
             <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
-              Adrena was crafted with one thing in mind... build a DeFi project
-              that gives all of It&apos;s value to the community. This is
-              something that Solana has lacked and Adrena aims to change the
-              narrative. It was built as an open-source, on-chain, unstoppable
-              application that anyone can interact with and build upon. Token
-              holders and users are the ones who decide what is built and how it
-              functions. This is the people&apos;s perp DEX.
+              Adrena was born out of a singular goal: a DeFi platform owned and
+              operated by the people, centered on a powerful token imbued with
+              governance and economic utility. Starting with perpetuals,
+              Adrena&apos;s vision is to be the DeFi platform that anyone can
+              use, own, and build on.
             </p>
 
             <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
