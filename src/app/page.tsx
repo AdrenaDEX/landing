@@ -81,10 +81,10 @@ export default function Home() {
             // Small screen
             'flex-col gap-x-20 gap-y-28 items-center',
             // Large screen
-            'lg:flex-row lg:flex-wrap lg:max-w-[1200px] lg:justify-evenly lg:gap-x-10 lg:text-sm',
+            'lg:flex-row lg:flex-wrap lg:gap-y-0 lg:max-w-[1200px] lg:justify-evenly lg:gap-x-10 lg:text-sm',
             // Extra large screen
-            'xl:max-w-[1200px] xl:text-sm xl:gap-y-20',
-            '2xl:max-w-full 2xl:gap-x-0 2xl:text-sm 2xl:gap-y-20',
+            'xl:max-w-[1200px] xl:text-sm',
+            '2xl:max-w-full 2xl:gap-x-0 2xl:text-sm',
           )}
         >
           <div className={itemClasses}>
@@ -147,7 +147,7 @@ export default function Home() {
             </p>
 
             {tokenPrices ? (
-              <div className="flex flex-col min-w-[15em] w-[15em] absolute -z-10 font-bold opacity-[8%] bottom-0">
+              <div className="flex flex-col min-w-[15em] w-full max-w-[18em] absolute -z-10 font-bold opacity-5 top-[2em]">
                 {Object.entries(tokenPrices).map(([symbol, price], index) => {
                   if (price === null) return null;
 
@@ -167,7 +167,9 @@ export default function Home() {
 
           <div className="hidden lg:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-          <div className={itemClasses}>
+          <div
+            className={twMerge(itemClasses, 'relative bottom-16 lg:bottom-0')}
+          >
             <h2 className="mb-4">FAIR ACCESS</h2>
 
             <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
@@ -205,7 +207,7 @@ export default function Home() {
       </div>*/}
 
       <Community
-        className="mt-[8em]"
+        className="mt-[8em] lg:mt-[6em]"
         setIsMidLoaded={setIsMidLoaded}
         isLoaded={isLoaded}
       />
