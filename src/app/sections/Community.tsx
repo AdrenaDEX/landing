@@ -10,9 +10,11 @@ import midImage from '../../../public/Images/mid-monster.png';
 
 export default function Community({
   isLoaded,
+  className,
   setIsMidLoaded,
 }: {
   isLoaded: boolean;
+  className?: string;
   setIsMidLoaded: (v: boolean) => void;
 }) {
   const [isReady, setIsReady] = useState(false);
@@ -26,7 +28,7 @@ export default function Community({
   }, [isLoaded]);
 
   return (
-    <div className="relative z-10">
+    <div className={twMerge('relative z-10', className)}>
       <div className="relative w-full h-[90vh] sm:h-[100vh] flex items-center">
         <div
           className="absolute sm:right-0 w-full h-full"

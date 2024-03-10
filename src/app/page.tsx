@@ -43,7 +43,7 @@ export default function Home() {
   // }, [isLoaded]);
 
   const itemClasses =
-    'text-center flex flex-col items-center justify-start relative h-[12em] w-[25em]';
+    'text-center flex flex-col items-center justify-start relative w-[25em] lg:h-[15em]';
 
   return (
     <>
@@ -69,7 +69,7 @@ export default function Home() {
           height={432}
           width={702}
           alt="app's trade page screenshot"
-          className="mt-10 shadow-2xl shadow-black absolute top-[-12em] -z-30 opacity-30 rounded-b-3xl"
+          className="mt-10 max-w-full shadow-2xl shadow-black absolute top-[-7em] sm:top-[-11.5em] md:top-[-12em] -z-30 opacity-30 rounded-b-3xl"
         />
 
         <h1 className="mt-[2em] text-center mb-[1.5em]">Trading</h1>
@@ -79,7 +79,7 @@ export default function Home() {
           className={twMerge(
             'flex mt-20 pl-4 pr-4 w-full',
             // Small screen
-            'flex-col gap-x-20 gap-y-10 items-center',
+            'flex-col gap-x-20 gap-y-28 items-center',
             // Large screen
             'lg:flex-row lg:flex-wrap lg:max-w-[1200px] lg:justify-evenly lg:gap-x-10 lg:text-sm',
             // Extra large screen
@@ -100,7 +100,7 @@ export default function Home() {
 
           <div className="hidden lg:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-          <div className={itemClasses}>
+          <div className={twMerge(itemClasses, 'h-[15em]')}>
             <h2 className="mb-4">TRADE BIG</h2>
 
             {/*<Image
@@ -139,11 +139,11 @@ export default function Home() {
 
           <div className="hidden 2xl:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-          <div className={itemClasses}>
+          <div className={twMerge(itemClasses, 'h-[15em]')}>
             <h2 className="mb-4">TRADE AT FAIR PRICE</h2>
 
             <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-              No Spread, No Slippage. Pay at Oracle Price.
+              No Spread, No Slippage. Execute at Oracle Price.
             </p>
 
             {tokenPrices ? (
@@ -190,8 +190,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 justify-center items-center my-12 px-7">
-        {/*
+      {/*
         
         
           <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
@@ -204,9 +203,12 @@ export default function Home() {
             USDC real yield, 10% in ADX token buy backs.
           </p>
       </div>*/}
-      </div>
 
-      <Community setIsMidLoaded={setIsMidLoaded} isLoaded={isLoaded} />
+      <Community
+        className="mt-[8em]"
+        setIsMidLoaded={setIsMidLoaded}
+        isLoaded={isLoaded}
+      />
 
       <div className="relative">
         <Image
