@@ -30,7 +30,7 @@ export default function Community({
 
   return (
     <div className={twMerge('relative', className)}>
-      <div className="relative w-full h-[100vh] flex px-10">
+      <div className="relative w-full h-[100vh] 2xl:h-[80vh] flex px-10">
         <div
           style={{
             position: 'absolute',
@@ -69,35 +69,37 @@ export default function Community({
             </p>
           </div>
 
-          <div className="flex flex-col items-center md:items-start mt-10">
+          <div className="flex flex-col mt-10 items-center md:items-start">
             <div className="border-b border-width">Concrete steps include:</div>
-            <div className="flex items-center mt-2">
-              <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-              <span className="ml-2">
-                100% of Fees redistributed to community.
-              </span>
-            </div>
+            <div className="ml-4 flex flex-col mt-4 items-center md:items-start">
+              <div className="flex items-center mt-2">
+                <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
+                <span className="ml-2">
+                  100% of Fees redistributed to community.
+                </span>
+              </div>
 
-            <div className="flex items-center">
-              <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-              <span className="ml-2">
-                Onchain program under DAO&apos;s authority (ADX).
-              </span>
-            </div>
+              <div className="flex items-center">
+                <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
+                <span className="ml-2">
+                  Onchain program under DAO&apos;s authority (ADX).
+                </span>
+              </div>
 
-            <div className="flex items-center">
-              <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-              <span className="ml-2">Open source codebase.</span>
-            </div>
+              <div className="flex items-center">
+                <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
+                <span className="ml-2">Open source codebase.</span>
+              </div>
 
-            <div className="flex items-center">
-              <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-              <span className="ml-2">ADX Token distribution.</span>
-            </div>
+              <div className="flex items-center">
+                <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
+                <span className="ml-2">ADX Token distribution.</span>
+              </div>
 
-            <div className="flex items-center">
-              <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-              <span className="ml-2">Full transparency. Nothing hidden.</span>
+              <div className="flex items-center">
+                <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
+                <span className="ml-2">Full transparency. Nothing hidden.</span>
+              </div>
             </div>
           </div>
 

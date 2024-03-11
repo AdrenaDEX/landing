@@ -15,6 +15,7 @@ import Button from './components/Button';
 import { twMerge } from 'tailwind-merge';
 import Trading from './sections/Trading';
 import Tokens from './sections/Tokens';
+import FeeDistribution from './sections/FeeDistribution';
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
@@ -22,7 +23,7 @@ export default function Home() {
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
 
-  const isLoaded = isHeaderLoaded /*&& isMidLoaded*/ && isBtmLoaded;
+  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -88,7 +89,11 @@ export default function Home() {
         isLoaded={isLoaded}
       />
 
-      <Tokens />
+      <FeeDistribution
+        className="-z-10"
+        setIsMidLoaded={setIsMidLoaded}
+        isLoaded={isLoaded}
+      />
 
       {/* <FAQ /> */}
 
