@@ -16,6 +16,8 @@ import { twMerge } from 'tailwind-merge';
 import Trading from './sections/Trading';
 import Tokens from './sections/Tokens';
 import FeeDistribution from './sections/FeeDistribution';
+import Header from './Header';
+import Footer from './Footer';
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
@@ -40,15 +42,7 @@ export default function Home() {
 
   return (
     <>
-      {isLoaded && (
-        <div className="border-transparent bg-transparent fixed w-full p-5 px-10 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in max-w-[2000px] m-auto">
-          <p className="font-specialmonster text-2xl mr-5 tracking-normal">
-            Adrena
-          </p>
-
-          <Button className="p-2 w-[125px] sm:w-[175px] text-sm" />
-        </div>
-      )}
+      <Header isLoaded={isLoaded} />
 
       <Hero
         isLoaded={isLoaded}
@@ -99,38 +93,7 @@ export default function Home() {
 
       <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-      <footer className="flex flex-row gap-3 justify-center p-3 items-center ">
-        {/* <p className="font-specialmonster">Adrena</p> */}
-        <div className="flex flex-row gap-6 justify-center items-center">
-          <Link
-            href="https://github.com/orgs/AdrenaDEX/repositories"
-            target="_blank"
-          >
-            <Image
-              className="hover:opacity-90 cursor-pointer"
-              src={githubLogo}
-              alt="github icon"
-              width="32"
-              height="32"
-            />
-          </Link>
-
-          <Link href="https://twitter.com/AdrenaProtocol" target="_blank">
-            <Image
-              className="hover:opacity-90 cursor-pointer"
-              src={twitterLogo}
-              alt="twitter icon"
-              width="32"
-              height="32"
-            />
-          </Link>
-        </div>
-        {/* <a href="https://alpha.adrena.xyz/">
-          <button className="p-1 bg-[#4C34A4] w-[100px] text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-full">
-            TRADE NOW
-          </button>
-        </a> */}
-      </footer>
+      <Footer />
     </>
   );
 }
