@@ -24,28 +24,6 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
 
-  const separatorWithTopOffset = (
-    <div className="relative">
-      <Image
-        src={sepImg}
-        alt="separator"
-        className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
-    </div>
-  );
-
-  const separator = (
-    <div className="relative">
-      <Image
-        src={sepImg}
-        alt="separator"
-        className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
-    </div>
-  );
-
   return (
     <div className="flex flex-col relative">
       {/* Add a shadow on both sides of the screen when screen is too big */}
@@ -56,15 +34,33 @@ export default function Home() {
 
       <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
-      {separatorWithTopOffset}
+      <div className="relative">
+        <Image
+          src={sepImg}
+          alt="separator"
+          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+        />
+      </div>
 
       <Trading className="" />
 
-      {separator}
+      <div className="relative">
+        <Image
+          src={sepImg}
+          alt="separator"
+          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+        />
+      </div>
 
       <TwoToken className="mt-[1em] lg:mt-[3em]" isLoaded={isLoaded} />
 
-      {separator}
+      <div className="relative">
+        <Image
+          src={sepImg}
+          alt="separator"
+          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1] top-[-1em] z-20"
+        />
+      </div>
 
       <Community
         className="mt-[3em] lg:mt-[6em]"
@@ -72,7 +68,13 @@ export default function Home() {
         isLoaded={isLoaded}
       />
 
-      {separatorWithTopOffset}
+      <div className="relative">
+        <Image
+          src={sepImg}
+          alt="separator"
+          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+        />
+      </div>
 
       <FeeDistribution
         className="-z-10"

@@ -25,8 +25,12 @@ export default function Community({
   return (
     <div className={twMerge('relative z-10', className)}>
       <div className="relative w-full flex">
-        <div className={twMerge('flex flex-col px-10 z-30 w-full pb-[10em]')}>
-          <div className="flex flex-col mt-[8em]">
+        <div
+          className={twMerge(
+            'flex flex-col px-10 z-30 w-full pb-[10em] sm:pb-0',
+          )}
+        >
+          <div className="flex flex-col mt-[5em]">
             <h1 className="mb-3 text-center">Our 2-token model</h1>
 
             <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
@@ -41,15 +45,20 @@ export default function Community({
             </p>
           </div>
 
-          <div className="flex flex-wrap items-start justify-center mt-[3em] gap-x-5 gap-y-10 md:gap-x-10 self-center">
-            <div className="flex flex-col items-center justify-start w-[90%] sm:w-[45%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full border-2 border-white rounded-2xl bg-[#10103030] p-6 shadow-lg shadow-[#00000050]">
+          <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-10 md:gap-x-10 self-center mt-[5em]">
+            <div
+              className={twMerge(
+                'flex flex-col items-center justify-start p-6 bg-[#242437]',
+                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full',
+                'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
+              )}
+            >
               <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
                 <h2 className="text-center">The Pool Token</h2>
                 <div className="italic flex items-center">
                   aka <h3 className="ml-2">ALP</h3>
                 </div>
               </div>
-
               <div className="flex flex-col mt-auto mb-auto">
                 <div className="text-center mt-4 2xl:text-lg">
                   The token collateral providers receive in exchange for
@@ -69,7 +78,13 @@ export default function Community({
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-start w-[90%] sm:w-[45%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full border-2 border-white rounded-2xl bg-[#10103030] p-6 shadow-lg shadow-[#00000050]">
+            <div
+              className={twMerge(
+                'flex flex-col items-center justify-start p-6 bg-[#242437]',
+                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full',
+                'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
+              )}
+            >
               <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
                 <h2 className="text-center">The Governance Token</h2>
                 <div className="italic flex items-center">
@@ -99,13 +114,15 @@ export default function Community({
 
       <div
         className={twMerge(
-          '-z-30 absolute opacity-10',
+          '-z-30 absolute',
           // mobile
-          'hidden',
+          'w-[50em] h-[50em] top-0 left-[-25em] opacity-10',
           // small screen
-          'sm:block sm:w-[40em] sm:h-[40em] sm:bottom-[0em] sm:left-[-20em]',
+          'sm:w-[40em] sm:h-[40em] sm:top-0 sm:left-[-20em]',
+          // medium screen
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:left-[-20em]',
           // large screens
-          'lg:w-[50%] lg:h-auto lg:bottom-[-1em] lg:left-[-2%]',
+          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:left-[-13%]',
         )}
       >
         <Image
@@ -117,16 +134,17 @@ export default function Community({
           alt="hero illustration"
         />
       </div>
-
       <div
         className={twMerge(
-          '-z-30 absolute opacity-10',
+          '-z-30 absolute',
           // mobile
-          'w-[50em] h-[50em] bottom-[0em] right-[-25em]',
+          'w-[50em] h-[50em] bottom-[0em] right-[-25em] opacity-10',
           // small screen
-          'sm:w-[40em] sm:h-[40em] sm:bottom-[0em] sm:right-[-20em]',
+          'sm:w-[40em] sm:h-[40em] sm:top-0 sm:right-[-20em]',
+          // medium screen
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:right-[-20em]',
           // large screens
-          'lg:w-[50%] lg:h-auto lg:bottom-[-1em] lg:right-[-2%]',
+          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:right-[-13%]',
         )}
       >
         <Image
