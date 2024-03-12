@@ -69,7 +69,7 @@ export default function FeeDistribution({
             'flex flex-col px-10 z-30 w-full mt-[8em] items-center',
           )}
         >
-          <h1 className="text-center">Fees Redistribution</h1>
+          <h1 className="text-center">100% Fees Redistribution</h1>
 
           <Image
             src={isBigScreen ? feesImage : feesPhoneImage}
