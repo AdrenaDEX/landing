@@ -28,7 +28,7 @@ export default function Trading({ className }: { className?: string }) {
       {/* Limit the width to force having max 2 items per row */}
       <div
         className={twMerge(
-          'flex mt-20 pl-4 pr-4 w-full',
+          'flex mt-20 pl-4 pr-4 w-full mb-8',
           // Small screen
           'flex-col gap-x-20 gap-y-28 items-center',
           // Large screen
