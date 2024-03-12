@@ -58,7 +58,7 @@ export default function Home() {
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1] top-[-1em] z-20"
+          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1] top-[-1.5em] z-20"
         />
       </div>
 

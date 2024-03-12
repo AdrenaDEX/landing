@@ -48,8 +48,8 @@ export default function Community({
           <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-10 md:gap-x-10 self-center mt-[5em]">
             <div
               className={twMerge(
-                'flex flex-col items-center justify-start p-6 bg-[#242437]',
-                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full',
+                'flex flex-col items-center justify-start p-6 bg-[#242437] rounded-2xl',
+                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full sm:pb-16',
                 'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
               )}
             >
@@ -80,8 +80,8 @@ export default function Community({
 
             <div
               className={twMerge(
-                'flex flex-col items-center justify-start p-6 bg-[#242437]',
-                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full',
+                'flex flex-col items-center justify-start p-6 bg-[#242437] rounded-2xl',
+                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full sm:pb-16',
                 'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
               )}
             >
