@@ -18,7 +18,7 @@ export default function Home() {
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
 
-  const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
+  const isLoaded = isHeaderLoaded /*&& isMidLoaded*/ && isBtmLoaded;
 
   useEffect(() => {
     window.scrollTo(0, 0);
