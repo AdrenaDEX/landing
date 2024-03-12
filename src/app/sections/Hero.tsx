@@ -53,7 +53,7 @@ export default function Hero({
           <Image
             src={logo}
             alt="adrena logo"
-            className="w-[30em] 2xl:w-[35em]"
+            className="w-[25em] 2xl:w-[32em]"
           />
 
           <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
