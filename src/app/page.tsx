@@ -17,22 +17,12 @@ export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
-  const [progress, setProgress] = useState(0);
 
   const isLoaded = isHeaderLoaded && isMidLoaded && isBtmLoaded;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  // no scroll during loading
-  // useEffect(() => {
-  //   if (!isLoaded) {
-  //     document.documentElement.style.overflowY = 'hidden';
-  //   } else {
-  //     document.documentElement.style.overflowY = 'auto';
-  //   }
-  // }, [isLoaded]);
 
   const separatorWithTopOffset = (
     <div className="relative">
@@ -64,11 +54,7 @@ export default function Home() {
 
       <Header isLoaded={isLoaded} />
 
-      <Hero
-        isLoaded={isLoaded}
-        setIsHeaderLoaded={setIsHeaderLoaded}
-        setProgress={setProgress}
-      />
+      <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
 
       {separatorWithTopOffset}
 
@@ -93,10 +79,7 @@ export default function Home() {
         setIsMidLoaded={setIsMidLoaded}
         isLoaded={isLoaded}
       />
-      {/*
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-30 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
-    */}
+
       {/* <FAQ /> */}
       {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}
       <Footer />

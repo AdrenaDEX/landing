@@ -111,17 +111,6 @@ export default function Trading({ className }: { className?: string }) {
             embedded priority fee system.
           </p>
         </div>
-
-        {/*<div className={itemClasses}>
-            <h2 className="mb-4">FEES TRANSAPARENCY</h2>
-
-            <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-              All fee parameters are disclosed upfront, and all calculations are
-              open-source. You&apos;ll be charged a fee upon position opening,
-              borrow fees while the position is active, and a fee upon position
-              closure. An additional fee applies if liquidated.
-            </p>
-              </div>*/}
       </div>
     </div>
   );

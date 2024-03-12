@@ -46,11 +46,6 @@ export default function Footer({ className }: { className?: string }) {
             />
           </Link>
         </div>
-        {/* <a href="https://alpha.adrena.xyz/">
-      <button className="p-1 bg-[#4C34A4] w-[100px] text-sm shadow-xl hover:bg-[#432D87] transition duration-300 rounded-full">
-        TRADE NOW
-      </button>
-    </a> */}
 
         <Image
           className="hover:opacity-90 opacity-50 cursor-pointer absolute right-2 bottom-4"

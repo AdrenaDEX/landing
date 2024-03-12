@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import sepImg from '../assets/line.png';
-import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
-import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import midImage from '../../../public/Images/mid-monster.png';
-import curvedArrowImage from '../assets/curved-arrow.svg';
 
 export default function FeeDistribution({
   isLoaded,
