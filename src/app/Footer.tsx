@@ -14,7 +14,7 @@ export default function Footer({ className }: { className?: string }) {
 
       <footer
         className={twMerge(
-          'flex flex-col gap-3 items-center justify-center h-[10em] w-full relative',
+          'flex flex-col gap-3 items-center justify-center h-[8em] w-full relative',
           className,
         )}
       >
@@ -31,8 +31,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={githubLogo}
               alt="github icon"
-              width="40"
-              height="40"
+              width="35"
+              height="35"
             />
           </Link>
 
@@ -41,8 +41,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={xLogo}
               alt="x icon"
-              width="32"
-              height="32"
+              width="27"
+              height="27"
             />
           </Link>
         </div>
