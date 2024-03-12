@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import sepImg from '../assets/line.png';
-import logo from '../../../public/adrena-logo.svg'
+import logo from '../../../public/adrena-logo.svg';
 
 import Image from 'next/image';
 
@@ -58,7 +58,11 @@ export default function Hero({
 
           <div className="flex flex-col gap-5 justify-center text-center items-center fade-in z-10">
             {/* <h2 className="text-[6em] mb-5 tracking-normal">Adrena</h2> */}
-            <Image src={logo} alt="adrena logo" className='w-[300px] md:w-[400px]'/>
+            <Image
+              src={logo}
+              alt="adrena logo"
+              className="w-[300px] md:w-[400px]"
+            />
 
             <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
@@ -68,15 +72,6 @@ export default function Hero({
             <Button />
           </div>
         </div>
-
-        <Image
-          src={sepImg}
-          alt="seperator"
-          className="absolute seperator seperator__top fade-in-3"
-          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-        />
-        <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-        <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
 
         {!isReady && (
           <span className="absolute w-full h-full top-0 left-0 fade-in-3 -z-10">

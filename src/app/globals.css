@@ -99,28 +99,6 @@ body {
 
 /* for screens bigger than 1500px */
 
-.seperator {
-  transform: scale(1.2);
-}
-
-.seperator__top {
-  bottom: -20px;
-}
-
-.seperator__community__top {
-  top: -30px;
-}
-
-@media (max-width: 600px) {
-  .seperator {
-    transform: scale(3);
-  }
-
-  .seperator__community__top {
-    top: -20px;
-  }
-}
-
 @media (max-width: 1500px) {
   .lottie-svg-class {
     transform: scale(1.2) !important;

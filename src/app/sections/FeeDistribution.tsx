@@ -40,7 +40,9 @@ export default function FeeDistribution({
             layout={
               new Layout({ fit: Fit.Contain, alignment: Alignment.TopRight })
             }
-            className="absolute w-full h-full max-w-5xl right-0"
+            className={
+              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 max-w-7xl right-0'
+            }
             setIsReady={setIsMidLoaded}
           />
         </div>
@@ -55,16 +57,6 @@ export default function FeeDistribution({
           </h2>
         </div>
       </div>
-
-      {/*} <Image
-        src={sepImg}
-        alt="seperator"
-        className="absolute seperator seperator__community__bottom fade-in-3 z-20"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-            />*/}
-
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-20 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
     </div>
   );
 }

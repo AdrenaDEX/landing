@@ -5,16 +5,10 @@ import Hero from './sections/Hero';
 import TwoToken from './sections/TwoToken';
 import Community from './sections/Community';
 
-import githubLogo from './assets/github.svg';
-import twitterLogo from './assets/twitter.svg';
 import sepImg from './assets/line.png';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from './components/Button';
-import { twMerge } from 'tailwind-merge';
 import Trading from './sections/Trading';
-import Tokens from './sections/Tokens';
 import FeeDistribution from './sections/FeeDistribution';
 import Header from './Header';
 import Footer from './Footer';
@@ -40,8 +34,34 @@ export default function Home() {
   //   }
   // }, [isLoaded]);
 
+  const separatorWithTopOffset = (
+    <div className="relative">
+      <Image
+        src={sepImg}
+        alt="separator"
+        className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+      />
+    </div>
+  );
+
+  const separator = (
+    <div className="relative">
+      <Image
+        src={sepImg}
+        alt="separator"
+        className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
+      />
+    </div>
+  );
+
   return (
-    <>
+    <div className="flex flex-col relative">
+      {/* Add a shadow on both sides of the screen when screen is too big */}
+      <div className="absolute w-[5em] h-full z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
+      <div className="absolute w-[5em] h-full z-30 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
+
       <Header isLoaded={isLoaded} />
 
       <Hero
@@ -50,50 +70,36 @@ export default function Home() {
         setProgress={setProgress}
       />
 
-      <Trading />
+      {separatorWithTopOffset}
 
-      {/*
-        
-        
-          <div className="hidden md:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
-        
-        <div className="text-center flex flex-col items-center">
-          <h2 className="mb-4">COMMUNITY OWNED</h2>
+      <Trading className="" />
 
-          <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-            100% of revenues generated are distributed to token holders: 90% in
-            USDC real yield, 10% in ADX token buy backs.
-          </p>
-      </div>*/}
+      {separator}
 
-      <div className="relative mt-[8em]">
-        <Image
-          src={sepImg}
-          alt="seperator"
-          className="absolute seperator seperator__community__top fade-in-3 z-20"
-          style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-        />
-      </div>
+      <TwoToken className="mt-[1em] lg:mt-[3em]" isLoaded={isLoaded} />
 
-      <TwoToken className="mt-[8em] lg:mt-[6em]" isLoaded={isLoaded} />
+      {separator}
 
       <Community
-        className="mt-[8em]"
+        className="mt-[3em] lg:mt-[6em]"
         setIsBtmLoaded={setIsBtmLoaded}
         isLoaded={isLoaded}
       />
+
+      {separatorWithTopOffset}
 
       <FeeDistribution
         className="-z-10"
         setIsMidLoaded={setIsMidLoaded}
         isLoaded={isLoaded}
       />
-
+      {/*
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
+      <div className="absolute w-1/4 h-[110%] top-[-150px] z-30 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
+    */}
       {/* <FAQ /> */}
-
-      <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
-
+      {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}
       <Footer />
-    </>
+    </div>
   );
 }

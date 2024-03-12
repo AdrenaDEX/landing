@@ -14,7 +14,7 @@ export default function Trading({ className }: { className?: string }) {
     'text-center flex flex-col items-center justify-start relative w-[25em] lg:h-[15em]';
 
   return (
-    <div className="flex flex-col justify-center items-center relative">
+    <div className="flex flex-col justify-center items-center relative overflow-hidden">
       <Image
         src={screenshotTrade}
         height={432}
@@ -53,22 +53,6 @@ export default function Trading({ className }: { className?: string }) {
 
         <div className={twMerge(itemClasses, 'h-[15em]')}>
           <h2 className="mb-4">TRADE BIG</h2>
-
-          {/*<Image
-            src={longTradeIcon}
-            height={50}
-            width={50}
-            alt="long trade icon"
-            className="absolute top-[-8em] w-60 -z-10 opacity-[8%]"
-          />
-
-          <Image
-            src={shortTradeIcon}
-            height={50}
-            width={50}
-            alt="long trade icon"
-            className="absolute bottom-[-8em] w-60 -z-10 opacity-[8%]"
-              />*/}
 
           <div className="absolute -z-10 text-[10em] font-mono top-[0.5em] opacity-5 nowrap">
             x{leverage}

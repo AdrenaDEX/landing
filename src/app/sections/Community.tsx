@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import { AnimatePresence, motion } from 'framer-motion';
 import btmImage from '../../../public/Images/btm-monster.png';
 import { twMerge } from 'tailwind-merge';
 
@@ -51,7 +49,7 @@ export default function Community({
           />
         </div>
 
-        <div className="text-center md:text-left lg:ml-[15%] md:ml-[10%] mt-[3em]">
+        <div className="text-center md:text-left  md:ml-[10%] lg:ml-[8%] xl:ml-[14%] 2xl:ml-[25%] mt-[3em]">
           <div>
             <h1 className="mb-3 text-center md:text-left">
               Community is everything
@@ -106,16 +104,6 @@ export default function Community({
           <Button className="mt-10 ml-auto mr-auto md:ml-0 md:mr-0" />
         </div>
       </div>
-
-      <Image
-        src={sepImg}
-        alt="seperator"
-        className="absolute seperator seperator__top fade-in"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
-
-      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
 
       {!isReady ? (
         <Image

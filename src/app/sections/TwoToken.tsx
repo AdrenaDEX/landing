@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import sepImg from '../assets/line.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import monsterFace1 from '../assets/monster-face-1.png';
@@ -139,16 +138,6 @@ export default function Community({
           alt="hero illustration"
         />
       </div>
-
-      <Image
-        src={sepImg}
-        alt="seperator"
-        className="absolute seperator seperator__community__bottom fade-in-3 z-20"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
-
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-50 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-      <div className="absolute w-1/4 h-[110%] top-[-150px] z-50 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
     </div>
   );
 }
