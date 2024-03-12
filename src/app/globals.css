@@ -168,7 +168,7 @@ body {
 /* Shrink the whole screen when in mobile resolution */
 @media (max-width: 500px) {
   html {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 
