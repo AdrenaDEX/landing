@@ -36,7 +36,7 @@ export default function FeeDistribution({
               new Layout({ fit: Fit.Contain, alignment: Alignment.TopRight })
             }
             className={
-              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 max-w-7xl right-0'
+              'absolute w-full h-full min-w-[70em] opacity-10 sm:opacity-100 sm:min-w-0 max-w-6xl right-0'
             }
             setIsReady={setIsMidLoaded}
           />
