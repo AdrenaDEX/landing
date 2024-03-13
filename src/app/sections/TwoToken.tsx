@@ -24,12 +24,8 @@ export default function Community({
 
   return (
     <div className={twMerge('relative z-10', className)}>
-      <div className="relative w-full flex">
-        <div
-          className={twMerge(
-            'flex flex-col px-10 z-30 w-full pb-[10em] sm:pb-0',
-          )}
-        >
+      <div className="relative w-full flex pb-[8em] md:pb-0">
+        <div className={twMerge('flex flex-col px-10 z-30 w-full')}>
           <div className="flex flex-col mt-[5em]">
             <h1 className="mb-3 text-center">Our 2-token model</h1>
 
@@ -49,8 +45,8 @@ export default function Community({
             <div
               className={twMerge(
                 'flex flex-col items-center justify-start p-6 bg-[#16293d] rounded-2xl',
-                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full sm:pb-16',
-                'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
+                'w-[90%] md:w-[25%] md:min-w-[17.5em] md:max-w-[35em] md:h-full md:pb-16',
+                'border-t-2 border-l-2 border-r-2 border-b-2 md:border-b-0 border-white',
               )}
             >
               <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
@@ -81,12 +77,12 @@ export default function Community({
             <div
               className={twMerge(
                 'flex flex-col items-center justify-start p-6 bg-[#16293d] rounded-2xl',
-                'w-[90%] sm:w-[25%] sm:min-w-[16em] sm:max-w-[35em] sm:h-full sm:pb-16',
-                'border-t-2 border-l-2 border-r-2 border-b-2 sm:border-b-0 border-white',
+                'w-[90%] md:w-[25%] md:min-w-[17.5em] md:max-w-[35em] md:h-full md:pb-16',
+                'border-t-2 border-l-2 border-r-2 border-b-2 md:border-b-0 border-white',
               )}
             >
               <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
-                <h2 className="text-center">The Governance Token</h2>
+                <h2 className="text-center">The Gov Token</h2>
                 <div className="italic flex items-center">
                   aka <h3 className="ml-2">ADX</h3>
                 </div>

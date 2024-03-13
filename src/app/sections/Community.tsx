@@ -28,7 +28,7 @@ export default function Community({
 
   return (
     <div className={twMerge('relative', className)}>
-      <div className="relative w-full h-[100vh] 2xl:h-[80vh] flex px-10">
+      <div className="relative w-full flex px-10 pb-[25em]">
         <div
           style={{
             position: 'absolute',
@@ -52,7 +52,7 @@ export default function Community({
         <div className="text-center md:text-left  md:ml-[10%] lg:ml-[8%] xl:ml-[14%] 2xl:ml-[25%] mt-[3em]">
           <div>
             <h1 className="mb-3 text-center md:text-left">
-              Community is everything
+              Community built and owned
             </h1>
 
             <p className="mt-8 2xl:text-[1.3em] text-center md:text-left max-w-[44em]">
@@ -73,14 +73,14 @@ export default function Community({
               <div className="flex items-center mt-2">
                 <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
                 <span className="ml-2">
-                  100% of Fees redistributed to community.
+                  100% of fee revenue distributed back to the community.
                 </span>
               </div>
 
               <div className="flex items-center">
                 <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
                 <span className="ml-2">
-                  Onchain program under DAO&apos;s authority (ADX).
+                  On-chain program governed by the DAO with ADX.
                 </span>
               </div>
 
@@ -91,12 +91,14 @@ export default function Community({
 
               <div className="flex items-center">
                 <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-                <span className="ml-2">ADX Token distribution.</span>
+                <span className="ml-2">
+                  Wide ADX token distribution, liquid ADX emissions.
+                </span>
               </div>
 
               <div className="flex items-center">
                 <div className="bg-white rounded-full h-2 w-2 hidden md:block"></div>
-                <span className="ml-2">Full transparency. Nothing hidden.</span>
+                <span className="ml-2">Transparent.</span>
               </div>
             </div>
           </div>

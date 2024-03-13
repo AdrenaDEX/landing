@@ -39,7 +39,7 @@ export default function Trading({ className }: { className?: string }) {
         )}
       >
         <div className={itemClasses}>
-          <h2 className="mb-4">TRADE INSTANT</h2>
+          <h2 className="mb-4">TRADE FAST</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Experience OPOS: Trades executed in milliseconds with near-zero gas
@@ -75,7 +75,7 @@ export default function Trading({ className }: { className?: string }) {
         <div className="hidden 2xl:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
         <div className={twMerge(itemClasses, 'h-[15em]')}>
-          <h2 className="mb-4">TRADE AT FAIR PRICE</h2>
+          <h2 className="mb-4">TRADE AT BEST PRICE</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             No spread, no slippage. Execute at oracle price.
