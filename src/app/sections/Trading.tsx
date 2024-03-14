@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import screenshotTrade from '../assets/screenshot-trade-2.png';
+import screenshotTrade from '../assets/screenshot-trade.png';
 import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import useTokenPrices from '../hooks/useWatchTokenPrices';
