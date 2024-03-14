@@ -51,9 +51,7 @@ export default function Community({
 
         <div className="text-center md:text-left  md:ml-[10%] lg:ml-[8%] xl:ml-[14%] 2xl:ml-[25%] mt-[3em]">
           <div>
-            <h1 className="mb-3 text-center md:text-left">
-              Community built and owned
-            </h1>
+            <h1 className="mb-3 text-center md:text-left">Community First</h1>
 
             <p className="mt-8 2xl:text-[1.3em] text-center md:text-left max-w-[44em]">
               Adrena was born out of a singular goal: a DeFi platform owned and

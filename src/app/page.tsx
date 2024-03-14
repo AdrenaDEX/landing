@@ -15,10 +15,9 @@ import Footer from './Footer';
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
-  const [isMidLoaded, setIsMidLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
 
-  const isLoaded = isHeaderLoaded /*&& isMidLoaded*/ && isBtmLoaded;
+  const isLoaded = isHeaderLoaded && isBtmLoaded;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -76,11 +75,7 @@ export default function Home() {
         />
       </div>
 
-      <FeeDistribution
-        className="-z-10"
-        setIsMidLoaded={setIsMidLoaded}
-        isLoaded={isLoaded}
-      />
+      <FeeDistribution className="-z-10" />
 
       {/* <FAQ /> */}
       {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}
