@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
-import sepImg from '../assets/line.png';
 import Image from 'next/image';
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
-import Button from '../components/Button';
-import RiveAnimation from '../components/RiveAnimation';
-import { AnimatePresence, motion } from 'framer-motion';
-import btmImage from '../../../public/Images/btm-monster.png';
+import { twMerge } from 'tailwind-merge';
+import monsterFace1 from '../assets/monster-face-1.png';
+import monsterFace2 from '../assets/monster-face-2.png';
 
-export default function TwoToken({
+export default function Community({
   isLoaded,
-  setIsBtmLoaded,
+  className,
 }: {
   isLoaded: boolean;
-  setIsBtmLoaded: (v: boolean) => void;
+  className?: string;
 }) {
   const [isReady, setIsReady] = useState(false);
 
@@ -26,70 +23,135 @@ export default function TwoToken({
   }, [isLoaded]);
 
   return (
-    <div className="relative">
-      <div className="relative w-full h-[100vh] flex items-center px-10">
-        <div
-          style={{
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            filter: 'drop-shadow(0px 0px 40px #000)',
-          }}
-        >
-          <RiveAnimation
-            animation="btm-monster"
-            layout={
-              new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
-            }
-            className={'absolute w-full h-full max-w-7xl right-0'}
-            setIsReady={setIsBtmLoaded}
-          />
-        </div>
+    <div className={twMerge('relative z-10', className)}>
+      <div className="relative w-full flex pb-[8em] md:pb-0">
+        <div className={twMerge('flex flex-col px-10 z-30 w-full')}>
+          <div className="flex flex-col mt-[5em]">
+            <h1 className="mb-3 text-center">Our 2-token model</h1>
 
-        <div className="absolute top-[8%] 2xl:top-[12%] left-[7%] 2xl:left-[10%] w-[87%] md:w-[55%] lg:w-[45%]">
-          <div>
-            <h1 className="mb-3 text-center sm:text-left">Our 2-token model</h1>
-
-            <p className="mt-8 2xl:text-[1.3em] text-center sm:text-justify">
-              Building upon the 2-token model system used by perps dex innovator
-              GMX, we&apos;ve taken their token structure to the next level,
-              providing token holders with as much control and value as possible
-              to help shape Adrena long term.
-            </p>
-
-            <p className="mt-2 2xl:text-[1.3em] text-center sm:text-justify">
-              Our governance and utility token, ADX, accrues 30% of the
-              platform&apos;s generated fees. ALP is the liquidity provider
-              token that accrues 70% of the platform&apos;s generated fees. All
-              of this is supplemented with our attractive distribution model
-              which rewards ALL participants of the platform.
+            <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
+              Largely inspired by the 2-token model pioneered by GMX, we&apos;ve
+              has added a few improvements to better align liquidity providers,
+              token holders, and users with the long term interests of the
+              protocol. After 10% of revenues are used to buy back ADX, 30% of
+              the remaining revenue is distributed to ADX stakers and 70% to
+              ALP. This distribution is weighted more to people who have locked
+              their ADX or ALP, rewarding long term beneficiaries of the
+              protocol.
             </p>
           </div>
 
-          <Button className="mt-10 ml-auto mr-auto sm:ml-0 sm:mr-0" />
+          <div className="flex flex-wrap items-start justify-center gap-x-5 gap-y-10 md:gap-x-10 self-center mt-[5em]">
+            <div
+              className={twMerge(
+                'flex flex-col items-center justify-start p-6 bg-[#16293d] rounded-2xl',
+                'w-[90%] md:w-[25%] md:min-w-[17.5em] md:max-w-[35em] md:h-full md:pb-16',
+                'border-t-2 border-l-2 border-r-2 border-b-2 md:border-b-0 border-white',
+              )}
+            >
+              <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
+                <h2 className="text-center">The Pool Token</h2>
+                <div className="italic flex items-center">
+                  aka <h3 className="ml-2">ALP</h3>
+                </div>
+              </div>
+              <div className="flex flex-col mt-auto mb-auto">
+                <div className="text-center mt-4 2xl:text-lg">
+                  The token collateral providers receive in exchange for
+                  pledging their assets to the protocol. It represents a share
+                  of the liquidity pool.
+                </div>
+
+                <div className="text-center mt-2 2xl:text-lg">
+                  ALP tokens receive USDC yield from fees, directly paid to the
+                  pool, naturally increasing their value.
+                </div>
+
+                <div className="text-center mt-2 2xl:text-lg">
+                  When staked, they generate bonus USDC yield depending on
+                  lock-duration directly paid to the token owner.
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={twMerge(
+                'flex flex-col items-center justify-start p-6 bg-[#16293d] rounded-2xl',
+                'w-[90%] md:w-[25%] md:min-w-[17.5em] md:max-w-[35em] md:h-full md:pb-16',
+                'border-t-2 border-l-2 border-r-2 border-b-2 md:border-b-0 border-white',
+              )}
+            >
+              <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
+                <h2 className="text-center">The Gov Token</h2>
+                <div className="italic flex items-center">
+                  aka <h3 className="ml-2">ADX</h3>
+                </div>
+              </div>
+
+              <div className="flex flex-col mt-auto mb-auto">
+                <div className="text-center mt-4 2xl:text-lg">
+                  Grants its holder voting power within the Adrena ecosystem and
+                  USDC yield originating from platform&apos;s fees.
+                </div>
+
+                <div className="text-center mt-2 2xl:text-lg">
+                  In liquid form: receives votes in governance and USDC yield.
+                </div>
+
+                <div className="text-center mt-2 2xl:text-lg">
+                  When staked: receives ADX emissions and multipliers on yield
+                  and governance (depending on stake duration)
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <Image
-        src={sepImg}
-        alt="seperator"
-        className="absolute seperator seperator__top fade-in"
-        style={{ filter: 'drop-shadow(0px 0px 40px #000)' }}
-      />
-
-      <div className="absolute w-1/4 h-[120%] top-0 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
-      <div className="absolute w-1/4 h-[120%] top-0 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
-
-      {!isReady && (
+      <div
+        className={twMerge(
+          '-z-30 absolute',
+          // mobile
+          'w-[50em] h-[50em] top-0 left-[-25em] opacity-10',
+          // small screen
+          'sm:w-[40em] sm:h-[40em] sm:top-0 sm:left-[-20em]',
+          // medium screen
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:left-[-20em]',
+          // large screens
+          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:left-[-13%]',
+        )}
+      >
         <Image
-          src={btmImage}
-          className="absolute w-full bottom-0 right-0 max-w-7xl object-right-bottom -z-10 fade-in-3"
+          src={monsterFace1}
           style={{
             filter: 'drop-shadow(0px 0px 40px #000)',
           }}
+          className="w-full h-auto fade-in-3"
           alt="hero illustration"
         />
-      )}
+      </div>
+      <div
+        className={twMerge(
+          '-z-30 absolute',
+          // mobile
+          'w-[50em] h-[50em] bottom-[0em] right-[-25em] opacity-10',
+          // small screen
+          'sm:w-[40em] sm:h-[40em] sm:top-0 sm:right-[-20em]',
+          // medium screen
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:right-[-20em]',
+          // large screens
+          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:right-[-13%]',
+        )}
+      >
+        <Image
+          src={monsterFace2}
+          style={{
+            filter: 'drop-shadow(0px 0px 40px #000)',
+          }}
+          className="w-full h-auto fade-in-3"
+          alt="hero illustration"
+        />
+      </div>
     </div>
   );
 }

@@ -18,8 +18,8 @@
 
 @layer base {
   @font-face {
-    font-family: specialmonster;
-    src: url('/fonts/Pink Blue.ttf');
+    font-family: titletext;
+    src: url('/fonts/Louis George Cafe Bold.ttf');
   }
 
   @font-face {
@@ -28,27 +28,31 @@
   }
 
   h1 {
-    @apply text-6xl;
-    @apply font-specialmonster;
-    letter-spacing: 0.1em;
+    @apply text-5xl;
+    @apply font-titletext;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   h2 {
-    @apply text-3xl;
-    @apply font-specialmonster;
-    letter-spacing: 0.1em;
+    @apply text-2xl;
+    @apply font-titletext;
+    /* letter-spacing: 0.1em; */
+    text-transform: uppercase;
   }
 
   h3 {
-    @apply text-2xl;
-    @apply font-specialmonster;
-    letter-spacing: 0.1em;
+    @apply text-xl;
+    @apply font-titletext;
+    /* letter-spacing: 0.1em; */
+    text-transform: uppercase;
   }
 
   h4 {
-    @apply text-xl;
-    @apply font-specialmonster;
-    letter-spacing: 0.1em;
+    @apply text-lg;
+    @apply font-titletext;
+    /* letter-spacing: 0.1em; */
+    text-transform: uppercase;
   }
 
   p,
@@ -98,28 +102,6 @@ body {
 }
 
 /* for screens bigger than 1500px */
-
-.seperator {
-  transform: scale(1.2);
-}
-
-.seperator__top {
-  bottom: -20px;
-}
-
-.seperator__community__top {
-  top: -30px;
-}
-
-@media (max-width: 600px) {
-  .seperator {
-    transform: scale(3);
-  }
-
-  .seperator__community__top {
-    top: -20px;
-  }
-}
 
 @media (max-width: 1500px) {
   .lottie-svg-class {
@@ -190,7 +172,7 @@ body {
 /* Shrink the whole screen when in mobile resolution */
 @media (max-width: 500px) {
   html {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 }
 
