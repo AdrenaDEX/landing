@@ -38,11 +38,11 @@ export default function Team({
           Behind The Scene
         </h1>
 
-        <div className="w-[41em] h-[40em] relative rounded-full scale-50 sm:scale-100 mt-8">
+        <div className="w-[41em] h-[40em] relative rounded-full scale-50 sm:scale-100 sm:mt-[8em] md:mt-8">
           <div>
             <div
               className={twMerge(
-                'absolute bottom-[4em] text-4xl left-[-2em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[-2em] z-[6]',
                 hovering === 'Endo' ? 'visible' : 'hidden',
               )}
             >
@@ -64,7 +64,7 @@ export default function Team({
           <div>
             <div
               className={twMerge(
-                'absolute bottom-0 text-4xl left-[7em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-0 text-4xl md:left-[7em] z-[6]',
                 hovering === 'Corto' ? 'visible' : 'hidden',
               )}
             >
@@ -86,7 +86,7 @@ export default function Team({
           <div>
             <div
               className={twMerge(
-                'absolute bottom-[4em] text-4xl left-[19em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[19em] z-[6]',
                 hovering === 'Orex' ? 'visible' : 'hidden',
               )}
             >
@@ -108,7 +108,7 @@ export default function Team({
           <div>
             <div
               className={twMerge(
-                'absolute bottom-[14em] text-4xl left-[17em] z-[6] flex flex-col',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[14em] text-4xl md:left-[17em] z-[6]',
                 hovering === 'Tyro' ? 'visible' : 'hidden',
               )}
             >
@@ -130,7 +130,7 @@ export default function Team({
           <div>
             <div
               className={twMerge(
-                'absolute bottom-[13em] text-4xl left-[-2em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[13em] text-4xl md:left-[-2em] z-[6]',
                 hovering === 'Aldo' ? 'visible' : 'hidden',
               )}
             >
