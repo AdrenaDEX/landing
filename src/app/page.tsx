@@ -12,6 +12,7 @@ import Trading from './sections/Trading';
 import FeeDistribution from './sections/FeeDistribution';
 import Header from './Header';
 import Footer from './Footer';
+import Team from './sections/Team';
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
@@ -76,6 +77,12 @@ export default function Home() {
       </div>
 
       <FeeDistribution className="-z-10" />
+
+      <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
+
+      <Team isLoaded={isLoaded} />
+
+      <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
       {/* <FAQ /> */}
       {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}

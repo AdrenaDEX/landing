@@ -10,8 +10,6 @@ import { twMerge } from 'tailwind-merge';
 export default function Footer({ className }: { className?: string }) {
   return (
     <>
-      <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
-
       <footer
         className={twMerge(
           'flex flex-col gap-3 items-center justify-center h-[8em] w-full relative',
