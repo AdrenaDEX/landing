@@ -11,34 +11,19 @@ import orexImg from '../../../public/Images/team/orex.png';
 import tyroImg from '../../../public/Images/team/tyro.png';
 import { twMerge } from 'tailwind-merge';
 
-export default function Team({
-  isLoaded,
-  className,
-}: {
-  isLoaded: boolean;
-  className?: string;
-}) {
-  const [isReady, setIsReady] = useState(false);
+export default function Team({ className }: { className?: string }) {
   const [hovering, setHovering] = useState<
     'Endo' | 'Corto' | 'Orex' | 'Aldo' | 'Tyro' | null
   >(null);
-
-  useEffect(() => {
-    if (isLoaded) {
-      setTimeout(() => {
-        setIsReady(true);
-      }, 500);
-    }
-  }, [isLoaded]);
 
   return (
     <div className={twMerge('relative', className)}>
       <div className="relative w-full flex flex-col overflow-hidden items-center">
         <h1 className="mb-3 mt-14 ml-auto mr-auto pl-4 pr-4 text-center">
-          Behind The Scene
+          Launch Team
         </h1>
 
-        <div className="w-[41em] h-[40em] relative rounded-full scale-50 sm:scale-100 sm:mt-[8em] md:mt-8">
+        <div className="w-[41em] h-[40em] relative rounded-full scale-x-[0.7] scale-y-[0.7] sm:scale-x-100 sm:scale-y-100 sm:mt-[8em] md:mt-8">
           <div>
             <div
               className={twMerge(
