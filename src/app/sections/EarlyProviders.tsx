@@ -6,6 +6,7 @@ import littleUnusualImg from '../../../public/Images/early-contributors/little-u
 import sec3Img from '../../../public/Images/early-contributors/sec3.png';
 import syntaxImg from '../../../public/Images/early-contributors/syntax.png';
 import vendingMachineImg from '../../../public/Images/early-contributors/vending-machine.png';
+import otterSecImg from '../../../public/Images/early-contributors/ottersec.png';
 import { twMerge } from 'tailwind-merge';
 
 const investors: string[] = [
@@ -97,11 +98,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
   return (
     <div className={twMerge('relative', className)}>
       <div className="relative w-full flex flex-col overflow-hidden items-center">
-        <h1 className="mb-3 mt-8 ml-auto mr-auto pl-4 pr-4 text-center">
-          EARLY BACKERS
-        </h1>
-
-        <div className="flex flex-wrap items-center justify-evenly w-[90%] mt-16 border border-gray-300/10 relative pb-4 pt-4">
+        <div className="flex flex-wrap items-center justify-evenly w-[90%] mt-8 border border-gray-300/10 relative pb-4 pt-4">
           <div className="absolute top-[-0.6em] left-auto right-auto text-2xl font-titletext bg-[#16293d] w-[10em] items-center flex justify-center">
             PARTNERS
           </div>
@@ -111,22 +108,40 @@ export default function EarlyProviders({ className }: { className?: string }) {
             src={vendingMachineImg}
             alt="Vending Machine Logo"
           />
+
           <Image
-            className="w-[10em] h-auto m-4"
+            className="w-[10em] h-auto m-4 cursor-pointer"
             src={forgdImg}
             alt="Forgd Logo"
-          />
-          <Image
-            className="w-[10em] h-auto m-4"
-            src={syntaxImg}
-            alt="Syntax Logo"
+            onClick={() => window.open('https://forgd.com/')}
           />
 
-          <Image className="w-[3em] h-auto m-4" src={sec3Img} alt="Sec3 Logo" />
           <Image
-            className="w-[14em] h-auto m-4"
+            className="w-[3em] h-auto m-4 cursor-pointer"
+            src={sec3Img}
+            alt="Sec3 Logo"
+            onClick={() => window.open('https://www.sec3.dev/')}
+          />
+
+          <Image
+            className="w-[3em] h-auto m-4 cursor-pointer"
+            src={otterSecImg}
+            alt="Ottersec Logo"
+            onClick={() => window.open('https://osec.io')}
+          />
+
+          <Image
+            className="w-[10em] h-auto m-4 cursor-pointer"
+            src={syntaxImg}
+            alt="Syntax Logo"
+            onClick={() => window.open('https://syntaxlabs.xyz/')}
+          />
+
+          <Image
+            className="w-[14em] h-auto m-4 cursor-pointer"
             src={littleUnusualImg}
             alt="Little Unusual Logo"
+            onClick={() => window.open('https://littleunusual.co/landing-page')}
           />
         </div>
       </div>

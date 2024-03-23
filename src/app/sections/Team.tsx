@@ -49,7 +49,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-0 text-4xl md:left-[7em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[9em] text-4xl md:left-[7em] z-[6]',
                 hovering === 'Corto' ? 'visible' : 'hidden',
               )}
             >
