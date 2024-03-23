@@ -89,13 +89,7 @@ export default function Home() {
 
       <Team className="pt-14" />
 
-      <div className="relative">
-        <Image
-          src={sepImg}
-          alt="separator"
-          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
-        />
-      </div>
+      <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
       <EarlyProviders className="pt-14 pb-8" />
 
