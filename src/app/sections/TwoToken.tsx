@@ -27,7 +27,9 @@ export default function Community({
       <div className="relative w-full flex pb-[8em] md:pb-0">
         <div className={twMerge('flex flex-col px-10 z-30 w-full')}>
           <div className="flex flex-col mt-[5em]">
-            <h1 className="mb-3 text-center">Our 2-token model</h1>
+            <h1 className="text-center mt-[1em] mb-[1.5em] sm:text-[5em] sm:mt-[0.5em] sm:mb-[0.5em] lg:mt-0 lg:mb-[0.2em] lg:text-[6em]">
+              Our 2-token model
+            </h1>
 
             <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
               Largely inspired by the 2-token model pioneered by GMX, we&apos;ve

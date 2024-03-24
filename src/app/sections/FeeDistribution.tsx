@@ -29,10 +29,12 @@ export default function FeeDistribution({ className }: { className?: string }) {
 
         <div
           className={twMerge(
-            'flex flex-col px-10 z-30 w-full mt-[8em] items-center',
+            'flex flex-col px-10 z-30 w-full mt-[5em] items-center',
           )}
         >
-          <h1 className="text-center">100% Fees Redistribution</h1>
+          <h1 className="text-center mt-[1em] mb-[1.5em] sm:text-[5em] sm:mt-[0.5em] sm:mb-[0.5em] lg:mt-0 lg:mb-0 lg:text-[6em]">
+            100% Fees Redistribution
+          </h1>
 
           <Image
             src={isBigScreen ? feesImage : feesPhoneImage}
