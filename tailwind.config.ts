@@ -17,6 +17,18 @@ const config: Config = {
         titletext: ['titletext'],
         regulartext: ['regulartext'],
       },
+      fontSize: {
+        xs: '0.875rem', // Extra Small
+        sm: '1rem', // Small
+        base: '1.125rem', // Base
+        lg: '1.25rem', // Large
+        xl: '1.5rem', // Extra Large
+        '2xl': '1.875rem', // 2 Extra Large
+        '3xl': '2.25rem', // 3 Extra Large
+        '4xl': '2.625rem', // 4 Extra Large
+        '5xl': '2.8rem', // 5 Extra Large
+        '6xl': '3rem', // 6 Extra Large
+      },
     },
   },
   plugins: [],
