@@ -146,7 +146,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="flex items-center justify-center w-[90%] mt-14 border border-gray-300/10 relative ml-auto mr-auto">
+      <div className="flex items-center justify-center w-[90%] mt-20 border border-gray-300/10 relative ml-auto mr-auto">
         <div className="absolute top-[-0.8em] left-auto right-auto text-4xl font-titletext bg-[#16293d] w-[17em] items-center flex justify-center">
           COMMUNITY CONTRIBUTORS
         </div>
