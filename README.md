@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ADRENA's Landing Page
+
+Welcome to the official repository for ADRENA's landing page. Built with Next.js, this landing page is the gateway to understanding what ADRENA is all about. Our aim is to provide a clear, engaging, and informative first impression for users interested in our Solana-based protocol.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Before you begin, ensure you have the following installed:
+- Node.js version 18.0.0 or higher
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Clone the Repository**
 
-## Learn More
+   To get started, clone this repository to your local machine using:
+   ```bash
+   git clone https://github.com/<YourUsername>/adrena-landing-page.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install Dependencies**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    Navigate to the project directory and install the required dependencies:
+    ```bash
+    cd adrena-landing-page
+    yarn
+    ```
+3. **Launch the Development Server**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npx next dev
+    ```
+    Then, open http://localhost:3000 in your browser to view the landing page.
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+We highly value contributions from the community! If you're interested in helping improve ADRENA's landing page, please take a moment to review our contribution guidelines.
