@@ -99,7 +99,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
     <div className={twMerge('relative', className)}>
       <div className="relative w-full flex flex-col overflow-hidden items-center">
         <div className="flex flex-wrap items-center justify-evenly w-[90%] mt-8 border border-gray-300/10 relative pb-4 pt-4">
-          <div className="absolute top-[-0.6em] left-auto right-auto text-2xl font-titletext bg-[#16293d] w-[10em] items-center flex justify-center">
+          <div className="absolute top-[-0.75em] left-auto right-auto text-4xl font-titletext bg-[#16293d] w-[10em] items-center flex justify-center">
             PARTNERS
           </div>
 
@@ -146,8 +146,8 @@ export default function EarlyProviders({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="flex items-center justify-center w-[90%] mt-14 border border-gray-300/10 relative ml-auto mr-auto">
-        <div className="absolute top-[-0.6em] left-auto right-auto text-2xl font-titletext bg-[#16293d] w-[17em] items-center flex justify-center">
+      <div className="flex items-center justify-center w-[90%] mt-20 border border-gray-300/10 relative ml-auto mr-auto">
+        <div className="absolute top-[-0.8em] left-auto right-auto text-4xl font-titletext bg-[#16293d] w-[17em] items-center flex justify-center">
           COMMUNITY CONTRIBUTORS
         </div>
 

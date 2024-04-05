@@ -23,7 +23,9 @@ export default function Trading({ className }: { className?: string }) {
         className="mt-10 max-w-full shadow-2xl shadow-black absolute top-[-7em] sm:top-[-11.5em] md:top-[-12em] -z-30 opacity-30 rounded-b-3xl"
       />
 
-      <h1 className="mt-[2em] text-center mb-[1.5em]">Trade with us</h1>
+      <h1 className="mt-[2em] mb-[1.5em] sm:text-[5em] sm:mt-[1em] sm:mb-[0.5em] lg:mt-[0.5em] lg:mb-[0.2em] lg:text-[6em] text-center">
+        Trade with us
+      </h1>
 
       {/* Limit the width to force having max 2 items per row */}
       <div

@@ -19,12 +19,12 @@
 @layer base {
   @font-face {
     font-family: titletext;
-    src: url('/fonts/Louis George Cafe Bold.ttf');
+    src: url('/fonts/Oswald-Bold.ttf');
   }
 
   @font-face {
     font-family: regulartext;
-    src: url('/fonts/Louis George Cafe.ttf');
+    src: url('/fonts/Louis\ George\ Cafe.ttf');
   }
 
   h1 {

@@ -19,7 +19,7 @@ export default function Team({ className }: { className?: string }) {
   return (
     <div className={twMerge('relative', className)}>
       <div className="relative w-full flex flex-col overflow-hidden items-center">
-        <h1 className="mb-3 mt-14 ml-auto mr-auto pl-4 pr-4 text-center">
+        <h1 className="text-center mt-[1em] mb-[1.5em] sm:text-[5em] sm:mt-[0.5em] sm:mb-[0.5em] lg:mt-0 lg:mb-0 lg:text-[6em]">
           Launch Team
         </h1>
 
@@ -27,7 +27,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[-2em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[-1.8em] z-[6]',
                 hovering === 'Endo' ? 'visible' : 'hidden',
               )}
             >
@@ -71,7 +71,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[19em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[15.5em] z-[6]',
                 hovering === 'Orex' ? 'visible' : 'hidden',
               )}
             >
@@ -93,7 +93,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[14em] text-4xl md:left-[17em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[14em] text-4xl md:left-[13em] z-[6]',
                 hovering === 'Tyro' ? 'visible' : 'hidden',
               )}
             >
@@ -115,7 +115,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[13em] text-4xl md:left-[-2em] z-[6]',
+                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[13em] text-4xl md:left-[-1em] z-[6]',
                 hovering === 'Aldo' ? 'visible' : 'hidden',
               )}
             >

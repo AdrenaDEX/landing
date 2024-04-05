@@ -53,15 +53,16 @@ export default function Hero({
           <Image
             src={logo}
             alt="adrena logo"
-            className="w-[25em] 2xl:w-[32em]"
+            className="w-[23em] 2xl:w-[32em]"
           />
 
           <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-          <p className="text-xl max-w-[80%]">
+          <p className="text-lg max-w-[15em]">
             Trade at the speed of light with up to 50x leverage
           </p>
-          <Button />
+
+          <Button className="mt-4" />
         </div>
       </div>
 
