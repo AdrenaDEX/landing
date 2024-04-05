@@ -27,10 +27,7 @@ const config = [
 
 const symbols = config.map((item) => item.symbol);
 
-// Wallet: 6hqz24NfaMwEvUna95p7haPqrh2urVwyVo1gLHEqUVXY (Orex)
-const pythRPC: string =
-  'https://devnet.helius-rpc.com/?api-key=1e567222-acdb-43ee-80dc-926f9c06d89d';
-// 'https://api.devnet.solana.com';
+const pythRPC: string = 'https://api.devnet.solana.com';
 
 const useTokenPrices = () => {
   const [pythClient, setPythClient] = useState<PythHttpClient | null>(null);
