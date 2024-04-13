@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../../public/images/adrena-logo.svg';
+import logo from '../../../public/Images/adrena-logo.svg';
 
 import Image from 'next/image';
 

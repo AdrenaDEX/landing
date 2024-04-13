@@ -1,7 +1,7 @@
 import Button from '@/app/components/Button';
 import Image from 'next/image';
 
-import logo from '../../public/images/adrena-logo.svg';
+import logo from '../../public/Images/adrena-logo.svg';
 import { useEffect, useState } from 'react';
 
 export default function Header({ isLoaded }: { isLoaded: boolean }) {
