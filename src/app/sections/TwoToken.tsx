@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import monsterFace1 from '../assets/monster-face-1.png';
 import monsterFace2 from '../assets/monster-face-2.png';
-import adxIcon from '../../../public/images/adrena_logo_adx_color.svg';
-import alpIcon from '../../../public/images/adrena_logo_alp_color.svg';
+import adxIcon from '../../../public/Images/adrena_logo_adx_color.svg';
+import alpIcon from '../../../public/Images/adrena_logo_alp_color.svg';
 
 export default function Community({
   isLoaded,
