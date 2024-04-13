@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { twMerge } from 'tailwind-merge';
 import monsterFace1 from '../assets/monster-face-1.png';
 import monsterFace2 from '../assets/monster-face-2.png';
+import adxIcon from '../../../public/images/adrena_logo_adx_color.svg';
+import alpIcon from '../../../public/images/adrena_logo_alp_color.svg';
 
 export default function Community({
   isLoaded,
@@ -51,10 +53,15 @@ export default function Community({
                 'border-t-2 border-l-2 border-r-2 border-b-2 md:border-b-0 border-white',
               )}
             >
-              <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center">
+              <div className="flex flex-col border-b-2 border-white w-full min-h-20 pb-4 shrink-0 items-center relative">
                 <h2 className="text-center">The Pool Token</h2>
                 <div className="italic flex items-center">
                   aka <h3 className="ml-2">ALP</h3>
+                  <Image
+                    src={alpIcon}
+                    alt="ALP icon"
+                    className="w-8 h-8 ml-3"
+                  />
                 </div>
               </div>
               <div className="flex flex-col mt-auto mb-auto">
@@ -87,6 +94,11 @@ export default function Community({
                 <h2 className="text-center">The Gov Token</h2>
                 <div className="italic flex items-center">
                   aka <h3 className="ml-2">ADX</h3>
+                  <Image
+                    src={adxIcon}
+                    alt="ADX icon"
+                    className="w-8 h-8 ml-3"
+                  />
                 </div>
               </div>
 
