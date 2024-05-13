@@ -27,12 +27,12 @@ export default function LeverageSlider({
       <div className="flex p-6 h-[3.5em]">
         <Slider
           className="relative bottom-3"
-          min={1}
-          max={50}
+          min={1.1}
+              max={100}
           value={value}
           defaultValue={1}
           step={0.1}
-          marks={[2, 5, 10, 15, 20, 30, 40, 50].reduce((acc, mark) => {
+          marks={[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].reduce((acc, mark) => {
             acc[mark] = (
               <span className="text-white text-sm opacity-30 hover:opacity-100">
                 x{mark}

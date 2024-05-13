@@ -59,7 +59,7 @@ export default function Hero({
           <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
           <p className="text-lg max-w-[15em]">
-            Trade at the speed of light with up to 50x leverage
+            Trade at the speed of light with up to 100x leverage
           </p>
 
           <Button className="mt-4" />

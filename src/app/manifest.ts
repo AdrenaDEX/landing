@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Adrena',
     short_name: 'Adrena',
-    description: 'Trade at the speed of light with up to 50x leverage',
+    description: 'Trade at the speed of light with up to 100x leverage',
     start_url: '/',
     display: 'standalone',
     background_color: '#15283b',
@@ -13,7 +13,7 @@ export default function manifest(): MetadataRoute.Manifest {
     icons: [
       {
         src: '/favicon.ico',
-        sizes: 'any',
+        sizes: '16x16',
         type: 'image/x-icon',
       },
       {

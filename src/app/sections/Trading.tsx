@@ -8,7 +8,7 @@ import LeverageSlider from '../components/LeverageSlider';
 
 export default function Trading({ className }: { className?: string }) {
   const tokenPrices = useTokenPrices();
-  const [leverage, setLeverage] = useState<number>(50);
+  const [leverage, setLeverage] = useState<number>(100);
 
   const itemClasses =
     'text-center flex flex-col items-center justify-start relative w-[25em] lg:h-[15em]';
@@ -61,7 +61,7 @@ export default function Trading({ className }: { className?: string }) {
           </div>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-            Go long and short with up to 50x Leverage, All while maintaining
+            Go long and short with up to 100x Leverage, All while maintaining
             100% self custody.
           </p>
 
