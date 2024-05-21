@@ -11,7 +11,7 @@ export default function FeeStreamAnimation() {
   const LINES = [3, 2, 3, 5, 2, 3, 3, 4, 5];
 
   return (
-    <div className="relative  items-center flex flex-col justify-center w-full m-auto mt-[50px]">
+    <div className="relative  items-center flex flex-col justify-center w-full m-auto mt-[50px] scale-[0.85]">
       <div className="w-full h-full flex flex-col items-center">
         <Image src={feesImage} className="w-[500px] z-10" alt="adx logo" />
 

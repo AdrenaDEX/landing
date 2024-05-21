@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Image from 'next/image';
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
-import Button from '../components/Button';
-import RiveAnimation from '../components/RiveAnimation';
 import kinoImg from '../../../public/Images/team/kino.png';
 import aldoImg from '../../../public/Images/team/aldo.png';
 import endoImg from '../../../public/Images/team/endo.png';
@@ -20,15 +17,15 @@ export default function Team({ className }: { className?: string }) {
   return (
     <div className={twMerge('relative', className)}>
       <div className="relative w-full flex flex-col overflow-hidden items-center">
-        <h1 className="text-center mt-[1em] mb-[1.5em] sm:text-[5em] sm:mt-[0.5em] sm:mb-[0.5em] lg:mt-0 lg:mb-0 lg:text-[6em] z-10">
+        <h1 className="text-center sm:text-[5em] lg:text-[6em] z-10">
           Launch Team
         </h1>
 
-        <div className="w-[36em] sm:w-[41em] h-[40em] relative rounded-full scale-x-[0.7] scale-y-[0.7] sm:scale-x-100 sm:scale-y-100 sm:mt-[8em] md:mt-8">
+        <div className="w-[36em] sm:w-[35em] mb-3 h-[42em] relative scale-[0.65] sm:scale-[0.9] sm:mt-[8em] md:mt-8">
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[-4em] z-[6]',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[-4em] z-[6]',
                 hovering === 'Endo' ? 'visible' : 'hidden',
               )}
             >
@@ -39,7 +36,7 @@ export default function Team({ className }: { className?: string }) {
               onMouseEnter={() => setHovering('Endo')}
               onMouseLeave={() => setHovering(null)}
               className={twMerge(
-                'w-[21em] h-[25em] absolute scale-x-[-1] bottom-[-4em] left-[-5em] z-[4]',
+                'w-[21em] h-[25em] absolute scale-x-[-1] bottom-[-2em] left-[-5em] z-[4]',
                 hovering !== null && hovering !== 'Endo' ? 'grayscale' : '',
               )}
               src={endoImg}
@@ -50,7 +47,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[9em] text-4xl md:left-[7em] z-[6]',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[9em] text-4xl md:left-[7em] z-[6]',
                 hovering === 'Corto' ? 'visible' : 'hidden',
               )}
             >
@@ -72,7 +69,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[15.5em] z-[6]',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[4em] text-4xl md:left-[15.5em] z-[6]',
                 hovering === 'Orex' ? 'visible' : 'hidden',
               )}
             >
@@ -94,7 +91,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[14em] text-4xl md:left-[13em] z-[6]',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[14em] text-4xl md:left-[13em] z-[6]',
                 hovering === 'Tyro' ? 'visible' : 'hidden',
               )}
             >
@@ -116,7 +113,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[13em] text-4xl md:left-[-1em] z-[6] ',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[13em] text-4xl md:left-[-1em] z-[6] ',
                 hovering === 'Aldo' ? 'visible' : 'hidden',
               )}
             >
@@ -127,7 +124,7 @@ export default function Team({ className }: { className?: string }) {
               onMouseEnter={() => setHovering('Aldo')}
               onMouseLeave={() => setHovering(null)}
               className={twMerge(
-                'w-[22em] h-[22em] absolute bottom-[10em] scale-x-[-1] left-[-2em] z-[2] rotate-12',
+                'w-[22em] h-[22em] absolute bottom-[12em] scale-x-[-1] left-[-2em] z-[2] rotate-12',
                 hovering !== null && hovering !== 'Aldo' ? 'grayscale' : '',
               )}
               src={aldoImg}
@@ -138,7 +135,7 @@ export default function Team({ className }: { className?: string }) {
           <div>
             <div
               className={twMerge(
-                'absolute top-[-2em] left-[7em] md:top-auto md:bottom-[15em] text-4xl md:left-[-1em] z-[6]',
+                'absolute top-[-4em] left-[7em] md:top-auto md:bottom-[15em] text-4xl md:left-[-1em] z-[6]',
                 hovering === 'Kino' ? 'visible' : 'hidden',
               )}
             >
@@ -149,13 +146,15 @@ export default function Team({ className }: { className?: string }) {
               onMouseEnter={() => setHovering('Kino')}
               onMouseLeave={() => setHovering(null)}
               className={twMerge(
-                'w-[22em] h-[22em] absolute bottom-[22em] scale-x-[-1] left-[2em] z-[1] rotate-[35deg] ',
+                'w-[22em] h-[22em] absolute bottom-[24em] scale-x-[-1] left-[2em] z-[1] rotate-[35deg] ',
                 hovering !== null && hovering !== 'Kino' ? 'grayscale' : '',
               )}
               src={kinoImg}
               alt="kino pfp"
             />
           </div>
+
+          <div className="absolute right-0 bottom-[-40px] w-[800px] h-[200px] bg-gradient-to-b from-[#16283D00] to-[#16283D] z-10 m-auto self-center" />
         </div>
       </div>
     </div>
