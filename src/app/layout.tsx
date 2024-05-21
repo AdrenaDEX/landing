@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+
 import Head from 'next/head';
 import Script from 'next/script';
 
@@ -30,8 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <Script id="hotjar-snippet">
-          {`
+      ´
+      <Script id="hotjar-snippet" strategy="beforeInteractive">
+        {`
           (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:4990246,hjsv:6};
@@ -41,7 +43,7 @@ export default function RootLayout({
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `}
-        </Script>
+      </Script>
       <body>{children}</body>
     </html>
   );
