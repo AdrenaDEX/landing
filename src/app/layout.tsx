@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-import Script from 'next/script';
-import InitApp from './InitApp';
 import Head from 'next/head';
 
 export const metadata: Metadata = {
