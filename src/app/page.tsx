@@ -14,7 +14,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Team from './sections/Team';
 import EarlyProviders from './sections/EarlyProviders';
-import Script from 'next/script';
+
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
@@ -27,17 +27,6 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <Script id="hotjar-script" strategy="beforeInteractive">
-        {`(function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:4990246,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`}
-      </Script>
       <div className="flex flex-col relative">
         {/* Add a shadow on both sides of the screen when screen is too big */}
         <div className="absolute w-[5em] h-full z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
@@ -111,6 +100,5 @@ export default function Home() {
         {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}
         <Footer />
       </div>
-    </>
   );
 }
