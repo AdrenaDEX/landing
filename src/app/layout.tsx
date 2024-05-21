@@ -30,7 +30,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
         <Script id="hotjar-snippet">
           {`
           (function(h,o,t,j,a,r){
@@ -43,7 +42,6 @@ export default function RootLayout({
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `}
         </Script>
-      </Head>
       <body>{children}</body>
     </html>
   );
