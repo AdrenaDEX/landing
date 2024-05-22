@@ -95,7 +95,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
                   href={`https://twitter.com/${twitter}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="opacity-30 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center lowercase"
+                  className="opacity-30 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2"
                 >
                   {name}{' '}
                 </a>
@@ -104,7 +104,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
             return (
               <div
                 key={name + i}
-                className="opacity-30 flex items-center justify-center p-2 lowercase"
+                className="opacity-30 flex items-center justify-center p-2"
               >
                 {name}
               </div>
