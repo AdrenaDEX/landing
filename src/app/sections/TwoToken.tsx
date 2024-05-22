@@ -34,13 +34,12 @@ export default function Community({
             </h1>
 
             <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
-              Largely inspired by the 2-token model pioneered by GMX, we&apos;ve
-              has added a few improvements to better align liquidity providers,
+              Largely inspired by the 2-tokens model pioneered by GMX, but fully
+              redistributing revenues, trying best to align liquidity providers,
               token holders, and users with the long term interests of the
-              protocol. 10% of revenues are used to buy back ADX, while 30% of
-              the revenue is distributed to ADX stakers and 70% to ALP. This
-              distribution is weighted more to people who have locked their ADX
-              or ALP, rewarding long term beneficiaries of the protocol.
+              protocol. 70% of revenues are distributed to ALP holder and
+              stakers, 20% to ADX stakers, and the final 10% are used to buy
+              back ADX on the open market.
             </p>
           </div>
 
