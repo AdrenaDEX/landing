@@ -89,7 +89,10 @@ export default function FeeStreamAnimation() {
 
         <Image
           src={usdcImage}
-          className="w-[200px] h-[200px] m-auto z-10 outline outline-white outline-4 rounded-full"
+          className="w-[200px] h-[200px] m-auto z-10 rounded-full"
+          style={{
+            boxShadow: '0px 0px 0px 4px #fff',
+          }}
           alt="adx logo"
         />
 
