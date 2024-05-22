@@ -37,11 +37,10 @@ export default function Community({
               Largely inspired by the 2-token model pioneered by GMX, we&apos;ve
               has added a few improvements to better align liquidity providers,
               token holders, and users with the long term interests of the
-              protocol. After 10% of revenues are used to buy back ADX, 30% of
-              the remaining revenue is distributed to ADX stakers and 70% to
-              ALP. This distribution is weighted more to people who have locked
-              their ADX or ALP, rewarding long term beneficiaries of the
-              protocol.
+              protocol. 10% of revenues are used to buy back ADX, while 30% of
+              the revenue is distributed to ADX stakers and 70% to ALP. This
+              distribution is weighted more to people who have locked their ADX
+              or ALP, rewarding long term beneficiaries of the protocol.
             </p>
           </div>
 
