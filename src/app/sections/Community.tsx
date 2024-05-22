@@ -61,7 +61,7 @@ export default function Community({
               governance and economic utility.
             </p>
 
-            <p className="mt-1">
+            <p className="mt-1 2xl:text-[1.3em]">
               Starting with perpetuals, Adrena&apos;s vision is to be the DeFi
               platform that anyone can use, own, and build on.
             </p>
