@@ -95,8 +95,6 @@ export default function Home() {
 
       <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-      {/* <FAQ /> */}
-      {/*<div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />*/}
       <Footer />
     </div>
   );
