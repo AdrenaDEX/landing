@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
+
 import './globals.css';
-import Head from 'next/head';
-import Script from 'next/script';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://landing.adrena.xyz/'),
@@ -29,8 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html lang="en">
-        <body>{children}</body>
-      </html>
+    <html lang="en">
+      <body>
+        {children}
+        <Analytics />
+      </body>
+    </html>
   );
 }
