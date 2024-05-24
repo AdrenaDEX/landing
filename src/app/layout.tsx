@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Adrena',
     description: 'Trade at the speed of light with up to 100x leverage',
     images:
-      'https://iyd8atls7janm7g4.public.blob.vercel-storage.com/OG-nFshI7a1fxTEcp2L5XV8z9dormWh5w.png',
+      'https://iyd8atls7janm7g4.public.blob.vercel-storage.com/landing-dax9mhh6ElWRptAOFpjGqIHrgoR69T.png',
   },
   twitter: {
     card: 'summary_large_image',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Trade at the speed of light with up to 100x leverage',
     creator: '@adrenaprotocol',
     images:
-      'https://iyd8atls7janm7g4.public.blob.vercel-storage.com/OG-nFshI7a1fxTEcp2L5XV8z9dormWh5w.png',
+      'https://iyd8atls7janm7g4.public.blob.vercel-storage.com/landing-dax9mhh6ElWRptAOFpjGqIHrgoR69T.png',
   },
 };
 
