@@ -77,10 +77,10 @@ export default function Trading({ className }: { className?: string }) {
         <div className="hidden 2xl:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
         <div className={twMerge(itemClasses, 'h-[15em]')}>
-          <h2 className="mb-4">TRADE AT BEST PRICE</h2>
+          <h2 className="mb-4">BEST PRICE EXECUTION</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
-            No spread, no slippage. Execute at oracle price.
+            No spread, no slippage. The oracle price is your entry price.
           </p>
 
           {tokenPrices ? (
@@ -105,7 +105,7 @@ export default function Trading({ className }: { className?: string }) {
         <div className="hidden lg:block h-[100px] w-[2px] bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
         <div className={twMerge(itemClasses, 'relative bottom-16 lg:bottom-0')}>
-          <h2 className="mb-4">TRADE WITH FAIR ACCESS</h2>
+          <h2 className="mb-4">FAIR ACCESS</h2>
 
           <p className="max-w-[400px] text-center 2xl:text-[1.3em]">
             Trades are between you and the community owned on-chain program.
