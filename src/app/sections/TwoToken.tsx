@@ -33,7 +33,7 @@ export default function Community({
               Our 2-token model
             </h1>
 
-            <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
+            <p className="mt-8 text-center md:text-lg max-w-[60em] self-center">
               Adrena makes several improvements on the 2-token model pioneered
               by GMX, including distributing 100% of revenue and optimizing the
               long term alignment of liquidity providers, token holders, and
@@ -99,7 +99,7 @@ export default function Community({
                 </div>
               </div>
 
-              <div className="flex flex-col mt-auto mb-auto">
+              <div className="flex flex-col mb-auto">
                 <div className="text-center mt-4 2xl:text-lg">
                   ADX votes in Adrena governance and gets a share of USDC yield
                   from platform fees.
