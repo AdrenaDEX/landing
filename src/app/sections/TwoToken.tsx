@@ -34,12 +34,11 @@ export default function Community({
             </h1>
 
             <p className="mt-8 text-center 2xl:text-lg max-w-[60em] self-center">
-              Largely inspired by the 2-tokens model pioneered by GMX, but fully
-              redistributing revenues, trying best to align liquidity providers,
-              token holders, and users with the long term interests of the
-              protocol. 70% of revenues are distributed to ALP holder and
-              stakers, 20% to ADX stakers, and the final 10% are used to buy
-              back ADX on the open market.
+              Adrena makes several improvements on the 2-token model pioneered
+              by GMX, including distributing 100% of revenue and optimizing the
+              long term alignment of liquidity providers, token holders, and
+              traders. Revenue distribution: 70% to ALP holders and stakers, 20%
+              to ADX stakers, and 10% to buy back ADX on the open market.
             </p>
           </div>
 
@@ -64,19 +63,19 @@ export default function Community({
               </div>
               <div className="flex flex-col mt-auto mb-auto">
                 <div className="text-center mt-4 2xl:text-lg">
-                  The token collateral providers receive in exchange for
-                  pledging their assets to the protocol. It represents a share
-                  of the liquidity pool.
+                  In exchange for depositing their assets into the protocol
+                  liquidity pool, collateral providers receive ALP, a share of
+                  the liquidity pool.
                 </div>
 
                 <div className="text-center mt-2 2xl:text-lg">
-                  ALP tokens receive USDC yield from fees, directly paid to the
-                  pool, naturally increasing their value.
+                  ALP gains value from platform fees paid to the Adrena
+                  liquidity pool, and from appreciation in pool assets.
                 </div>
 
                 <div className="text-center mt-2 2xl:text-lg">
-                  When staked, they generate bonus USDC yield depending on
-                  lock-duration directly paid to the token owner.
+                  When staked, ALP receives bonus USDC yield and bonus ADX
+                  rewards, depending on the duration locked.
                 </div>
               </div>
             </div>
@@ -102,17 +101,13 @@ export default function Community({
 
               <div className="flex flex-col mt-auto mb-auto">
                 <div className="text-center mt-4 2xl:text-lg">
-                  Grants its holder voting power within the Adrena ecosystem and
-                  USDC yield originating from platform&apos;s fees.
+                  ADX votes in Adrena governance and gets a share of USDC yield
+                  from platform fees.
                 </div>
 
                 <div className="text-center mt-2 2xl:text-lg">
-                  In liquid form: receives votes in governance and USDC yield.
-                </div>
-
-                <div className="text-center mt-2 2xl:text-lg">
-                  When staked: receives ADX emissions and multipliers on yield
-                  and governance (depending on stake duration)
+                  When staked, ADX receives bonus USDC yield, bonus ADX rewards,
+                  and governance multipliers, depending on the duration locked.
                 </div>
               </div>
             </div>
