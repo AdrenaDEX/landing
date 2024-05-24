@@ -11,7 +11,7 @@ export default function FeeStreamAnimation() {
   const LINES = [3, 2, 3, 5, 2, 3, 3, 4, 5];
 
   return (
-    <div className="relative  items-center flex flex-col justify-center w-full m-auto mt-[50px] scale-[0.85]">
+    <div className="relative  items-center flex flex-col justify-center w-full m-auto scale-[0.85]">
       <div className="w-full h-full flex flex-col items-center">
         <Image src={feesImage} className="w-[500px] z-10" alt="adx logo" />
 
@@ -98,7 +98,7 @@ export default function FeeStreamAnimation() {
 
         <div className="w-full h-full hidden lg:flex items-center">
           <div className="flex flex-col gap-3 h-full w-full max-w-[200px] items-start justify-center">
-            {LINES.slice(4).map((duration, i) => (
+            {LINES.slice(7).map((duration, i) => (
               <motion.div
                 className={`flex items-center w-full h-[1px] bg-gradient-to-r from-[#2775CA] to-[#fff]`}
                 key={i}
@@ -230,7 +230,7 @@ export default function FeeStreamAnimation() {
 
       <div className="w-full h-full flex flex-col items-center">
         <div className="flex flex-row gap-3 h-[200px] w-full items-center justify-center scale-x-[-1]">
-          {LINES.slice(6).map((duration, i) => (
+          {LINES.slice(8).map((duration, i) => (
             <motion.div
               className={`flex items-center justify-center w-[1px] h-full bg-gradient-to-b from-[#2775CA] to-[#fff]`}
               key={i}
