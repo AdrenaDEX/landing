@@ -6,6 +6,9 @@ import littleUnusualImg from '../../../public/Images/early-contributors/little-u
 import syntaxImg from '../../../public/Images/early-contributors/syntax.png';
 import vendingMachineImg from '../../../public/Images/early-contributors/vending-machine.png';
 import otterSecImg from '../../../public/Images/early-contributors/ottersec.png';
+import overclockImg from '../../../public/Images/early-contributors/overclock.png';
+import autonomousImg from '../../../public/Images/early-contributors/autonomous.png';
+import tritonImg from '../../../public/Images/early-contributors/triton.png';
 import { twMerge } from 'tailwind-merge';
 
 export default function EarlyProviders({ className }: { className?: string }) {
@@ -46,16 +49,44 @@ export default function EarlyProviders({ className }: { className?: string }) {
           </div>
 
           <Image
-            className="w-[4em] h-auto m-4"
+            className="w-[3em] h-auto m-4"
             src={vendingMachineImg}
             alt="Vending Machine Logo"
           />
 
           <Image
-            className="w-[10em] h-auto m-4 cursor-pointer"
+            className="w-[8em] h-auto m-4 cursor-pointer"
             src={forgdImg}
             alt="Forgd Logo"
             onClick={() => window.open('https://forgd.com/')}
+          />
+
+          <Image
+            className="w-[9em] h-auto m-4 cursor-pointer"
+            src={syntaxImg}
+            alt="Syntax Logo"
+            onClick={() => window.open('https://syntaxlabs.xyz/')}
+          />
+
+          <Image
+            className="w-[10em] h-auto m-4 cursor-pointer"
+            src={littleUnusualImg}
+            alt="Little Unusual Logo"
+            onClick={() => window.open('https://littleunusual.co/landing-page')}
+          />
+
+          <Image
+            className="w-[8em] h-auto m-4 cursor-pointer"
+            src={autonomousImg}
+            alt="Autonomous Logo"
+            onClick={() => window.open('https://autonomousprojects.co')}
+          />
+
+          <Image
+            className="w-[3.5em] h-auto m-4 cursor-pointer"
+            src={overclockImg}
+            alt="Overclock Logo"
+            onClick={() => window.open('https://overclock-sol.one')}
           />
 
           <Image
@@ -66,17 +97,10 @@ export default function EarlyProviders({ className }: { className?: string }) {
           />
 
           <Image
-            className="w-[10em] h-auto m-4 cursor-pointer"
-            src={syntaxImg}
-            alt="Syntax Logo"
-            onClick={() => window.open('https://syntaxlabs.xyz/')}
-          />
-
-          <Image
-            className="w-[14em] h-auto m-4 cursor-pointer"
-            src={littleUnusualImg}
-            alt="Little Unusual Logo"
-            onClick={() => window.open('https://littleunusual.co/landing-page')}
+            className="w-[3em] h-auto m-4 cursor-pointer"
+            src={tritonImg}
+            alt="Triton Logo"
+            onClick={() => window.open('https://triton.one')}
           />
         </div>
       </div>
