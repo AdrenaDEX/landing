@@ -4,6 +4,7 @@ import Link from 'next/link';
 import githubLogo from './assets/github.svg';
 import xLogo from './assets/x.svg';
 import discourseLogo from './assets/discourse.svg';
+import discordLogo from './assets/discord.png';
 import arrowUpImage from './assets/arrow-up.svg';
 import { twMerge } from 'tailwind-merge';
 
@@ -44,13 +45,23 @@ export default function Footer({ className }: { className?: string }) {
             />
           </Link>
 
+          <Link href="https://discord.gg/adrena" target="_blank">
+            <Image
+              className="hover:opacity-100 opacity-50 cursor-pointer"
+              src={discordLogo}
+              alt="Discord icon"
+              width="38"
+              height="38"
+            />
+          </Link>
+
           <Link href="https://adrena.discourse.group/" target="_blank">
             <Image
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={discourseLogo}
               alt="discourse icon"
-              width="35"
-              height="35"
+              width="32"
+              height="32"
             />
           </Link>
         </div>
