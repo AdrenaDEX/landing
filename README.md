@@ -21,7 +21,7 @@ Before you begin, ensure you have the following installed:
 
     Navigate to the project directory and install the required dependencies:
     ```bash
-    cd adrena-landing-page
+    cd landing
     yarn
     ```
 3. **Launch the Development Server**
