@@ -15,10 +15,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the Repository**
 
-   To get started, clone this repository to your local machine using:
-   ```bash
-   git clone https://github.com/<YourUsername>/adrena-landing-page.git
-   ```
+   To get started, clone this repository to your local machine.
 
 2. **Install Dependencies**
 
