@@ -27,7 +27,7 @@ export default function Header({ isLoaded }: { isLoaded: boolean }) {
   }
 
   return (
-    <div className="border-transparent bg-[#00000050] fixed w-full pt-2 pb-2 pl-4 pr-4 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in max-w-[1980px]">
+    <div className="border-transparent bg-[#00000050] fixed w-full pt-2 pb-2 pl-4 pr-4 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in">
       <Image src={logo} alt="adrena logo" className="w-[10em]" />
 
       <Button className="p-2 w-[125px] sm:w-[175px] text-sm" />
