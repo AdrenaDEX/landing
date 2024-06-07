@@ -1,21 +1,19 @@
 'use client';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
-
-import Hero from './sections/Hero';
-import TwoToken from './sections/TwoToken';
-import Community from './sections/Community';
+import { twMerge } from 'tailwind-merge';
 
 import sepImg from './assets/line.png';
-
-import Image from 'next/image';
-import Trading from './sections/Trading';
-import FeeDistribution from './sections/FeeDistribution';
-import Header from './Header';
 import Footer from './Footer';
-import Team from './sections/Team';
-import EarlyProviders from './sections/EarlyProviders';
+import Header from './Header';
 import useBetterMediaQuery from './hooks/useBetterMediaQuery';
-import { twMerge } from 'tailwind-merge';
+import Community from './sections/Community';
+import EarlyProviders from './sections/EarlyProviders';
+import FeeDistribution from './sections/FeeDistribution';
+import Hero from './sections/Hero';
+import Team from './sections/Team';
+import Trading from './sections/Trading';
+import TwoToken from './sections/TwoToken';
 
 function calculateWidthToDisplay(isBigScreen: boolean) {
   if (isBigScreen) return 'screen4k';

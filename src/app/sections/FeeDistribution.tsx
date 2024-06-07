@@ -1,14 +1,14 @@
-import React from 'react';
-
-import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
+import React from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import adxImage from '../assets/adrena_logo_adx_color.svg';
+import alpImage from '../assets/adrena_logo_alp_color.svg';
 import feesImage from '../assets/fees.svg';
 import feesPhoneImage from '../assets/fees-phone.svg';
 import usdcImage from '../assets/usdc.svg';
-import adxImage from '../assets/adrena_logo_adx_color.svg';
-import alpImage from '../assets/adrena_logo_alp_color.svg';
-import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 import FeeStreamAnimation from '../components/FeeStreamAnimation';
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 
 export default function FeeDistribution({ className }: { className?: string }) {
   const isBigScreen = useBetterMediaQuery('(min-width: 750px)');

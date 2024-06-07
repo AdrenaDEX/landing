@@ -1,9 +1,10 @@
-import Button from '@/app/components/Button';
 import Image from 'next/image';
-
-import logo from '../../public/Images/adrena-logo.svg';
 import { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+
+import Button from '@/app/components/Button';
+
+import logo from '../../public/Images/adrena-logo.svg';
 
 export default function Header({
   isLoaded,

@@ -1,10 +1,10 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 import screenshotTrade from '../assets/screenshot-trade.png';
-import Image from 'next/image';
-import { twMerge } from 'tailwind-merge';
-import useTokenPrices from '../hooks/useWatchTokenPrices';
 import LeverageSlider from '../components/LeverageSlider';
+import useTokenPrices from '../hooks/useWatchTokenPrices';
 
 export default function Trading({
   className,

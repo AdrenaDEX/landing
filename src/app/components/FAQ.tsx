@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import chevron from '../assets/chevron.svg';
-import monsterPillarImg from '../assets/trade-monster.png';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+
+import chevron from '../assets/chevron.svg';
+import monsterPillarImg from '../assets/trade-monster.png';
 
 export default function FAQ() {
   const [activeQ, setActiveQ] = useState<null | number>(null);

@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
+import arrowUpImage from './assets/arrow-up.svg';
+import discordLogo from './assets/discord.png';
+import discourseLogo from './assets/discourse.svg';
 import githubLogo from './assets/github.svg';
 import xLogo from './assets/x.svg';
-import discourseLogo from './assets/discourse.svg';
-import discordLogo from './assets/discord.png';
-import arrowUpImage from './assets/arrow-up.svg';
-import { twMerge } from 'tailwind-merge';
 
 export default function Footer({ className }: { className?: string }) {
   return (

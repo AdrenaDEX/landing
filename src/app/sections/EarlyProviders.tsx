@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react';
-
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import autonomousImg from '../../../public/Images/early-contributors/autonomous.png';
 import forgdImg from '../../../public/Images/early-contributors/forgd.png';
 import littleUnusualImg from '../../../public/Images/early-contributors/little-unusual.png';
-import syntaxImg from '../../../public/Images/early-contributors/syntax.png';
-import vendingMachineImg from '../../../public/Images/early-contributors/vending-machine.png';
 import otterSecImg from '../../../public/Images/early-contributors/ottersec.png';
 import overclockImg from '../../../public/Images/early-contributors/overclock.png';
-import autonomousImg from '../../../public/Images/early-contributors/autonomous.png';
+import syntaxImg from '../../../public/Images/early-contributors/syntax.png';
 import tritonImg from '../../../public/Images/early-contributors/triton.png';
-import { twMerge } from 'tailwind-merge';
+import vendingMachineImg from '../../../public/Images/early-contributors/vending-machine.png';
 
 export default function EarlyProviders({ className }: { className?: string }) {
   const [investors, setInvestors] = useState<
@@ -21,7 +21,7 @@ export default function EarlyProviders({ className }: { className?: string }) {
   }, []);
 
   const fetchCsv = async () => {
-    let investorList = process.env.NEXT_PUBLIC_INVESTOR_LIST?.split(',').map(
+    const investorList = process.env.NEXT_PUBLIC_INVESTOR_LIST?.split(',').map(
       (item) => {
         const [name, twitter] = item.split('/');
         return {
@@ -31,13 +31,13 @@ export default function EarlyProviders({ className }: { className?: string }) {
       },
     ) as { name: string; twitter: string | null }[];
 
-    investorList.sort((a, b) => {
-      const aName = a.name.replace('@', '');
-      const bName = b.name.replace('@', '');
-      return aName.localeCompare(bName);
-    });
-
-    setInvestors(investorList);
+    setInvestors(
+      investorList.sort((a, b) => {
+        const aName = a.name.replace('@', '');
+        const bName = b.name.replace('@', '');
+        return aName.localeCompare(bName);
+      }),
+    );
   };
 
   return (

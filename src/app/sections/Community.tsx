@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
+import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Image from 'next/image';
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
+import React, { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import btmImage from '../../../public/Images/btm-monster.png';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import btmImage from '../../../public/Images/btm-monster.png';
-import { twMerge } from 'tailwind-merge';
 
 export default function Community({
   isLoaded,

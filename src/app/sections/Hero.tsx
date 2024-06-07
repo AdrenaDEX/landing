@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../../../public/Images/adrena-logo.svg';
-
+import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
-import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
+import logo from '../../../public/Images/adrena-logo.svg';
+import heroImage from '../../../public/Images/hero-monster.png';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import heroImage from '../../../public/Images/hero-monster.png';
-import { twMerge } from 'tailwind-merge';
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 
 export default function Hero({
   isLoaded,

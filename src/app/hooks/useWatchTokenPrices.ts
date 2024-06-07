@@ -27,7 +27,7 @@ const config = [
 
 const symbols = config.map((item) => item.symbol);
 
-const pythRPC: string = 'https://api.devnet.solana.com';
+const pythRPC = 'https://api.devnet.solana.com';
 
 const useTokenPrices = () => {
   const [pythClient, setPythClient] = useState<PythHttpClient | null>(null);

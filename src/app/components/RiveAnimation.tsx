@@ -1,11 +1,12 @@
 import {
+  decodeImage,
   ImageAsset,
   Layout,
-  decodeImage,
   useRive,
 } from '@rive-app/react-canvas';
 import React, { useEffect, useMemo, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+
 import { useResize } from '../hooks/useResize';
 
 const RiveAnimation = ({
@@ -82,6 +83,7 @@ const RiveAnimation = ({
 
   const getImages = async (asset: ImageAsset) => {
     const img =
+      // eslint-disable-next-line @typescript-eslint/no-var-requires
       require(`../../../public/${folder}/${subFolder}/${asset.name}.webp`).default;
 
     const arrayBuffer = await fetch(img.src).then((response) =>

@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import usdcImage from '../assets/usdc.svg';
-import arrowsImage from '../assets/arrows.svg';
-import feesImage from '../assets/fees.png';
+
 import adxImage from '../assets/adrena_logo_adx_color.svg';
 import alpImage from '../assets/adrena_logo_alp_color.svg';
+import arrowsImage from '../assets/arrows.svg';
+import feesImage from '../assets/fees.png';
+import usdcImage from '../assets/usdc.svg';
 
 export default function FeeStreamAnimation() {
   const LINES = [3, 2, 3, 5, 2, 3, 3, 4, 5];

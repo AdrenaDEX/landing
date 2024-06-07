@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-
 import Image from 'next/image';
-import kinoImg from '../../../public/Images/team/kino.png';
+import React, { useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+
 import aldoImg from '../../../public/Images/team/aldo.png';
-import endoImg from '../../../public/Images/team/endo.png';
 import cortoImg from '../../../public/Images/team/corto2.png';
+import endoImg from '../../../public/Images/team/endo.png';
+import kinoImg from '../../../public/Images/team/kino.png';
 import orexImg from '../../../public/Images/team/orex.png';
 import tyroImg from '../../../public/Images/team/tyro.png';
-import { twMerge } from 'tailwind-merge';
 
 export default function Team({ className }: { className?: string }) {
   const [hovering, setHovering] = useState<

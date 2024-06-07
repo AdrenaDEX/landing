@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import monsterFace1 from '../assets/monster-face-1.png';
-import monsterFace2 from '../assets/monster-face-2.png';
+
 import adxIcon from '../../../public/Images/adrena_logo_adx_color.svg';
 import alpIcon from '../../../public/Images/adrena_logo_alp_color.svg';
+import monsterFace1 from '../assets/monster-face-1.png';
+import monsterFace2 from '../assets/monster-face-2.png';
 
 export default function Community({
   isLoaded,
