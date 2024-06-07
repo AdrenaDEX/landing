@@ -68,11 +68,18 @@ html {
   overflow: auto;
 }
 
+.screen2k {
+  max-width: 2560px;
+}
+
+.screen4k {
+  max-width: 3840px;
+}
+
 body {
   overflow: hidden;
   background-color: #16293d;
   color: white;
-  max-width: 3840px;
   margin: 0 auto;
 }
 

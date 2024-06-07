@@ -14,6 +14,13 @@ import Header from './Header';
 import Footer from './Footer';
 import Team from './sections/Team';
 import EarlyProviders from './sections/EarlyProviders';
+import useBetterMediaQuery from './hooks/useBetterMediaQuery';
+import { twMerge } from 'tailwind-merge';
+
+function calculateWidthToDisplay(isBigScreen: boolean) {
+  if (isBigScreen) return 'screen4k';
+  return 'screen2k';
+}
 
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
@@ -21,39 +28,61 @@ export default function Home() {
 
   const isLoaded = isHeaderLoaded && isBtmLoaded;
 
+  const is4k = useBetterMediaQuery(
+    '(min-width: 2561px) and (min-height: 2000px)',
+  )
+    ? true
+    : false;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.remove('screen2k', 'screen4k');
+    document.body.classList.add(calculateWidthToDisplay(is4k));
+  }, [is4k]);
+
   return (
-    <div className="flex flex-col relative">
+    <div className={twMerge('flex flex-col relative')}>
       {/* Add a shadow on both sides of the screen when screen is too big */}
       <div className="absolute w-[5em] h-full z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
       <div className="absolute w-[5em] h-full z-30 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
 
-      <Header isLoaded={isLoaded} />
+      <Header isLoaded={isLoaded} is4k={is4k} />
 
-      <Hero isLoaded={isLoaded} setIsHeaderLoaded={setIsHeaderLoaded} />
-
-      <div className="relative">
-        <Image
-          src={sepImg}
-          alt="separator"
-          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
-        />
-      </div>
-
-      <Trading className="" />
+      <Hero
+        isLoaded={isLoaded}
+        setIsHeaderLoaded={setIsHeaderLoaded}
+        is4k={is4k}
+      />
 
       <div className="relative">
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] 2xl:top-[-4em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
         />
       </div>
 
-      <TwoToken className="mt-[1em] lg:mt-[3em]" isLoaded={isLoaded} />
+      <Trading className="" is4k={is4k} />
+
+      <div className="relative">
+        <Image
+          src={sepImg}
+          alt="separator"
+          className={twMerge(
+            'absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]',
+            is4k ? 'top-[-28em]' : '',
+          )}
+        />
+      </div>
+
+      <TwoToken
+        className={twMerge('mt-[1em]', is4k ? 'mt-[30em]' : 'lg:mt-[3em]')}
+        isLoaded={isLoaded}
+        is4k={is4k}
+      />
 
       <div className="relative">
         <Image
@@ -64,9 +93,10 @@ export default function Home() {
       </div>
 
       <Community
-        className="mt-[3em] lg:mt-[6em]"
+        className={twMerge('mt-[3em]', is4k ? 'mt-[20em]' : 'lg:mt-[6em]')}
         setIsBtmLoaded={setIsBtmLoaded}
         isLoaded={isLoaded}
+        is4k={is4k}
       />
 
       <div className="relative">

@@ -11,10 +11,12 @@ export default function Community({
   isLoaded,
   className,
   setIsBtmLoaded,
+  is4k,
 }: {
   isLoaded: boolean;
   className?: string;
   setIsBtmLoaded: (v: boolean) => void;
+  is4k: boolean;
 }) {
   const [isReady, setIsReady] = useState(false);
 
