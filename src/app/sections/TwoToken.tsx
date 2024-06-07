@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import adxIcon from '../../../public/Images/adrena_logo_adx_color.svg';
@@ -8,24 +8,12 @@ import monsterFace1 from '../assets/monster-face-1.png';
 import monsterFace2 from '../assets/monster-face-2.png';
 
 export default function Community({
-  isLoaded,
   className,
   is4k,
 }: {
-  isLoaded: boolean;
   className?: string;
   is4k: boolean;
 }) {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    if (isLoaded) {
-      setTimeout(() => {
-        setIsReady(true);
-      }, 500);
-    }
-  }, [isLoaded]);
-
   return (
     <div className={twMerge('relative z-10', className)}>
       <div

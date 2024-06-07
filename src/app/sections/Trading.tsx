@@ -6,13 +6,7 @@ import screenshotTrade from '../assets/screenshot-trade.png';
 import LeverageSlider from '../components/LeverageSlider';
 import useTokenPrices from '../hooks/useWatchTokenPrices';
 
-export default function Trading({
-  className,
-  is4k,
-}: {
-  className?: string;
-  is4k: boolean;
-}) {
+export default function Trading({ is4k }: { is4k: boolean }) {
   const tokenPrices = useTokenPrices();
   const [leverage, setLeverage] = useState<number>(100);
 
@@ -144,7 +138,7 @@ export default function Trading({
                 is4k ? 'max-w-[35em]' : 'max-w-[18em]',
               )}
             >
-              {Object.entries(tokenPrices).map(([symbol, price], index) => {
+              {Object.entries(tokenPrices).map(([symbol, price]) => {
                 if (price === null) return null;
 
                 return (

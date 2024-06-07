@@ -63,7 +63,7 @@ export default function Home() {
         />
       </div>
 
-      <Trading className="" is4k={is4k} />
+      <Trading is4k={is4k} />
 
       <div className="relative">
         <Image
@@ -78,7 +78,6 @@ export default function Home() {
 
       <TwoToken
         className={twMerge('mt-[1em]', is4k ? 'mt-[30em]' : 'lg:mt-[3em]')}
-        isLoaded={isLoaded}
         is4k={is4k}
       />
 

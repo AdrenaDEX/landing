@@ -21,6 +21,7 @@ export default function LeverageSlider({
 }) {
   // Use this state to allow user to remove everything in the input
   // overwise the user is stuck with one number, which is bad ux
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLeverageInputEmpty, setIsLeverageInputEmpty] =
     useState<boolean>(false);
 

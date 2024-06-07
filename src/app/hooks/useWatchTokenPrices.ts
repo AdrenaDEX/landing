@@ -52,8 +52,6 @@ const useTokenPrices = () => {
       config.map(({ feedId }) => feedId),
     );
 
-    const tokenPrices = {};
-
     // Store the prices in Store
     setTokenPrices(
       prices.reduce((tokenPrices, { price }, index) => {

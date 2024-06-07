@@ -11,6 +11,7 @@ export default function Community({
   isLoaded,
   className,
   setIsBtmLoaded,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   is4k,
 }: {
   isLoaded: boolean;
