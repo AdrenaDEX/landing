@@ -3,9 +3,6 @@
     "@typescript-eslint",
     "simple-import-sort"
   ],
-  "ignorePatterns": [
-    "public/charting_library/**"
-  ],
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
