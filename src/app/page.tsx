@@ -59,7 +59,12 @@ export default function Home() {
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] 2xl:top-[-4em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+          className={twMerge(
+            'absolute fade-in-3 top-[-20px] scale-[3] ',
+            is4k
+              ? 'top-[-4em] scale-[1]'
+              : 'sm:top-[-1em] lg:top-[-2em] 2xl:top-[-4em] sm:scale-[2.5] md:scale-[2] lg:scale-[1]',
+          )}
         />
       </div>
 
@@ -77,7 +82,7 @@ export default function Home() {
       </div>
 
       <TwoToken
-        className={twMerge('mt-[1em]', is4k ? 'mt-[30em]' : 'lg:mt-[3em]')}
+        className={twMerge('mt-[1em]', is4k ? 'mt-[20em]' : 'lg:mt-[3em]')}
         is4k={is4k}
       />
 
@@ -90,7 +95,7 @@ export default function Home() {
       </div>
 
       <Community
-        className={twMerge('mt-[3em]', is4k ? 'mt-[20em]' : 'lg:mt-[6em]')}
+        className={twMerge('mt-[3em] ', is4k ? 'mt-[4em]' : 'lg:mt-[6em]')}
         setIsBtmLoaded={setIsBtmLoaded}
         isLoaded={isLoaded}
         is4k={is4k}
@@ -100,25 +105,38 @@ export default function Home() {
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+          className={twMerge(
+            'absolute fade-in-3 top-[-20px] scale-[3] ',
+            is4k
+              ? 'top-[-4em] scale-[1]'
+              : 'sm:top-[-1em] lg:top-[-2em] 2xl:top-[-4em] sm:scale-[2.5] md:scale-[2] lg:scale-[1]',
+          )}
         />
       </div>
 
-      <FeeDistribution className="-z-10 mb-14" />
+      <FeeDistribution
+        className={twMerge('-z-10 mb-14', is4k ? 'pb-[16em]' : '')}
+        is4k={is4k}
+      />
 
       <div className="relative">
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 top-[-20px] sm:top-[-1em] lg:top-[-2em] scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1]"
+          className={twMerge(
+            'absolute fade-in-3 top-[-20px] scale-[3] ',
+            is4k
+              ? 'top-[-4em] scale-[1]'
+              : 'sm:top-[-1em] lg:top-[-2em] 2xl:top-[-4em] sm:scale-[2.5] md:scale-[2] lg:scale-[1]',
+          )}
         />
       </div>
 
-      <Team className="pt-14" />
+      <Team className="pt-14" is4k={is4k} />
 
       <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-      <EarlyProviders className="pt-14 pb-8" />
+      <EarlyProviders className="pt-14 pb-8" is4k={is4k} />
 
       <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 

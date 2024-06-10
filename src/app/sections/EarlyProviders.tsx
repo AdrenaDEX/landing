@@ -11,7 +11,13 @@ import syntaxImg from '../../../public/Images/early-contributors/syntax.png';
 import tritonImg from '../../../public/Images/early-contributors/triton.png';
 import vendingMachineImg from '../../../public/Images/early-contributors/vending-machine.png';
 
-export default function EarlyProviders({ className }: { className?: string }) {
+export default function EarlyProviders({
+  className,
+  is4k,
+}: {
+  className?: string;
+  is4k: boolean;
+}) {
   const [investors, setInvestors] = useState<
     { name: string; twitter: string | null }[]
   >([]);
@@ -41,7 +47,10 @@ export default function EarlyProviders({ className }: { className?: string }) {
   };
 
   return (
-    <div className={twMerge('relative', className)}>
+    <div
+      className={twMerge('relative', className)}
+      style={is4k ? { fontSize: '2em' } : {}}
+    >
       <div className="relative w-full flex flex-col overflow-hidden items-center">
         <div className="flex flex-wrap items-center justify-evenly w-[90%] mt-8 border border-gray-300/10 relative pb-4 pt-4">
           <div className="absolute top-[-0.75em] left-auto right-auto text-4xl font-titletext bg-[#16293d] w-[10em] items-center flex justify-center">

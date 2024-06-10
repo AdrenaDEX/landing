@@ -7,12 +7,18 @@ import alpImage from '../assets/adrena_logo_alp_color.svg';
 import arrowsImage from '../assets/arrows.svg';
 import feesImage from '../assets/fees.png';
 import usdcImage from '../assets/usdc.svg';
+import { twMerge } from 'tailwind-merge';
 
-export default function FeeStreamAnimation() {
+export default function FeeStreamAnimation({ is4k }: { is4k: boolean }) {
   const LINES = [3, 2, 3, 5, 2, 3, 3, 4, 5];
 
   return (
-    <div className="relative  items-center flex flex-col justify-center w-full m-auto scale-[0.85]">
+    <div
+      className={twMerge(
+        'relative  items-center flex flex-col justify-center w-full m-auto',
+        is4k ? 'scale-[1.5] top-[10em] pb-[8em]' : 'scale-[0.85]',
+      )}
+    >
       <div className="w-full h-full flex flex-col items-center">
         <Image src={feesImage} className="w-[500px] z-10" alt="adx logo" />
 

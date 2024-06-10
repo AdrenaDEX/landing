@@ -30,7 +30,10 @@ export default function Community({
   }, [isLoaded]);
 
   return (
-    <div className={twMerge('relative', className)}>
+    <div
+      className={twMerge('relative', className)}
+      style={is4k ? { fontSize: '2em' } : {}}
+    >
       <div className="relative w-full flex px-10 pb-[25em]">
         <div
           style={{
@@ -45,9 +48,10 @@ export default function Community({
             layout={
               new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
             }
-            className={
-              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 max-w-7xl right-0'
-            }
+            className={twMerge(
+              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 right-0',
+              is4k ? '' : 'max-w-7xl',
+            )}
             setIsReady={setIsBtmLoaded}
           />
         </div>
