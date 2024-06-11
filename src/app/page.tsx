@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import sepImg from './assets/line.png';
@@ -23,7 +24,9 @@ function calculateWidthToDisplay(isBigScreen: boolean) {
 export default function Home() {
   const [isHeaderLoaded, setIsHeaderLoaded] = useState(false);
   const [isBtmLoaded, setIsBtmLoaded] = useState(false);
+  const [width, setWidth] = useState(0);
 
+  const ref = React.createRef<HTMLDivElement>();
   const isLoaded = isHeaderLoaded && isBtmLoaded;
 
   const is4k = useBetterMediaQuery(
@@ -41,13 +44,33 @@ export default function Home() {
     document.body.classList.add(calculateWidthToDisplay(is4k));
   }, [is4k]);
 
+  useEffect(() => {
+    if (ref.current) {
+      setWidth(ref.current.offsetWidth);
+    }
+
+    const handleResize = () => {
+      if (ref.current) {
+        setWidth(ref.current.offsetWidth);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [ref]);
+
   return (
     <div className={twMerge('flex flex-col relative')}>
       {/* Add a shadow on both sides of the screen when screen is too big */}
       <div className="absolute w-[5em] h-full z-30 left-0 bg-gradient-to-r from-[#1A293C] gradient__control" />
       <div className="absolute w-[5em] h-full z-30 right-0 bg-gradient-to-l from-[#1A293C] gradient__control" />
 
-      <Header isLoaded={isLoaded} is4k={is4k} />
+      <div ref={ref}>
+        <Header isLoaded={isLoaded} is4k={is4k} width={width} />
+      </div>
 
       <Hero
         isLoaded={isLoaded}
@@ -82,7 +105,7 @@ export default function Home() {
       </div>
 
       <TwoToken
-        className={twMerge('mt-[1em]', is4k ? 'mt-[20em]' : 'lg:mt-[3em]')}
+        className={twMerge('mt-[1em]', is4k ? 'mt-[30em]' : 'lg:mt-[3em]')}
         is4k={is4k}
       />
 
@@ -95,7 +118,7 @@ export default function Home() {
       </div>
 
       <Community
-        className={twMerge('mt-[3em] ', is4k ? 'mt-[4em]' : 'lg:mt-[6em]')}
+        className={twMerge('mt-[3em] ', is4k ? 'mt-[8em]' : 'lg:mt-[6em]')}
         setIsBtmLoaded={setIsBtmLoaded}
         isLoaded={isLoaded}
         is4k={is4k}
@@ -115,7 +138,7 @@ export default function Home() {
       </div>
 
       <FeeDistribution
-        className={twMerge('-z-10 mb-14', is4k ? 'pb-[16em]' : '')}
+        className={twMerge('-z-10 mb-14', is4k ? 'pb-[16em] mt-[6em]' : '')}
         is4k={is4k}
       />
 
@@ -140,7 +163,7 @@ export default function Home() {
 
       <div className="w-full h-[1px] mb-3 bg-gradient-to-r from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
 
-      <Footer />
+      <Footer is4k={is4k} />
     </div>
   );
 }

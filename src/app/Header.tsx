@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import Button from '@/app/components/Button';
@@ -9,9 +10,11 @@ import logo from '../../public/Images/adrena-logo.svg';
 export default function Header({
   isLoaded,
   is4k,
+  width,
 }: {
   isLoaded: boolean;
   is4k: boolean;
+  width: number;
 }) {
   const [scrollStarted, setScrollStarted] = useState<boolean>(false);
 
@@ -36,6 +39,7 @@ export default function Header({
 
   return (
     <div
+      style={{ width }}
       className={twMerge(
         'border-transparent bg-[#00000050] fixed w-full pt-2 pb-2 pl-4 pr-4 flex flex-row justify-between items-center border z-30 transition duration-300 fade-in',
         is4k ? 'h-[8em] pl-8' : '',

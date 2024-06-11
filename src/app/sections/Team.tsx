@@ -22,7 +22,7 @@ export default function Team({
 
   return (
     <div
-      className={twMerge('relative', className)}
+      className={twMerge('relative', className, is4k ? 'mt-[6em]' : '')}
       style={is4k ? { fontSize: '2em' } : {}}
     >
       <div className="relative w-full flex flex-col overflow-hidden items-center">
@@ -30,7 +30,12 @@ export default function Team({
           Launch Team
         </h1>
 
-        <div className="w-[36em] sm:w-[35em] mb-3 h-[42em] relative scale-[0.65] sm:scale-[0.9] sm:mt-[8em] md:mt-8">
+        <div
+          className={twMerge(
+            'w-[36em] sm:w-[35em] mb-3 h-[42em] relative scale-[0.65] sm:scale-[0.9] ',
+            is4k ? 'mt-[4em]' : 'sm:mt-[8em] md:mt-8',
+          )}
+        >
           <div>
             <div
               className={twMerge(

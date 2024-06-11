@@ -8,7 +8,13 @@ import discourseLogo from './assets/discourse.svg';
 import githubLogo from './assets/github.svg';
 import xLogo from './assets/x.svg';
 
-export default function Footer({ className }: { className?: string }) {
+export default function Footer({
+  className,
+  is4k,
+}: {
+  className?: string;
+  is4k: boolean;
+}) {
   return (
     <>
       <footer
@@ -17,7 +23,10 @@ export default function Footer({ className }: { className?: string }) {
           className,
         )}
       >
-        <div className="absolute left-8 bottom-4 opacity-70 text-sm">
+        <div
+          className="absolute left-8 bottom-4 opacity-70 text-sm"
+          style={is4k ? { fontSize: '2em' } : {}}
+        >
           2023-{new Date().getFullYear()}
         </div>
 
@@ -30,8 +39,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={githubLogo}
               alt="github icon"
-              width="35"
-              height="35"
+              width={is4k ? '70' : '35'}
+              height={is4k ? '70' : '35'}
             />
           </Link>
 
@@ -40,8 +49,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={xLogo}
               alt="x icon"
-              width="27"
-              height="27"
+              width={is4k ? '54' : '27'}
+              height={is4k ? '54' : '27'}
             />
           </Link>
 
@@ -50,8 +59,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={discordLogo}
               alt="Discord icon"
-              width="38"
-              height="38"
+              width={is4k ? '76' : '38'}
+              height={is4k ? '76' : '38'}
             />
           </Link>
 
@@ -60,8 +69,8 @@ export default function Footer({ className }: { className?: string }) {
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={discourseLogo}
               alt="discourse icon"
-              width="32"
-              height="32"
+              width={is4k ? '64' : '32'}
+              height={is4k ? '64' : '32'}
             />
           </Link>
         </div>
@@ -73,8 +82,8 @@ export default function Footer({ className }: { className?: string }) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
           alt="go up icon"
-          width="32"
-          height="32"
+          width={is4k ? '64' : '32'}
+          height={is4k ? '64' : '32'}
         />
       </footer>
     </>
