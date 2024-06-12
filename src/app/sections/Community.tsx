@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
-
+import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Image from 'next/image';
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
+import React, { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
+
+import btmImage from '../../../public/Images/btm-monster.png';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import btmImage from '../../../public/Images/btm-monster.png';
-import { twMerge } from 'tailwind-merge';
 
 export default function Community({
   isLoaded,
   className,
   setIsBtmLoaded,
+  is4k,
 }: {
   isLoaded: boolean;
   className?: string;
   setIsBtmLoaded: (v: boolean) => void;
+  is4k: boolean;
 }) {
   const [isReady, setIsReady] = useState(false);
 
@@ -27,7 +29,10 @@ export default function Community({
   }, [isLoaded]);
 
   return (
-    <div className={twMerge('relative', className)}>
+    <div
+      className={twMerge('relative', className)}
+      style={is4k ? { fontSize: '2em' } : {}}
+    >
       <div className="relative w-full flex px-10 pb-[25em]">
         <div
           style={{
@@ -42,9 +47,10 @@ export default function Community({
             layout={
               new Layout({ fit: Fit.Contain, alignment: Alignment.BottomRight })
             }
-            className={
-              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 max-w-7xl right-0'
-            }
+            className={twMerge(
+              'absolute w-full h-full min-w-[80em] opacity-10 sm:opacity-100 sm:min-w-0 right-0',
+              is4k ? '' : 'max-w-7xl',
+            )}
             setIsReady={setIsBtmLoaded}
           />
         </div>

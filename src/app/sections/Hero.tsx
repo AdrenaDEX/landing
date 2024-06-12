@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import logo from '../../../public/Images/adrena-logo.svg';
-
+import { Alignment, Fit, Layout } from '@rive-app/react-canvas';
 import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-import { Layout, Fit, Alignment } from '@rive-app/react-canvas';
-import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
+import logo from '../../../public/Images/adrena-logo.svg';
+import heroImage from '../../../public/Images/hero-monster.png';
 import Button from '../components/Button';
 import RiveAnimation from '../components/RiveAnimation';
-import heroImage from '../../../public/Images/hero-monster.png';
+import useBetterMediaQuery from '../hooks/useBetterMediaQuery';
 
 export default function Hero({
   isLoaded,
   setIsHeaderLoaded,
+  is4k,
 }: {
   isLoaded: boolean;
   setIsHeaderLoaded: (v: boolean) => void;
+  is4k: boolean;
 }) {
   const isBigScreen = useBetterMediaQuery('(min-width: 500px)');
   const [isReady, setIsReady] = useState(false);
@@ -53,16 +55,29 @@ export default function Hero({
           <Image
             src={logo}
             alt="adrena logo"
-            className="w-[23em] 2xl:w-[32em]"
+            className={twMerge(is4k ? 'w-[60em]' : 'w-[23em] 2xl:w-[32em]')}
           />
 
-          <div className="block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]" />
+          <div
+            className={twMerge(
+              'block h-[2px] w-1/2 mt-4 bg-gradient-to-b from-[#1A2A3D] via-[#2B3A55] to-[#1A2A3D]',
+              is4k ? 'mt-12' : 'mt-4',
+            )}
+          />
 
-          <p className="text-lg max-w-[15em]">
+          <p
+            className={twMerge(
+              is4k ? 'text-[2.5em] max-w-[20em] mt-10' : 'text-lg max-w-[15em]',
+            )}
+          >
             Trade at the speed of light with up to 100x leverage
           </p>
 
-          <Button className="mt-4" />
+          <Button
+            className={twMerge(
+              is4k ? 'mt-10 w-[400px] text-[2em] p-6' : 'mt-4',
+            )}
+          />
         </div>
       </div>
 

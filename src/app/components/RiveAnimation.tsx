@@ -1,11 +1,12 @@
 import {
+  decodeImage,
   ImageAsset,
   Layout,
-  decodeImage,
   useRive,
 } from '@rive-app/react-canvas';
 import React, { useEffect, useMemo, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+
 import { useResize } from '../hooks/useResize';
 
 const RiveAnimation = ({
@@ -28,6 +29,7 @@ const RiveAnimation = ({
   automaticallyHandleEvents?: boolean;
   stateMachines?: string;
   setIsReady: (v: boolean) => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setProgress?: any;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -73,6 +75,7 @@ const RiveAnimation = ({
       setIsLoaded(true);
       setIsReady(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetsLoaded]);
 
   const currentAnimation = riveAnimations.find((a) => a.name === animation);
@@ -82,6 +85,7 @@ const RiveAnimation = ({
 
   const getImages = async (asset: ImageAsset) => {
     const img =
+      // eslint-disable-next-line @typescript-eslint/no-require-imports, @typescript-eslint/no-var-requires
       require(`../../../public/${folder}/${subFolder}/${asset.name}.webp`).default;
 
     const arrayBuffer = await fetch(img.src).then((response) =>
@@ -93,6 +97,7 @@ const RiveAnimation = ({
     asset.setRenderImage(image);
 
     setAssetsLoaded((prev) => prev + 1);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setProgress?.((prev: any) => prev + 1);
 
     // call unref to release any references when no longer needed.

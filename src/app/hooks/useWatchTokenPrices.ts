@@ -27,7 +27,7 @@ const config = [
 
 const symbols = config.map((item) => item.symbol);
 
-const pythRPC: string = 'https://api.devnet.solana.com';
+const pythRPC = 'https://api.devnet.solana.com';
 
 const useTokenPrices = () => {
   const [pythClient, setPythClient] = useState<PythHttpClient | null>(null);
@@ -51,8 +51,6 @@ const useTokenPrices = () => {
     const prices = await pythClient.getAssetPricesFromAccounts(
       config.map(({ feedId }) => feedId),
     );
-
-    const tokenPrices = {};
 
     // Store the prices in Store
     setTokenPrices(

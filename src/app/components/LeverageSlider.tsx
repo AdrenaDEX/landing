@@ -12,13 +12,16 @@ export default function LeverageSlider({
   className,
   value,
   onChange,
+  is4k,
 }: {
   value?: number;
   className?: string;
   onChange: (v: number) => void;
+  is4k?: boolean;
 }) {
   // Use this state to allow user to remove everything in the input
   // overwise the user is stuck with one number, which is bad ux
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isLeverageInputEmpty, setIsLeverageInputEmpty] =
     useState<boolean>(false);
 
@@ -28,18 +31,26 @@ export default function LeverageSlider({
         <Slider
           className="relative bottom-3"
           min={1.1}
-              max={100}
+          max={100}
           value={value}
           defaultValue={1}
-          step={0.1}
-          marks={[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].reduce((acc, mark) => {
-            acc[mark] = (
-              <span className="text-white text-sm opacity-30 hover:opacity-100">
-                x{mark}
-              </span>
-            );
-            return acc;
-          }, {} as Record<number, ReactNode>)}
+          step={1}
+          marks={[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].reduce(
+            (acc, mark) => {
+              acc[mark] = (
+                <span
+                  className={twMerge(
+                    'text-white opacity-30 hover:opacity-100',
+                    is4k ? 'text-2xl' : 'text-sm lg:text-xs xl:text-sm',
+                  )}
+                >
+                  x{mark}
+                </span>
+              );
+              return acc;
+            },
+            {} as Record<number, ReactNode>,
+          )}
           railStyle={{
             backgroundColor: colorB,
           }}
