@@ -18,8 +18,8 @@ export default function Community({
     <div className={twMerge('relative z-10', className)}>
       <div
         className={twMerge(
-          'relative w-full flex pb-[8em] md:pb-0',
-          is4k ? 'mt-[-2em]' : '',
+          'relative w-full flex pb-[8em]',
+          is4k ? 'mt-[-2em]' : 'md:pb-0',
         )}
       >
         <div className={twMerge('flex flex-col px-10 z-30 w-full')}>
@@ -56,8 +56,8 @@ export default function Community({
 
           <div
             className={twMerge(
-              'flex flex-wrap items-start justify-center gap-x-5 gap-y-10  self-center mt-[5em]',
-              is4k ? 'mt-[10em] gap-x-20' : 'md:gap-x-10',
+              'flex flex-wrap items-start justify-center gap-x-5 gap-y-10 self-center mt-[5em]',
+              is4k ? 'mt-[10em] gap-x-20 mb-[-10em]' : 'md:gap-x-10',
             )}
           >
             <div
@@ -192,9 +192,10 @@ export default function Community({
           // small screen
           'sm:w-[40em] sm:h-[40em] sm:top-0 sm:left-[-20em]',
           // medium screen
-          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:left-[-20em]',
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:left-[-20em]',
           // large screens
-          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:left-[-13%]',
+          'lg:w-[40%] lg:h-auto lg:left-[-13%]',
+          is4k ? 'bottom-[-1em]' : 'md:bottom-0 lg:bottom-[2em]',
         )}
       >
         <Image
@@ -210,13 +211,14 @@ export default function Community({
         className={twMerge(
           '-z-30 absolute',
           // mobile
-          'w-[50em] h-[50em] bottom-[0em] right-[-25em] opacity-10',
+          'w-[50em] h-[50em] right-[-25em] opacity-10',
           // small screen
           'sm:w-[40em] sm:h-[40em] sm:top-0 sm:right-[-20em]',
           // medium screen
-          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:bottom-0 md:right-[-20em]',
+          'md:opacity-40 md:w-[40em] md:h-[40em] md:top-auto md:right-[-20em]',
           // large screens
-          'lg:w-[40%] lg:h-auto lg:bottom-[-1em] lg:right-[-13%]',
+          'lg:w-[40%] lg:h-auto lg:right-[-13%]',
+          is4k ? 'bottom-[-1em]' : 'bottom-[0em] md:bottom-0 lg:bottom-[2em]',
         )}
       >
         <Image

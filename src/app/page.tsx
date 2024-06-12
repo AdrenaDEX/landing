@@ -113,7 +113,10 @@ export default function Home() {
         <Image
           src={sepImg}
           alt="separator"
-          className="absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1] top-[-1.5em] z-20"
+          className={twMerge(
+            'absolute fade-in-3 scale-[3] sm:scale-[2.5] md:scale-[2] lg:scale-[1] z-20',
+            is4k ? 'top-[-1.5em]' : 'top-[-3em]',
+          )}
         />
       </div>
 

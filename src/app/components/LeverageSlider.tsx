@@ -34,14 +34,14 @@ export default function LeverageSlider({
           max={100}
           value={value}
           defaultValue={1}
-          step={0.1}
+          step={1}
           marks={[10, 20, 30, 40, 50, 60, 70, 80, 90, 100].reduce(
             (acc, mark) => {
               acc[mark] = (
                 <span
                   className={twMerge(
                     'text-white opacity-30 hover:opacity-100',
-                    is4k ? 'text-2xl' : 'text-sm',
+                    is4k ? 'text-2xl' : 'text-sm lg:text-xs xl:text-sm',
                   )}
                 >
                   x{mark}
