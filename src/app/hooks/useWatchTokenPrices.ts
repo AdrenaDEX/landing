@@ -13,21 +13,21 @@ const PYTH_PRICE_LOADING_INTERVAL_IN_MS = 3_000;
 const config = [
   {
     symbol: 'SOL',
-    feedId: new PublicKey('J83w4HKfqxwcq3BEMMkPFSppX3gqekLyLJBexebFVkix'),
+    feedId: new PublicKey('H6ARHf6YXhGYeQfUzQNGk6rDNnLBQKrenN712K4AQJEG'),
   },
   {
     symbol: 'BTC',
-    feedId: new PublicKey('HovQMDrbAgAYPCmHVSrezcSmkMtXSSUsLDFANExrZh2J'),
+    feedId: new PublicKey('GVXRSBjFk6e6J3NbVPXohDJetcTjaeeuykUpbQF8UoMU'),
   },
   {
     symbol: 'ETH',
-    feedId: new PublicKey('EdVCmQ9FSPcVe5YySXDPCRmc8aDQLKJ9xvYBMZPie1Vw'),
+    feedId: new PublicKey('JBu1AL4obBcCMqKBBxhpWCNUt136ijcuMZLFvTP7iWdB'),
   },
 ] as const;
 
 const symbols = config.map((item) => item.symbol);
 
-const pythRPC = 'https://api.devnet.solana.com';
+const pythRPC = 'https://adrena-pythnet-99a9.mainnet.pythnet.rpcpool.com';
 
 const useTokenPrices = () => {
   const [pythClient, setPythClient] = useState<PythHttpClient | null>(null);
@@ -38,7 +38,12 @@ const useTokenPrices = () => {
   useEffect(() => {
     setPythClient(
       new PythHttpClient(
-        new Connection(pythRPC, 'confirmed'),
+        new Connection(
+          window.location.hostname.endsWith('adrena.xyz')
+            ? pythRPC
+            : `${pythRPC}/${process.env.NEXT_PUBLIC_DEV_TRITON_PYTHNET_API_KEY}`,
+          'confirmed',
+        ),
         getPythProgramKeyForCluster('devnet'),
         'confirmed',
       ),

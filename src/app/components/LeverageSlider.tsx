@@ -27,7 +27,7 @@ export default function LeverageSlider({
 
   return (
     <div className={twMerge('flex flex-col', className)}>
-      <div className="flex p-6 h-[3.5em]">
+      <div className="flex p-6 h-[3.5em] xl:p-0 xl:mt-6">
         <Slider
           className="relative bottom-3"
           min={1.1}
@@ -41,7 +41,7 @@ export default function LeverageSlider({
                 <span
                   className={twMerge(
                     'text-white opacity-30 hover:opacity-100',
-                    is4k ? 'text-2xl' : 'text-sm lg:text-xs xl:text-sm',
+                    is4k ? 'text-2xl' : 'text-sm lg:text-[12px] 2xl:text-sm',
                   )}
                 >
                   x{mark}
