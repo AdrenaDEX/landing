@@ -27,19 +27,7 @@ const config = [
 
 const symbols = config.map((item) => item.symbol);
 
-let pythRPC = 'https://adrena-pythnet-99a9.mainnet.pythnet.rpcpool.com';
-
-if (!window.location.hostname.endsWith('adrena.xyz')) {
-  const apiKey = process.env.NEXT_PUBLIC_DEV_TRITON_PYTHNET_API_KEY;
-
-  if (!apiKey || !apiKey.length) {
-    throw new Error(
-      'Missing environment variable NEXT_PUBLIC_DEV_TRITON_PYTHNET_API_KEY',
-    );
-  }
-
-  pythRPC = `${pythRPC}/${apiKey}`;
-}
+const pythRPC = 'https://adrena-pythnet-99a9.mainnet.pythnet.rpcpool.com';
 
 const useTokenPrices = () => {
   const [pythClient, setPythClient] = useState<PythHttpClient | null>(null);
@@ -50,7 +38,12 @@ const useTokenPrices = () => {
   useEffect(() => {
     setPythClient(
       new PythHttpClient(
-        new Connection(pythRPC, 'confirmed'),
+        new Connection(
+          !window.location.hostname.endsWith('adrena.xyz')
+            ? pythRPC
+            : `${pythRPC}/${process.env.NEXT_PUBLIC_DEV_TRITON_PYTHNET_API_KEY}`,
+          'confirmed',
+        ),
         getPythProgramKeyForCluster('devnet'),
         'confirmed',
       ),
