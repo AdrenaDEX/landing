@@ -39,7 +39,7 @@ const useTokenPrices = () => {
     setPythClient(
       new PythHttpClient(
         new Connection(
-          !window.location.hostname.endsWith('adrena.xyz')
+          window.location.hostname.endsWith('adrena.xyz')
             ? pythRPC
             : `${pythRPC}/${process.env.NEXT_PUBLIC_DEV_TRITON_PYTHNET_API_KEY}`,
           'confirmed',
