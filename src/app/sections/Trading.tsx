@@ -110,7 +110,9 @@ export default function Trading({ is4k }: { is4k: boolean }) {
             value={leverage}
             className={twMerge(
               'w-full h-full font-mono',
-              is4k ? 'mt-[3em]' : 'mt-3 max-w-[40em]',
+              is4k
+                ? 'mt-[3em]'
+                : 'mt-[3em] lg:mt-3 max-w-[40em] xl:max-w-[50em]',
             )}
             onChange={(v: number) => {
               setLeverage(v);
@@ -147,7 +149,7 @@ export default function Trading({ is4k }: { is4k: boolean }) {
           {tokenPrices ? (
             <div
               className={twMerge(
-                'flex flex-col min-w-[15em] max-w-[25em] w-full absolute -z-10 font-bold opacity-5 top-[2em]',
+                'flex flex-col min-w-[15em] max-w-[25em] w-full absolute -z-10 font-bold opacity-5 top-[2em] 2xl:mt-[3em]',
               )}
             >
               {Object.entries(tokenPrices).map(([symbol, price]) => {
