@@ -32,7 +32,7 @@ export default function Footer({
 
         <div className="flex flex-row gap-20 justify-center items-center">
           <Link
-            href="https://github.com/orgs/AdrenaDEX/repositories"
+            href="https://github.com/orgs/AdrenaFoundation/repositories"
             target="_blank"
           >
             <Image
