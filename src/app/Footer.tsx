@@ -31,10 +31,7 @@ export default function Footer({
         </div>
 
         <div className="flex flex-row gap-20 justify-center items-center">
-          <Link
-            href="https://github.com/orgs/AdrenaFoundation/repositories"
-            target="_blank"
-          >
+          <Link href="https://github.com/orgs/AdrenaFoundation" target="_blank">
             <Image
               className="hover:opacity-100 opacity-50 cursor-pointer"
               src={githubLogo}

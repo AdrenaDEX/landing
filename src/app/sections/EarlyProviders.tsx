@@ -74,21 +74,21 @@ export default function EarlyProviders({
             className="w-[9em] h-auto m-4 cursor-pointer"
             src={syntaxImg}
             alt="Syntax Logo"
-            onClick={() => window.open('https://syntaxlabs.xyz/')}
+            onClick={() => window.open('https://sntx.studio/')}
           />
 
           <Image
             className="w-[10em] h-auto m-4 cursor-pointer"
             src={littleUnusualImg}
             alt="Little Unusual Logo"
-            onClick={() => window.open('https://littleunusual.co/landing-page')}
+            onClick={() => window.open('https://www.littleunusual.co/')}
           />
 
           <Image
             className="w-[8em] h-auto m-4 cursor-pointer"
             src={autonomousImg}
             alt="Autonomous Logo"
-            onClick={() => window.open('https://autonomousprojects.co')}
+            onClick={() => window.open('https://autonomousprojects.co/')}
           />
 
           <Image
