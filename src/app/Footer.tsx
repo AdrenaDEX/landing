@@ -4,7 +4,6 @@ import { twMerge } from 'tailwind-merge';
 
 import arrowUpImage from './assets/arrow-up.svg';
 import discordLogo from './assets/discord.png';
-import discourseLogo from './assets/discourse.svg';
 import githubLogo from './assets/github.svg';
 import xLogo from './assets/x.svg';
 
@@ -58,16 +57,6 @@ export default function Footer({
               alt="Discord icon"
               width={is4k ? '76' : '38'}
               height={is4k ? '76' : '38'}
-            />
-          </Link>
-
-          <Link href="https://adrena.discourse.group/" target="_blank">
-            <Image
-              className="hover:opacity-100 opacity-50 cursor-pointer"
-              src={discourseLogo}
-              alt="discourse icon"
-              width={is4k ? '64' : '32'}
-              height={is4k ? '64' : '32'}
             />
           </Link>
         </div>
