@@ -9,7 +9,7 @@ export default function Button({ className }: { className?: string }) {
         className,
       )}
       onClick={() => {
-        window.open('https://alpha.adrena.xyz/', '_blank');
+        window.open('https://app.adrena.xyz/', '_blank');
       }}
     >
       <span className="absolute left-5 self-center opacity-0 group-hover:left-7 group-hover:opacity-20 transition-all duration-300">
