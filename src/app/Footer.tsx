@@ -6,6 +6,7 @@ import arrowUpImage from './assets/arrow-up.svg';
 import discordLogo from './assets/discord.png';
 import githubLogo from './assets/github.svg';
 import xLogo from './assets/x.svg';
+import gitbookLogo from './assets/gitbook.svg';
 
 export default function Footer({
   className,
@@ -57,6 +58,16 @@ export default function Footer({
               alt="Discord icon"
               width={is4k ? '76' : '38'}
               height={is4k ? '76' : '38'}
+            />
+          </Link>
+
+          <Link href="https://docs.adrena.xyz" target="_blank">
+            <Image
+              className="hover:opacity-100 opacity-50 cursor-pointer"
+              src={gitbookLogo}
+              alt="Gitbook icon"
+              width={is4k ? '76' : '40'}
+              height={is4k ? '76' : '40'}
             />
           </Link>
         </div>
